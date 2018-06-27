@@ -248,6 +248,7 @@ class Home extends Component {
 
     // STYLES
     var input = {
+      maxWidth: "550px",
       textAlign: "center",
       marginTop: "250px",
       padding: "20px",
@@ -301,9 +302,9 @@ class Home extends Component {
     if (!token) {
       return (
 
-        <div className="row">
+        <div className="row text-center">
           
-            <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-sm-offset-5 col-md-offset-5 col-lg-offset-5 text-center">
+            <div className="col-sm-offset-3 col-md-offset-3 col-lg-offset-4 col-xl-offset-4">
               <div className="input-group" style={input}>
                 
                   <h2>Sign In</h2>
