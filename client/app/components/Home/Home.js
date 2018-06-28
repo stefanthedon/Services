@@ -250,7 +250,7 @@ class Home extends Component {
     var input = {
       maxWidth: "550px",
       textAlign: "center",
-      marginTop: "250px",
+      marginTop: "20%",
       padding: "20px",
       boxShadow: "0 4px 10px 4px rgba(19, 35, 47, 0.3)",
     };

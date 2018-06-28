@@ -39,8 +39,8 @@ class ContentContainer extends Component {
 		  	// background: "#eee",
 		  	padding: "10px",
 		  	margin: "10px",
-		  	height: "200px",
-		  	width: "200px",
+		  	height: "150px",
+		  	width: "150px",
 		  	borderRadius: "10px"
 		};
 		var cardStyle2 = {
@@ -48,8 +48,8 @@ class ContentContainer extends Component {
 		  	// background: "#eee",
 		  	padding: "10px",
 		  	margin: "10px",
-		  	height: "200px",
-		  	width: "200px",
+		  	height: "150px",
+		  	width: "150px",
 		  	borderRadius: "10px"
 		};
 
@@ -83,7 +83,8 @@ class ContentContainer extends Component {
 	      	<div>
 		      	<button className="btn btn-default btn-lg btn-block btn-huge" style={cardStyle2}>
 		      		<span className="glyphicon glyphicon-usd" aria-hidden="true" style={icon}></span><br/>
-		      		<span>BOOK SERVICE</span>
+		      		<span>BOOK</span><br/>
+		      		<span>SERVICE</span>
 		      	</button>
 	      	</div>
 	      	<div>
@@ -96,7 +97,8 @@ class ContentContainer extends Component {
 	      	<div>
 		      	<button className="btn btn-default btn-lg btn-block btn-huge" style={cardStyle2}>
 		      		<span className="glyphicon glyphicon-globe" aria-hidden="true" style={icon}></span><br/>
-		      		<span>DESKTOP VERSION</span>
+		      		<span>DESKTOP</span><br/>
+		      		<span>VERSION</span>
 		      	</button>
 	      	</div>
 	      </div>
