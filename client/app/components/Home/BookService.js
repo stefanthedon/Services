@@ -27,7 +27,7 @@ class ContentContainer extends Component {
     return (
       <div>
 	      <div className="row">
-	      	<div className="col-xs-12 col-sm-4 col-md-6 col-lg-6 col-xl-6 col-sm-offset-3 col-md-offset-3 col-lg-offset-4 col-xl-offset-4">
+	      	<div className="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-sm-offset-2 col-md-offset-2 col-lg-offset-4 col-xl-offset-4">
 	      		<div className="form-group text-center">
 	      			<h4>Please Select your Brand below</h4>
 	      			<select className="selectpicker form-control" title="Select Brand...">
