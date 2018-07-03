@@ -1,14 +1,99 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>School Solution</title>
-</head>
-<body>
-  <div id="app"></div>
-<script type="text/javascript" src="/js/app.js"></script></body>
-</html>
+Html Webpack Plugin:
+<pre>
+  Error: Child compilation failed:
+  Entry module not found: SyntaxError: C:\Users\Don\Documents\GitHub\Services\pa  ckage.json (directory description file): SyntaxError: C:\Users\Don\Documents\G  itHub\Services\package.json (directory description file): SyntaxError: C:\User  s\Don\Documents\GitHub\Services\package.json (directory description file): Syn  taxError: C:\Users\Don\Documents\GitHub\Services\package.json (directory descr  iption file): SyntaxError: Unexpected token } in JSON at position 1465:
+  SyntaxError: C:\Users\Don\Documents\GitHub\Services\package.json (directory de  scription file): SyntaxError: C:\Users\Don\Documents\GitHub\Services\package.j  son (directory description file): SyntaxError: C:\Users\Don\Documents\GitHub\S  ervices\package.json (directory description file): SyntaxError: C:\Users\Don\D  ocuments\GitHub\Services\package.json (directory description file): SyntaxErro  r: Unexpected token } in JSON at position 1465
+  
+  - compiler.js:79 childCompiler.runAsChild
+    [Services]/[html-webpack-plugin]/lib/compiler.js:79:16
+  
+  - Compiler.js:243 compile
+    [Services]/[webpack]/lib/Compiler.js:243:11
+  
+  - Compiler.js:500 hooks.afterCompile.callAsync.err
+    [Services]/[webpack]/lib/Compiler.js:500:14
+  
+  
+  - Hook.js:35 AsyncSeriesHook.lazyCompileHook [as _callAsync]
+    [Services]/[tapable]/lib/Hook.js:35:21
+  
+  - Compiler.js:497 compilation.seal.err
+    [Services]/[webpack]/lib/Compiler.js:497:30
+  
+  
+  - Hook.js:35 AsyncSeriesHook.lazyCompileHook [as _callAsync]
+    [Services]/[tapable]/lib/Hook.js:35:21
+  
+  - Compilation.js:986 hooks.optimizeAssets.callAsync.err
+    [Services]/[webpack]/lib/Compilation.js:986:35
+  
+  
+  - Hook.js:35 AsyncSeriesHook.lazyCompileHook [as _callAsync]
+    [Services]/[tapable]/lib/Hook.js:35:21
+  
+  - Compilation.js:977 hooks.optimizeChunkAssets.callAsync.err
+    [Services]/[webpack]/lib/Compilation.js:977:32
+  
+  
+  - Hook.js:35 AsyncSeriesHook.lazyCompileHook [as _callAsync]
+    [Services]/[tapable]/lib/Hook.js:35:21
+  
+  - Compilation.js:972 hooks.additionalAssets.callAsync.err
+    [Services]/[webpack]/lib/Compilation.js:972:36
+  
+  
+  - Hook.js:35 AsyncSeriesHook.lazyCompileHook [as _callAsync]
+    [Services]/[tapable]/lib/Hook.js:35:21
+  
+  - Compilation.js:968 hooks.optimizeTree.callAsync.err
+    [Services]/[webpack]/lib/Compilation.js:968:32
+  
+  
+  - Hook.js:35 AsyncSeriesHook.lazyCompileHook [as _callAsync]
+    [Services]/[tapable]/lib/Hook.js:35:21
+  
+  - Compilation.js:905 Compilation.seal
+    [Services]/[webpack]/lib/Compilation.js:905:27
+  
+  - Compiler.js:494 hooks.make.callAsync.err
+    [Services]/[webpack]/lib/Compiler.js:494:17
+  
+  
+  - Compilation.js:771 _addModuleChain
+    [Services]/[webpack]/lib/Compilation.js:771:12
+  
+  - Compilation.js:650 errorAndCallback.bail.err
+    [Services]/[webpack]/lib/Compilation.js:650:6
+  
+  - Compilation.js:683 moduleFactory.create
+    [Services]/[webpack]/lib/Compilation.js:683:14
+  
+  - NormalModuleFactory.js:397 factory
+    [Services]/[webpack]/lib/NormalModuleFactory.js:397:22
+  
+  - NormalModuleFactory.js:130 resolver
+    [Services]/[webpack]/lib/NormalModuleFactory.js:130:21
+  
+  - NormalModuleFactory.js:224 asyncLib.parallel
+    [Services]/[webpack]/lib/NormalModuleFactory.js:224:22
+  
+  - async.js:2817 
+    [Services]/[neo-async]/async.js:2817:7
+  
+  - async.js:6783 
+    [Services]/[neo-async]/async.js:6783:13
+  
+  - NormalModuleFactory.js:214 normalResolver.resolve
+    [Services]/[webpack]/lib/NormalModuleFactory.js:214:25
+  
+  - Resolver.js:175 doResolve
+    [Services]/[enhanced-resolve]/lib/Resolver.js:175:20
+  
+  - Resolver.js:230 hook.callAsync
+    [Services]/[enhanced-resolve]/lib/Resolver.js:230:20
+  
+  
+  - UnsafeCachePlugin.js:35 resolver.doResolve
+    [Services]/[enhanced-resolve]/lib/UnsafeCachePlugin.js:35:20
+  
+</pre><script type="text/javascript" src="/js/app.js"></script>
