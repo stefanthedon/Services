@@ -3,61 +3,47 @@ const merge = require('webpack-merge');
 
 const helpers = require('./helpers');
 const commonConfig = require('./webpack.common');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+
+// module.exports = merge(commonConfig, {
+//   mode: 'production',
+
+//   output: {
+//     filename: 'js/[name].[hash].js',
+//     chunkFilename: '[id].[hash].chunk.js'
+//   },
+
+//   plugins: [
+//     new webpack.optimize.UglifyJsPlugin({
+//       compressor: {
+//         warnings: false,
+//         screw_ie8: true
+//       },
+//       output: {
+//         comments: false
+//       }
+//     })
+//   ]
+// });
 
 module.exports = merge(commonConfig, {
-  mode: 'production',
+  devtool: 'eval-source-map',
 
-  output: {
-    filename: 'js/[name].[hash].js',
-    chunkFilename: '[id].[hash].chunk.js'
+  mode: 'development',
+
+  entry: {
+    'app': [
+      'webpack-hot-middleware/client?reload=true'
+    ]
   },
 
-  optimization: {
-    minimizer: [
-      new UglifyJSPlugin({
-        uglifyOptions: {
-          output: {
-            comments: false
-          },
-          compress: {
-            unsafe_comps: true,
-            properties: true,
-            keep_fargs: false,
-            pure_getters: true,
-            collapse_vars: true,
-            unsafe: true,
-            warnings: false,
-            screw_ie8: true,
-            sequences: true,
-            dead_code: true,
-            drop_debugger: true,
-            comparisons: true,
-            conditionals: true,
-            evaluate: true,
-            booleans: true,
-            loops: true,
-            unused: true,
-            hoist_funs: true,
-            if_return: true,
-            join_vars: true,
-            cascade: true,
-            drop_console: true
-          }
-        }
-      }),
-    ]
-  }
+  output: {
+    filename: 'js/[name].js',
+    chunkFilename: '[id].chunk.js'
+  },
 
-  // plugins: [
-  //   new webpack.optimize.UglifyJsPlugin({
-  //     compressor: {
-  //       warnings: false,
-  //       screw_ie8: true
-  //     },
-  //     output: {
-  //       comments: false
-  //     }
-  //   })
-  // ]
+  devServer: {
+    contentBase: './client/public',
+    historyApiFallback: true,
+    stats: 'minimal' // none (or false), errors-only, minimal, normal (or true) and verbose
+  }
 });
