@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-
 import 'whatwg-fetch';
 // import css from './ContentContainer.css';
 
 import Home from './Home';
-// import ContentContainerRouter from '../../routes/ContentContainerRouter';
-// import ProductList from './ProductList';
 
 
 
@@ -20,10 +16,10 @@ class ContentContainer extends Component {
       
     	};
 
-
-
+    	
 	}
 
+	
 
 
 	render() {
@@ -62,8 +58,6 @@ class ContentContainer extends Component {
 			padding: "20px"
 		};
 
-		
-
     return (
       <div className="row">
 	      <div className="col-md-6 col-xs-12 col-sm-8 col-lg-4 col-xl-4 col-sm-offset-2 col-md-offset-5 col-lg-offset-5 col-xl-offset-5" style={container}>     	
@@ -80,22 +74,18 @@ class ContentContainer extends Component {
 		      	</button>
 	      	</div>
 	      	<div>
-	      		<Link to="/ProductList">
 		      	<button className="btn btn-default btn-lg btn-block btn-huge" style={cardStyle1}>
 		      		<span className="glyphicon glyphicon-list-alt" aria-hidden="true" style={icon}></span><br/>
 		      		<span>FIND SPARE</span><br/>
 		      		<span>PARTS</span>
 		      	</button>
-		      	</Link>
 	      	</div>
 	      	<div>
-	      		<Link to="/BookService">
 		      	<button className="btn btn-default btn-lg btn-block btn-huge" style={cardStyle2}>
 		      		<span className="glyphicon glyphicon-usd" aria-hidden="true" style={icon}></span><br/>
 		      		<span>BOOK</span><br/>
 		      		<span>SERVICE</span>
 		      	</button>
-		      	</Link>
 	      	</div>
 	      	<div>
 		      	<button className="btn btn-default btn-lg btn-block btn-huge" style={cardStyle1}>

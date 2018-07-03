@@ -328,6 +328,43 @@ class Home extends Component {
 
               </div>
           </div>
+
+          <div className="col-sm-offset-3 col-md-offset-3 col-lg-offset-4 col-xl-offset-4">
+              <div className="input-group" style={input}>
+                 
+                <h2>Sign Up</h2>
+                <input
+                className="form-control" 
+                type="text" 
+                placeholder="First Name"
+                value={signUpFirstName}
+                onChange={this.onTextboxChangeSignUpFirstName}
+                />
+                <input
+                className="form-control" 
+                type="text" 
+                placeholder="Last Name"
+                value={signUpLastName}
+                onChange={this.onTextboxChangeSignUpLastName}
+                />
+                <input
+                className="form-control" 
+                type="email" 
+                placeholder="Email"
+                value={signUpEmail}
+                onChange={this.onTextboxChangeSignUpEmail}
+                />
+                <input
+                className="form-control" 
+                type="password" 
+                placeholder="Password"
+                value={signUpPassword}
+                onChange={this.onTextboxChangeSignUpPassword}
+                />
+                <button className="btn btn-default" type="button" onClick={this.onSignUp} >Sign Up</button>
+              </div>
+            </div>
+
         </div>
       );
 

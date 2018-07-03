@@ -39,29 +39,15 @@ module.exports = {
 
       // SCSS files
       {
-        test: /\.scss$/,
-        loader: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                'sourceMap': true,
-                'importLoaders': 1
-              }
-            },
-            {
-              loader: 'postcss-loader',
-              options: {
-                plugins: () => [
-                  autoprefixer
-                ]
-              }
-            },
-            'sass-loader'
-          ]
-        })
-      }
+       test: /(\.css|.scss)$/,
+       use: [{
+           loader: "style-loader" // creates style nodes from JS strings
+       }, {
+           loader: "css-loader" // translates CSS into CommonJS
+       }, {
+           loader: "sass-loader" // compiles Sass to CSS
+       }]
+     },
     ]
   },
 
