@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import 'whatwg-fetch';
-// import css from '../../styles/Home.css';
+import css from '../../styles/Home.css';
 import Header from './Header';
 import ServiceAccount from './ServiceAccount';
 
@@ -259,13 +259,6 @@ class Home extends Component {
     } = this.state;
 
     // STYLES
-    var input = {
-      maxWidth: "550px",
-      textAlign: "center",
-      marginTop: "20%",
-      padding: "20px",
-      boxShadow: "0 4px 10px 4px rgba(19, 35, 47, 0.3)",
-    };
 
     var signInBtn = {
       backgroundColor: "#4CAF50",
@@ -317,7 +310,7 @@ class Home extends Component {
         <div className="row text-center">
           
             <div id="signIn" className="col-sm-offset-3 col-md-offset-3 col-lg-offset-4 col-xl-offset-4">
-              <div className="input-group" style={input}>
+              <div className="sign-in input-group">
                 
                   <h2>Sign In</h2>
                   <input
@@ -336,14 +329,12 @@ class Home extends Component {
                   />
                 <p className="signUpError">{signInError}</p>
                   <button className="btn btn-default" type="button" onClick={this.onSignIn} style={signInBtn}>SIGN IN</button>
-                  <button className="btn btn-default" type="button" style={registerBtn}>REGISTER</button>
-                  <button className="btn btn-default" type="button" style={forgotBtn}>FORGOT PASSWORD?</button>
 
               </div>
           </div>
 
-          <div className="col-sm-offset-3 col-md-offset-3 col-lg-offset-4 col-xl-offset-4">
-              <div className="input-group" style={input}>
+          <div id="signIn" className="col-sm-offset-3 col-md-offset-3 col-lg-offset-4 col-xl-offset-4">
+              <div className="input-group">
                  
                 <h2>Sign Up</h2>
                 <input
