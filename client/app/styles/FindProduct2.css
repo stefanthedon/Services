@@ -1,8 +1,8 @@
-/*html {
+html {
   font-size: 1.3px;
 }
 html * {
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
 }
 
 body {
@@ -11,10 +11,10 @@ body {
   background: -webkit-linear-gradient(30deg, #1900fa, #616bff);
   background: linear-gradient(60deg, #1900fa, #616bff);
   background: white;
-  font-family: "Alegreya Sans",'Montserrat', sans-serif;
+  font-family: 'Alegreya Sans','Montserrat', sans-serif;
   font-size: 30rem;
-  overflow: hidden;
-}*/
+  overflow-x: hidden;
+}
 
 .wrap {
   position: absolute;
@@ -698,4 +698,8 @@ body {
 .navbar>.container .navbar-brand-centered, 
 .navbar>.container-fluid .navbar-brand-centered {
     margin-left: -80px;
+}
+
+.glyphicon {
+  font-size: 20px;
 }
