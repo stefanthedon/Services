@@ -271,29 +271,6 @@ class Home extends Component {
       opacity: "0.9"
     };
 
-    var registerBtn = {
-      float: "left",
-      width: "50%",
-      backgroundColor: "#4CAF50",
-      color: "white",
-      padding: "14px 20px",
-      margin: "8px 0",
-      border: "none",
-      cursor: "pointer",
-      opacity: "0.9"
-    };
-
-    var forgotBtn = {
-      width: "50%",
-      backgroundColor: "#f44336",
-      color: "white",
-      padding: "14px 20px",
-      margin: "8px 0",
-      border: "none",
-      cursor: "pointer",
-      opacity: "0.9"
-    };
-
     var loading = {
       fontSize: "40px",
       marginLeft: "50%",
@@ -373,7 +350,7 @@ class Home extends Component {
                 onChange={this.onTextboxChangeSignUpPassword}
                 />
                 <p className="signUpError">{signUpError}</p>
-                <button className="btn btn-default" type="button" onClick={this.onSignUp} >Sign Up</button>
+                <button className="btn btn-default" type="button" onClick={this.onSignUp} style={signInBtn}>Sign Up</button>
               </div>
             </div>
 
