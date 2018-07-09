@@ -90,7 +90,7 @@ class ContentContainer extends Component {
 		      	</Link>
 	      	</div>
 	      	<div>
-	      		<Link to="/BookService">
+	      		<Link to="/FindProduct2">
 		      	<button className="btn btn-default btn-lg btn-block btn-huge" style={cardStyle2}>
 		      		<span className="glyphicon glyphicon-usd" aria-hidden="true" style={icon}></span><br/>
 		      		<span>BOOK</span><br/>

@@ -14,7 +14,7 @@ body {
   background: linear-gradient(60deg, #1900fa, #616bff);
   background: #f1f2f6;
   font-family: "Alegreya Sans",'Montserrat', sans-serif;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 .signUpError {
