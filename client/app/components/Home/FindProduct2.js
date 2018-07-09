@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Select } from 'react-dom';
+import { Select, Link } from 'react-dom';
 import $ from 'jquery'
 import 'whatwg-fetch';
 import css from '../../styles/FindProduct2.css';
@@ -294,6 +294,11 @@ class FindProduct2 extends Component {
     return (
       <div>
         <nav class="navbar navbar-default" role="navigation">
+          <Link to="/FindProduct">
+          <ul className="nav navbar-nav navbar-right">
+            <li><a href=""><span className="glyphicon glyphicon-arrow-left"></span>Logout</a></li>
+          </ul>
+          </Link>
           <div class="container">
             <div class="navbar-header">
               <div class="navbar-brand navbar-brand-centered">ACHELIS KE</div>
