@@ -294,9 +294,9 @@ class FindProduct2 extends Component {
     return (
       <div>
         <nav class="navbar navbar-default" role="navigation">
-          <Link to="/FindProduct">
+          <Link to="/">
           <ul className="nav navbar-nav navbar-right">
-            <li><a href=""><span className="glyphicon glyphicon-arrow-left"></span>Logout</a></li>
+            <li><a href=""><span className="glyphicon glyphicon-arrow-left"></span></a></li>
           </ul>
           </Link>
           <div class="container">
