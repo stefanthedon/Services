@@ -13,10 +13,10 @@ class FindProduct2 extends Component {
       super(props);
 
       this.state = {
-          firstName: 'Don',
-          lastName: 'Stefan',
+          firstName: 'Admin',
+          lastName: 'Admin',
           telephone: '0719762808',
-          email: 'don@gmail.com',
+          email: 'admin@admin.com',
           productModel: '',
           serviceDate: '',
           serviceType: '',
@@ -294,11 +294,12 @@ class FindProduct2 extends Component {
     return (
       <div>
         <nav class="navbar navbar-default" role="navigation">
-          <Link to="/">
-          <ul className="nav navbar-nav navbar-right">
-            <li><a href=""><span className="glyphicon glyphicon-arrow-left"></span></a></li>
+          <ul className="nav navbar-nav navbar-left">
+            <Link to="/">
+              <li><a href=""><span className="glyphicon glyphicon-arrow-left"></span></a></li>
+            </Link>
           </ul>
-          </Link>
+
           <div class="container">
             <div class="navbar-header">
               <div class="navbar-brand navbar-brand-centered">ACHELIS KE</div>
