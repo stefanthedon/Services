@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Select } from 'react-dom';
 import $ from 'jquery'
 import 'whatwg-fetch';
-// import css from '../../styles/FindProduct2.css';
+import css from '../../styles/FindProduct2.css';
 // import axios from 'axios';
 
 
