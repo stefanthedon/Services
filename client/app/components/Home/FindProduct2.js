@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Select, Link } from 'react-dom';
+import { Select } from 'react-dom';
+import { Link } from 'react-router-dom';
 import $ from 'jquery'
 import 'whatwg-fetch';
 import css from '../../styles/FindProduct2.css';
