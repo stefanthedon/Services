@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import 'whatwg-fetch';
-
+import css from '../../styles/Home.css';
 import Header from './Header';
-import SchoolAccount from './SchoolAccount';
+import ServiceAccount from './ServiceAccount';
 
 
 import {
@@ -23,6 +23,7 @@ class Home extends Component {
       signInPassword: '',
       signUpFirstName: '',
       signUpLastName: '',
+      signUpTelephone: '',
       signUpEmail: '',
       signUpPassword: ''
     };
@@ -33,6 +34,7 @@ class Home extends Component {
     this.onTextboxChangeSignUpPassword = this.onTextboxChangeSignUpPassword.bind(this);
     this.onTextboxChangeSignUpFirstName = this.onTextboxChangeSignUpFirstName.bind(this);
     this.onTextboxChangeSignUpLastName = this.onTextboxChangeSignUpLastName.bind(this);
+    this.onTextboxChangeSignUpTelephone = this.onTextboxChangeSignUpTelephone.bind(this);
 
     this.onSignIn = this.onSignIn.bind(this);
     this.onSignUp = this.onSignUp.bind(this);
@@ -105,6 +107,12 @@ class Home extends Component {
     });
   }
 
+  onTextboxChangeSignUpTelephone(event) {
+    this.setState({
+      signUpTelephone: event.target.value,
+    });
+  }
+
   onSignIn () {
     // Grab state
     const {
@@ -157,6 +165,7 @@ class Home extends Component {
       signUpFirstName,
       signUpLastName,
       signUpEmail,
+      signUpTelephone,
       signUpPassword
     } = this.state;
 
@@ -174,7 +183,8 @@ class Home extends Component {
         firstName: signUpFirstName,
         lastName: signUpLastName,
         email: signUpEmail,
-        password: signUpPassword
+        telephone: signUpTelephone,
+        password:   signUpPassword
       }),
     }).then(res => res.json())
       .then(json => {
@@ -189,7 +199,8 @@ class Home extends Component {
             signUpEmail: '',
             signUpPassword: '',
             signUpFirstName: '',
-            signUpLastName: ''
+            signUpLastName: '',
+            signUpTelephone: ''
           })
         } else {
           this.setState({
@@ -243,7 +254,8 @@ class Home extends Component {
       signUpFirstName,
       signUpLastName,
       signUpEmail,
-      signUpPassword
+      signUpPassword,
+      signUpTelephone
     } = this.state;
 
     // STYLES
@@ -304,7 +316,7 @@ class Home extends Component {
 
         <div className="row text-center">
           
-            <div className="col-sm-offset-3 col-md-offset-3 col-lg-offset-4 col-xl-offset-4">
+            <div id="signIn" className="col-sm-offset-3 col-md-offset-3 col-lg-offset-4 col-xl-offset-4">
               <div className="input-group" style={input}>
                 
                   <h2>Sign In</h2>
@@ -322,9 +334,10 @@ class Home extends Component {
                   value={signInPassword}
                   onChange={this.onTextboxChangeSignInPassword}
                   />
+                <p className="signUpError">{signInError}</p>
                   <button className="btn btn-default" type="button" onClick={this.onSignIn} style={signInBtn}>SIGN IN</button>
-                  <button className="btn btn-default" type="button" onClick="" style={registerBtn}>REGISTER</button>
-                  <button className="btn btn-default" type="button" onClick="" style={forgotBtn}>FORGOT PASSWORD?</button>
+                  <button className="btn btn-default" type="button" style={registerBtn}>REGISTER</button>
+                  <button className="btn btn-default" type="button" style={forgotBtn}>FORGOT PASSWORD?</button>
 
               </div>
           </div>
@@ -356,11 +369,19 @@ class Home extends Component {
                 />
                 <input
                 className="form-control" 
+                type="text" 
+                placeholder="Phone Number"
+                value={signUpTelephone}
+                onChange={this.onTextboxChangeSignUpTelephone}
+                />
+                <input
+                className="form-control" 
                 type="password" 
                 placeholder="Password"
                 value={signUpPassword}
                 onChange={this.onTextboxChangeSignUpPassword}
                 />
+                <p className="signUpError">{signUpError}</p>
                 <button className="btn btn-default" type="button" onClick={this.onSignUp} >Sign Up</button>
               </div>
             </div>
@@ -370,32 +391,20 @@ class Home extends Component {
 
   }
 
-    var background = {
-      alignItems: "center",
-      justifyContent: "center",
-      margin: "0",
-      padding: "0",
-      width: "100%",
-      height: "100%",
-      backgroundColor: "#f1f2f6"
-    };
-
     return (
-      <div className="background" style={background}>
         <div>
-          <nav className="navbar navbar-inverse">
-          <div className="container-fluid">
+        <nav className="navbar navbar-default" role="navigation">
+          <div className="container">
             <div className="navbar-header">
-              <a className="navbar-brand navbar-center" href="">School Name</a>
+              <div className="navbar-brand navbar-brand-centered">ACHELIS KE</div>
             </div>
             <ul className="nav navbar-nav navbar-right">
               <li><a href="" onClick={this.logOut}><span className="glyphicon glyphicon-log-out"></span>Logout</a></li>
             </ul>
           </div>
         </nav>
-          <SchoolAccount/>
+          <ServiceAccount/>
         </div>
-      </div>
     );
   }
 }

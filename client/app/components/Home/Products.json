@@ -1,0 +1,159 @@
+{
+    "Construction": {
+        "Case": {
+            "Excavator": [
+                {"model":"CX2010B"},
+                {"model":"CX290B"},
+                {"model":"CX350B"},
+                {"model":"CX470B"}
+            ],
+            "Backhoe Loader": [
+                {"model":"570T"},
+                {"model":"580T"}
+            ],
+            "Motor Grader": [
+                {"model":"865B"},
+                {"model":"845B"},
+                {"model":"885B"}
+            ],
+            "Roller/Compactor": [
+                {"model":"1107EX"}
+            ],
+              "Dozer": [
+                {"model":"2050M"}
+            ],
+              "Wheel Loader": [
+                {"model":"621F"},
+                {"model":"721F"},
+                {"model":"821F"},
+                {"model":"921F"}
+            ],
+              "Skid steer": [
+                {"model":"SR175"},
+                {"model":"SR300"}            
+            ]
+        },
+        "New Holland": {
+            "Grader": [
+                {"model":"F170 -180HP"}
+            ],
+              "Wheel loader": [
+                {"model":"W190C-3.5 CUM"}
+            ]
+        },
+        "Bomag": {
+          "Roller": [
+            {"model":"161AD-40(10ton tandem roller)"},
+            {"model":"BW213D-40(13ton single drum roller)"},
+            {"model":"BW211D-40(10ton roller)"},
+            {"model":"BW120AD-5(3ton tandem roller-used)"},
+            {"model":"BW120AD-5(3ton tandem roller)"},
+            {"model":"BW900(1.2 ton tandem roller)"},
+            {"model":"BW75H(1ton pedestrian roller)"},
+            {"model":"BW24RH( 10ton pneumatic tyre roller)"}
+          ]
+        },
+        "Fiori": {
+          "Concrete Mixer": [
+            {"model":"DBX35"},
+            {"model":"DB460"}
+          ]
+        },
+        "Triman": {
+          "Crusher": [
+            {"model":"DB 110"},
+            {"model":"DB X35"},
+            {"model":"DB 180"},
+            {"model":"DB 460"},
+            {"model":"D40"},
+            {"model":"D100SL"},
+            {"model":"DB X25"},
+            {"model":"DB X50"},
+            {"model":"DB 260"},
+            {"model":"DB 560T"},
+            {"model":"D70SL"},
+            {"model":"HS 15.0"},
+            {"model":"HS 35.0"}
+          ]
+        }
+    },
+    "Material Handling": {
+        "Hyster": {
+            "Forklift Trucks": [
+                {"model":"CX2010B"},
+                {"model":"CX290B"},
+                {"model":"CX350B"},
+                {"model":"CX470B"}
+            ],
+            "Backhoe Loader": [
+                {"model":"570T"},
+                {"model":"580T"}
+            ],
+            "Motor Grader": [
+                {"model":"865B"},
+                {"model":"845B"},
+                {"model":"885B"}
+            ],
+            "Roller/Compactor": [
+                {"model":"1107EX"}
+            ],
+              "Dozer": [
+                {"model":"2050M"}
+            ],
+              "Wheel Loader": [
+                {"model":"621F"},
+                {"model":"721F"},
+                {"model":"821F"},
+                {"model":"921F"}
+            ],
+              "Skid steer": [
+                {"model":"SR175"},
+                {"model":"SR300"}            
+            ]
+        },
+        "Utilev": {
+            "Grader": [
+                {"model":"F170 -180HP"}
+            ],
+              "Wheel loader": [
+                {"model":"W190C-3.5 CUM"}
+            ]
+        },
+        "Manitou ": {
+          "Roller": [
+            {"model":"161AD-40(10ton tandem roller)"},
+            {"model":"BW213D-40(13ton single drum roller)"},
+            {"model":"BW211D-40(10ton roller)"},
+            {"model":"BW120AD-5(3ton tandem roller-used)"},
+            {"model":"BW120AD-5(3ton tandem roller)"},
+            {"model":"BW900(1.2 ton tandem roller)"},
+            {"model":"BW75H(1ton pedestrian roller)"},
+            {"model":"BW24RH( 10ton pneumatic tyre roller)"}
+          ]
+        },
+        "Zeigler": {
+          "Zieglar": [
+            {"model":"DBX35"},
+            {"model":"DB460"}
+          ]
+        },
+        "FFG": {
+          "Combined high pressure vehicle for sewer cleaning": [
+            {"model":"DB 110"},
+            {"model":"DB X35"},
+            {"model":"DB 180"},
+            {"model":"DB 460"},
+            {"model":"D40"},
+            {"model":"D100SL"},
+            {"model":"DB X25"},
+            {"model":"DB X50"},
+            {"model":"DB 260"},
+            {"model":"DB 560T"},
+            {"model":"D70SL"},
+            {"model":"HS 15.0"},
+            {"model":"HS 35.0"}
+          ]
+        }
+    }
+
+}

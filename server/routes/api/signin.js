@@ -26,6 +26,7 @@ module.exports = (app) => {
     const {
       firstName,
       lastName,
+      telephone,
       password
     } = body;
 
@@ -82,6 +83,7 @@ module.exports = (app) => {
     newUser.email = email;
     newUser.firstName = firstName;
     newUser.lastName = lastName;
+    newUser.telephone = telephone;
     newUser.password = newUser.generateHash(password);
     newUser.save((err, user) => {
       if (err) {
@@ -191,7 +193,7 @@ module.exports = (app) => {
       if (sessions.length != 1) {
         return res.send({
           success: false,
-          message: 'Error: Invalid'
+          message: 'Error: Invalid Credentials'
         });
       } else {
           return res.send({

@@ -17,6 +17,10 @@ const UserSchema = new mongoose.Schema({
     type: String,
     default: ''
   },
+  telephone: {
+    type: String,
+    default: ''
+  },
   isDeleted: {
 	type: Boolean,
 	default: false

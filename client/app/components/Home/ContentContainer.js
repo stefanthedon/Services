@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import css from '../../styles/ServiceAccount.css';
 
 import 'whatwg-fetch';
 // import css from './ContentContainer.css';
@@ -80,7 +81,7 @@ class ContentContainer extends Component {
 		      	</button>
 	      	</div>
 	      	<div>
-	      		<Link to="/ProductList">
+	      		<Link to="/FindProduct">
 		      	<button className="btn btn-default btn-lg btn-block btn-huge" style={cardStyle1}>
 		      		<span className="glyphicon glyphicon-list-alt" aria-hidden="true" style={icon}></span><br/>
 		      		<span>FIND SPARE</span><br/>
