@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
 import { Select } from 'react-dom';
+import { Link } from 'react-router-dom';
 import $ from 'jquery'
 import 'whatwg-fetch';
-import css from '../../styles/FindProduct2.css';
+import css from '../../styles/FindSpare.css';
 // import axios from 'axios';
 
 
 
-class FindProduct3 extends Component {
+class FindSpare extends Component {
 
   constructor(props) {
       super(props);
 
       this.state = {
-          firstName: 'Don',
-          lastName: 'Stefan',
+          firstName: 'Admin',
+          lastName: 'Admin',
           telephone: '0719762808',
-          email: 'don@gmail.com',
+          email: 'admin@admin.com',
           productModel: '',
           serviceDate: '',
           serviceType: '',
@@ -127,7 +128,7 @@ class FindProduct3 extends Component {
       if (!$(this).hasClass('selected')){
         $(this).addClass('selected');
         $('.wrap').addClass('member-selected');
-        addCalendar($(this).find('.calendar'));
+        addModel();
       }
       // e.preventDefault();
       // e.stopPropagation();
@@ -135,31 +136,24 @@ class FindProduct3 extends Component {
 
     $('.deselect-member, .restart').on('click', function(e){
       $('.member').removeClass('selected');
-      $('.wrap').removeClass('member-selected date-selected slot-selected booking-complete');
+      $('.wrap').removeClass('member-selected model-selected spare-selected booking-complete');
       e.preventDefault();
       e.stopPropagation();
     });
 
-    $('.deselect-date').on('click', function(e){
-      $('.wrap').removeClass('date-selected slot-selected');
-      $('.calendar *').removeClass('selected');
+    $('.deselect-model').on('click', function(e){
+      $('.wrap').removeClass('model-selected');
+      $('.model *').removeClass('selected');
       e.preventDefault();
       e.stopPropagation();
     });
 
-    $('.deselect-slot').on('click', function(e){
-      $('.wrap').removeClass('slot-selected');
-      $('.slots *').removeClass('selected');
+    $('.deselect-spare').on('click', function(e){
+      $('.wrap').removeClass('spare-selected');
+      $('.spare *').removeClass('selected');
       e.preventDefault();
       e.stopPropagation();
     });
-
-    // $('.deselect-slot').on('click', function(e){
-    //   $('.wrap').removeClass('slot-selected');
-    //   $('.slots *').removeClass('selected');
-    //   e.preventDefault();
-    //   e.stopPropagation();
-    // });
 
     $('.form').on('submit', function(e){
       $('.wrap').toggleClass('booking-complete');
@@ -167,136 +161,57 @@ class FindProduct3 extends Component {
       e.stopPropagation();
     });
 
-    function invokeCalendarListener(){
-      $('.calendar td:not(.disabled)').on('click', function(e){
-        addSlots();
-        var today = new Date();
-        var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-        var date = $(this).html();
-        var day = $(this).data('day');
-        var month = today.getMonth();
-        var year = today.getFullYear();
-        $('.date').html(day + ',  ' + date);
+    function invokeModelListener(){
+      $('.model li').on('click', function(e){
+        addSpare();
+        var FindSpare = $(this).html();
         $(this).addClass('selected');
-        setTimeout(function(){
-          $('.wrap').addClass('date-selected');
-        },10);
-        _this.setState({ serviceDate: [date+ ' ' +day+ ' ' +monthNames[month]+ ' ' +year] })
-        console.log(serviceDate);
-        e.preventDefault();
-        e.stopPropagation();
-      });
-    }
-
-
-    function invokeSlotsListener(){
-      $('.slots li').on('click', function(e){
-        var service = $(this).html();
-        $(this).addClass('selected');
-        $('.wrap').addClass('slot-selected');
-        setTimeout(function(){
-          $('.selected.member input[name="name"]').focus();
-        }, 700);
-        _this.setState({ serviceType: service })
+        $('.wrap').addClass('model-selected');
+        _this.setState({ serviceType: FindSpare })
         console.log(serviceType);
         e.preventDefault();
         e.stopPropagation();
       });
     }
 
-    function addTime(container){
-  
-      var number = [7,8,9,10,11,12];
-      var time = 7;
-      var endings = [':00', ':15', ':30', ':45'];
-      var timeDisplay = '';
-      var slots = ''
-      for(var i = 0; i < number; i++)
-        time += Math.ceil(Math.random()*3);
-        timeDisplay = number[i] + endings[Math.floor(Math.random()*4)];
-        slots += '<li>'+timeDisplay+'</li>';
+    function invokeSpareListener(){
+      $('.spare li').on('click', function(e){
+        var FindSpare = $(this).html();
+        $(this).addClass('selected');
+        $('.wrap').addClass('spare-selected');
+        _this.setState({ serviceType: FindSpare })
+        console.log(serviceType);
+        e.preventDefault();
+        e.stopPropagation();
+      });
+    }
+
+    function addModel(container){
+      
+      var modelArray = ['CX2010B', 'CX290B', 'CX350B', 'CX470B'];
+      var model = ''
+      for(var i = 0; i < modelArray.length; i++) {
+        model += '<li>'+modelArray[i]+'</li>';
       }
       
-      $('.selected .slots').html(slots);
+      $('.selected .model').html(model);
       
-      invokeSlotsListener();
+      invokeModelListener();
       
     }
 
-    function addSlots(container){
+    function addSpare(container){
       
-      var service = ['Major Service', 'Minor Service'];
-      var slots = ''
-      for(var i = 0; i < service.length; i++) {
-        slots += '<li>'+service[i]+'</li>';
+      var spareArray = ['Oil Filter', 'Fuel Filter', 'Water Separator', 'Air Filter', 'Transmission filter', 'Hydraulic Filter'];
+      var spare = ''
+      for(var i = 0; i < spareArray.length; i++) {
+        spare += '<li>'+spareArray[i]+'</li>';
       }
       
-      $('.selected .slots').html(slots);
+      $('.selected .spare').html(spare);
       
-      invokeSlotsListener();
+      invokeSpareListener();
       
-    }
-
-
-
-    function addCalendar(container){
-      //get dates
-      var today = new Date();
-      var day = today.getDay()
-      var date = today.getDate();
-      var month = today.getMonth();
-      var year = today.getFullYear();
-      var first = new Date();
-      first.setDate(1);
-      var startDay = first.getDay();
-      var dayLabels = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
-      var monthLengths = [31,28,31,30,31,30,31,31,30,31,30,31];
-      var monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-      var dayNames = ['Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
-      
-      var current = 1 - startDay;
-      
-      //assemble calendar
-      var calendar = '<label class="date"></label><label class="month">'+monthNames[month]+'</label> <label class="year">'+year+'</label>';
-      
-      calendar += '<table><tr>';
-      dayLabels.forEach(function(label){
-        calendar += '<th>'+label+'</th>';
-      })
-      calendar += '</tr><tr>';
-      var dayClasses = '';
-      while( current <= 30){
-        // if (window.CP.shouldStopExecution(2)){break;}
-        if (current > 0){
-          dayClasses = '';
-          today.setDate(current);
-          if (today.getDay() == 0 || today.getDay() == 6){
-            dayClasses += ' disabled';
-          }
-          if (current < date){
-            dayClasses += ' disabled';
-          }
-          if (current == date){
-            dayClasses += ' today';
-          }
-          calendar += '<td class="'+dayClasses+'" data-day="'+dayNames[(current + startDay)%7]+'">'+current+'</td>';
-        } else {
-          calendar += '<td></td>';
-        }
-        
-        if ( (current + startDay) % 7 == 0){
-          calendar += '</tr><tr>';
-        }
-        
-        current++
-      }
-    // window.CP.exitedLoop(2);
-
-      
-      calendar += '</tr></table>';
-      container.html(calendar);
-      
-      invokeCalendarListener();
     }
 
     }
@@ -317,6 +232,19 @@ class FindProduct3 extends Component {
       
     return (
       <div>
+        <nav className="navbar navbar-default" role="navigation">
+          <Link to="/">
+          <ul className="nav navbar-nav navbar-left">
+              <li><a href=""><span className="glyphicon glyphicon-home">HOME</span></a></li>  
+          </ul>
+          </Link>
+
+          <div className="container">
+            <div className="navbar-header">
+              <div className="navbar-brand navbar-brand-centered">ACHELIS KE</div>
+            </div>
+          </div>
+        </nav>
         <div className="wrap">
           <div className="instructions">
             <div className="first">Choose Product</div>
@@ -326,14 +254,12 @@ class FindProduct3 extends Component {
               <div className="avatar"></div>
               <div className="name" onClick={this.onClickProductModel}>Excavator</div>
               <div className="deselect-member">change</div>
-              <div className="deselect-date">change</div>
-              <div className="deselect-slot">change</div>
-              <div className="deselect-time">change</div>
-              <div className="calendar"></div>
-              <ul className="slots"></ul>
-              <ul className="time"></ul>
+              <div className="deselect-model">change</div>
+              <div className="deselect-spare">change</div>
+              <div className="model"></div>
+              <ul className="spare"></ul>
               <form className="form">
-                <input type="submit" onClick={this.onSubmit} value="Confirm Booking"/>
+                <input type="submit" onClick={this.onSubmit} value="Confirm Spare"/>
               </form>
               <h2>{bookingError}</h2>
               <div className="confirm-message">Booking Complete!<span className="restart">Book Again?</span></div>
@@ -343,7 +269,7 @@ class FindProduct3 extends Component {
               <div className="name">Backhoe Loader</div>
               <div className="deselect-member">change</div>
               <div className="deselect-date">change</div>
-              <div className="deselect-slot">change</div>
+              <div className="deselect-model">change</div>
               <div className="calendar"></div>
               <ul className="slots"></ul>
               <form className="form">
@@ -357,7 +283,7 @@ class FindProduct3 extends Component {
               <div className="name">Motor Grader</div>
               <div className="deselect-member">change</div>
               <div className="deselect-date">change</div>
-              <div className="deselect-slot">change</div>
+              <div className="deselect-model">change</div>
               <div className="calendar"></div>
               <ul className="slots"></ul>
               <form className="form">
@@ -370,7 +296,7 @@ class FindProduct3 extends Component {
               <div className="name">Roller/Compactor</div>
               <div className="deselect-member">change</div>
               <div className="deselect-date">change</div>
-              <div className="deselect-slot">change</div>
+              <div className="deselect-model">change</div>
               <div className="calendar"></div>
               <ul className="slots"></ul>
               <form className="form">
@@ -389,4 +315,4 @@ class FindProduct3 extends Component {
 
 }
 
-export default FindProduct3;
+export default FindSpare;

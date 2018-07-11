@@ -81,7 +81,7 @@ class ContentContainer extends Component {
 		      	</button>
 	      	</div>
 	      	<div>
-	      		<Link to="/FindProduct">
+	      		<Link to="/FindSpare">
 		      	<button className="btn btn-default btn-lg btn-block btn-huge" style={cardStyle1}>
 		      		<span className="glyphicon glyphicon-list-alt" aria-hidden="true" style={icon}></span><br/>
 		      		<span>FIND SPARE</span><br/>
@@ -90,26 +90,28 @@ class ContentContainer extends Component {
 		      	</Link>
 	      	</div>
 	      	<div>
-	      		<Link to="/FindProduct2">
+	      		<Link to="/Service">
 		      	<button className="btn btn-default btn-lg btn-block btn-huge" style={cardStyle2}>
 		      		<span className="glyphicon glyphicon-usd" aria-hidden="true" style={icon}></span><br/>
-		      		<span>BOOK</span><br/>
-		      		<span>SERVICE</span>
+		      		<span>SERVICE</span><br/>
+		      		<span>CENTER</span>
 		      	</button>
 		      	</Link>
 	      	</div>
 	      	<div>
+	      		<Link to="/Rental">
 		      	<button className="btn btn-default btn-lg btn-block btn-huge" style={cardStyle1}>
 		      		<span className="glyphicon glyphicon-stats" aria-hidden="true" style={icon}></span><br/>
-		      		<span>CUSTOMER</span><br/>
-		      		<span>SUPPORT</span>
+		      		<span>LEASING</span><br/>
+		      		<span>&amp; RENTAL</span>
 		      	</button>
+		      	</Link>
 	      	</div>
 	      	<div>
 		      	<button className="btn btn-default btn-lg btn-block btn-huge" style={cardStyle2}>
 		      		<span className="glyphicon glyphicon-globe" aria-hidden="true" style={icon}></span><br/>
-		      		<span>DESKTOP</span><br/>
-		      		<span>VERSION</span>
+		      		<span>CUSTOMER</span><br/>
+		      		<span>SUPPORT</span>
 		      	</button>
 	      	</div>
 	      </div>

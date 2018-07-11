@@ -4,3 +4,8 @@ module.exports = {
   	db: 'mongodb://admin:admin@localhost:27017/services',
 	db_dev: 'mongodb://admin:admin@localhost:27017/services'
 };
+
+// module.exports = {
+//   db: 'mongodb://username:password@url:port/db',
+//   db_dev: 'mongodb://localhost:27017/services-login'
+// };

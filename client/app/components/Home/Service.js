@@ -3,12 +3,12 @@ import { Select } from 'react-dom';
 import { Link } from 'react-router-dom';
 import $ from 'jquery'
 import 'whatwg-fetch';
-import css from '../../styles/FindProduct2.css';
+import css from '../../styles/Service.css';
 // import axios from 'axios';
 
 
 
-class FindProduct2 extends Component {
+class Service extends Component {
 
   constructor(props) {
       super(props);
@@ -294,10 +294,10 @@ class FindProduct2 extends Component {
       
     return (
       <div>
-        <nav class="navbar navbar-default" role="navigation">
+        <nav className="navbar navbar-default" role="navigation">
           <Link to="/">
           <ul className="nav navbar-nav navbar-left">
-              <li><a href=""><span className="glyphicon glyphicon-arrow-left"></span></a></li>  
+              <li><a href=""><span className="glyphicon glyphicon-home">HOME</span></a></li>  
           </ul>
           </Link>
 
@@ -377,4 +377,4 @@ class FindProduct2 extends Component {
 
 }
 
-export default FindProduct2;
+export default Service;

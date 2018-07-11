@@ -15,8 +15,9 @@ import App from './components/App/App';
 import NotFound from './components/App/NotFound';
 
 import Home from './components/Home/Home';
-import FindProduct from './components/Home/FindProduct';
-import FindProduct2 from './components/Home/FindProduct2';
+import FindSpare from './components/Home/FindSpare';
+import Service from './components/Home/Service';
+import Rental from './components/Home/Rental';
 import BookService from './components/Home/BookService';
 
 
@@ -27,8 +28,9 @@ render((
     <App>
       <Switch>
         <Route exact path="/" component={Home}/>
-        <Route exact path="/FindProduct" component={FindProduct}/>  
-        <Route exact path="/FindProduct2" component={FindProduct2}/>  
+        <Route exact path="/FindSpare" component={FindSpare}/>  
+        <Route exact path="/Service" component={Service}/>  
+        <Route exact path="/Rental" component={Rental}/>  
         <Route exact path="/BookService" component={BookService}/>
         <Route component={NotFound}/>
       </Switch>
