@@ -116,8 +116,8 @@ app.post('/api/account/rental-admin-email', (req, res) => {
 			<li>Email: ${req.body.email}</li>
 			<li>Telephone: ${req.body.telephone}</li>
 			<li>Product: ${req.body.productModel}</li>
-			<li>Service: ${req.body.serviceType}</li>
-			<li>Service Date: ${req.body.serviceDate}</li>
+			<li>Service: ${req.body.rentalDate}</li>
+			<li>Service Date: ${req.body.returnDate}</li>
 		</ul>
 		<p>Kind Regards,</p>
 		<p>Achelis KE</p>
@@ -166,8 +166,8 @@ app.post('/api/account/rental-client-email', (req, res) => {
 			<li>Email: ${req.body.email}</li>
 			<li>Telephone: ${req.body.telephone}</li>
 			<li>Product: ${req.body.productModel}</li>
-			<li>Service: ${req.body.serviceType}</li>
-			<li>Service Date: ${req.body.serviceDate}</li>
+			<li>Service: ${req.body.rentalDate}</li>
+			<li>Service Date: ${req.body.returnDate}</li>
 		</ul>
 		<p>Kind Regards,</p>
 		<p>Achelis KE</p>
@@ -216,8 +216,7 @@ app.post('/api/account/findspare-admin-email', (req, res) => {
 			<li>Email: ${req.body.email}</li>
 			<li>Telephone: ${req.body.telephone}</li>
 			<li>Product: ${req.body.productModel}</li>
-			<li>Service: ${req.body.serviceType}</li>
-			<li>Service Date: ${req.body.serviceDate}</li>
+			<li>Service: ${req.body.productSpare}</li>
 		</ul>
 		<p>Kind Regards,</p>
 		<p>Achelis KE</p>
@@ -266,8 +265,7 @@ app.post('/api/account/findspare-client-email', (req, res) => {
 			<li>Email: ${req.body.email}</li>
 			<li>Telephone: ${req.body.telephone}</li>
 			<li>Product: ${req.body.productModel}</li>
-			<li>Service: ${req.body.serviceType}</li>
-			<li>Service Date: ${req.body.serviceDate}</li>
+			<li>Service: ${req.body.productSpare}</li>
 		</ul>
 		<p>Kind Regards,</p>
 		<p>Achelis KE</p>
@@ -315,9 +313,7 @@ app.post('/api/account/signin-admin-email', (req, res) => {
 			<li>Name: ${req.body.firstName} ${req.body.lastName}</li>
 			<li>Email: ${req.body.email}</li>
 			<li>Telephone: ${req.body.telephone}</li>
-			<li>Product: ${req.body.productModel}</li>
-			<li>Service: ${req.body.serviceType}</li>
-			<li>Service Date: ${req.body.serviceDate}</li>
+			<li>Product: ${req.body.signUpPassword}</li>
 		</ul>
 		<p>Kind Regards,</p>
 		<p>Achelis KE</p>
@@ -365,9 +361,7 @@ app.post('/api/account/signin-client-email', (req, res) => {
 			<li>Name: ${req.body.firstName} ${req.body.lastName}</li>
 			<li>Email: ${req.body.email}</li>
 			<li>Telephone: ${req.body.telephone}</li>
-			<li>Product: ${req.body.productModel}</li>
-			<li>Service: ${req.body.serviceType}</li>
-			<li>Service Date: ${req.body.serviceDate}</li>
+			<li>Product: ${req.body.signUpPassword}</li>
 		</ul>
 		<p>Kind Regards,</p>
 		<p>Achelis KE</p>

@@ -75,21 +75,38 @@ class Service extends Component {
       });
 
       // EMAIL
-      fetch('/api/account/email', { 
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        firstName: firstName,
-        lastName: lastName,
-        telephone: telephone,
-        email: email,
-        productModel: productModel,
-        serviceType: serviceType,
-        serviceDate: serviceDate
-      }),
-    }).then(res => res.json())
+        fetch('/api/account/booking-admin-email', { 
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          firstName: firstName,
+          lastName: lastName,
+          telephone: telephone,
+          email: email,
+          productModel: productModel,
+          serviceType: serviceType,
+          serviceDate: serviceDate
+        }),
+      }).then(res => res.json())
+
+        // CLIENT
+      fetch('/api/account/booking-client-email', { 
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          firstName: firstName,
+          lastName: lastName,
+          telephone: telephone,
+          email: email,
+          productModel: productModel,
+          serviceType: serviceType,
+          serviceDate: serviceDate
+        }),
+      }).then(res => res.json())
   }
 
     onClickProductModel(event) {
@@ -327,7 +344,7 @@ class Service extends Component {
               <div className="confirm-message">Booking Complete!<span className="restart">Book Again?</span></div>
             </div>
             <div className="member"> 
-              <div className="avatar" style={{backgroundImage: 'url(http://i.pravatar.cc/300?img=25)'}}></div>
+              <div className="avatar"></div>
               <div className="name">Backhoe Loader</div>
               <div className="deselect-member">change</div>
               <div className="deselect-date">change</div>

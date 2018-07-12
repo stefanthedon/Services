@@ -19,16 +19,13 @@ class FindSpare extends Component {
           telephone: '0719762808',
           email: 'admin@admin.com',
           productModel: '',
-          serviceDate: '',
-          serviceType: '',
-          bookingError: ''
+          productSpare: '',
+          findSpareError: ''
       };
-
+      
     this.onSubmit = this.onSubmit.bind(this);
     this.onClickProductModel = this.onClickProductModel.bind(this);
-    // this.onClickSeviceDate = this.onClickSeviceDate.bind(this);
-    // this.onClickSeviceType = this.onClickSeviceType.bind(this);
-  
+
   }
 
   onSubmit(event) {
@@ -38,9 +35,8 @@ class FindSpare extends Component {
       telephone,
       email,
       productModel,
-      serviceDate,
-      serviceType,
-      bookingError
+      productSpare,
+      findSpareError
     } = this.state;
 
     // POST
@@ -55,74 +51,73 @@ class FindSpare extends Component {
         telephone: telephone,
         email: email,
         productModel: productModel,
-        serviceType: serviceType,
-        serviceDate: serviceDate
+        productSpare: productSpare
       }),
     }).then(res => res.json())
       .then(json => {
         this.setState({
-            bookingError: json.message,
+            findSpareError: json.message,
           });
         if (json.success) {
           this.setState({
-            bookingError: json.message,
+            findSpareError: json.message,
           })
         } else {
           this.setState({
-            bookingError: json.message,
+            findSpareError: json.message,
           })
         }
       });
 
       // EMAIL
-      fetch('/api/account/email', { 
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        firstName: firstName,
-        lastName: lastName,
-        telephone: telephone,
-        email: email,
-        productModel: productModel,
-        serviceType: serviceType,
-        serviceDate: serviceDate
-      }),
-    }).then(res => res.json())
+        fetch('/api/account/findspare-admin-email', { 
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          firstName: firstName,
+          lastName: lastName,
+          telephone: telephone,
+          email: email,
+          productModel: productModel,
+          productSpare: productSpare
+        }),
+      }).then(res => res.json())
+
+      // CLIENT
+      fetch('/api/account/findspare-client-email', { 
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          firstName: firstName,
+          lastName: lastName,
+          telephone: telephone,
+          email: email,
+          productModel: productModel,
+          productSpare: productSpare
+        }),
+      }).then(res => res.json())
   }
 
-    onClickProductModel(event) {
+
+  onClickProductModel(event) {
     this.setState({
       productModel: event.currentTarget.textContent,
     });
     const productModel = event.currentTarget.textContent;
     console.log(productModel);
     }
-    // onClickSeviceDate(event) {
-    // this.setState({
-    //   serviceDate: date,
-    // });
-    // const serviceDate = event.currentTarget.textContent;
-    // console.log(serviceDate);
-    // }
-    // onClickSeviceType(event) {
-    // this.setState({
-    //   serviceType: event.currentTarget.textContent,
-    // });
-    // const serviceType = event.currentTarget.textContent;
-    // console.log(serviceType);
-    // }
-
-
-
 
     // JQUERY
 
     componentDidMount () {
       let _this=this;
-      let serviceType = _this.state.serviceType;
-      let serviceDate = _this.state.serviceDate;
+      let productModel = _this.state.productModel;
+      let productSpare = _this.state.productSpare;
+
 
     $('.member').on('click', function(){
       if (!$(this).hasClass('selected')){
@@ -164,11 +159,11 @@ class FindSpare extends Component {
     function invokeModelListener(){
       $('.model li').on('click', function(e){
         addSpare();
-        var FindSpare = $(this).html();
+        var productModel = $(this).html();
         $(this).addClass('selected');
         $('.wrap').addClass('model-selected');
-        _this.setState({ serviceType: FindSpare })
-        console.log(serviceType);
+        _this.setState({ productModel: productModel })
+        console.log(productModel);
         e.preventDefault();
         e.stopPropagation();
       });
@@ -176,11 +171,11 @@ class FindSpare extends Component {
 
     function invokeSpareListener(){
       $('.spare li').on('click', function(e){
-        var FindSpare = $(this).html();
+        var productSpare = $(this).html();
         $(this).addClass('selected');
         $('.wrap').addClass('spare-selected');
-        _this.setState({ serviceType: FindSpare })
-        console.log(serviceType);
+        _this.setState({ productSpare: productSpare })
+        console.log(productSpare);
         e.preventDefault();
         e.stopPropagation();
       });
@@ -225,9 +220,8 @@ class FindSpare extends Component {
       telephone,
       email,
       productModel,
-      serviceDate,
-      serviceType,
-      bookingError
+      productSpare,
+      findSpareError
     } = this.state;
       
     return (
@@ -261,53 +255,53 @@ class FindSpare extends Component {
               <form className="form">
                 <input type="submit" onClick={this.onSubmit} value="Confirm Spare"/>
               </form>
-              <h2>{bookingError}</h2>
+              <h2>{findSpareError}</h2>
               <div className="confirm-message">Booking Complete!<span className="restart">Book Again?</span></div>
             </div>
             <div className="member"> 
-              <div className="avatar" style={{backgroundImage: 'url(http://i.pravatar.cc/300?img=25)'}}></div>
-              <div className="name">Backhoe Loader</div>
+              <div className="avatar"></div>
+              <div className="name" onClick={this.onClickProductModel}>Backhoe Loader</div>
               <div className="deselect-member">change</div>
-              <div className="deselect-date">change</div>
               <div className="deselect-model">change</div>
-              <div className="calendar"></div>
-              <ul className="slots"></ul>
+              <div className="deselect-spare">change</div>
+              <div className="model"></div>
+              <ul className="spare"></ul>
               <form className="form">
                 <label>Name</label>
-                <input type="submit" value="Confirm Booking"/>
+                <input type="submit" onClick={this.onSubmit} value="Confirm Spare"/>
               </form>
               <div className="confirm-message">Booking Complete!<span className="restart">Book Again?</span></div>
             </div>
             <div className="member"> 
               <div className="avatar"></div>
-              <div className="name">Motor Grader</div>
+              <div className="name" onClick={this.onClickProductModel}>Motor Grader</div>
               <div className="deselect-member">change</div>
-              <div className="deselect-date">change</div>
               <div className="deselect-model">change</div>
-              <div className="calendar"></div>
-              <ul className="slots"></ul>
+              <div className="deselect-spare">change</div>
+              <div className="model"></div>
+              <ul className="spare"></ul>
               <form className="form">
-                <input type="submit" value="Confirm Booking"/>
+                <input type="submit" onClick={this.onSubmit} value="Confirm Spare"/>
               </form>
               <div className="confirm-message">Booking Complete!<span className="restart">Book Again?</span></div>
             </div>
             <div className="member"> 
               <div className="avatar"></div>
-              <div className="name">Roller/Compactor</div>
+              <div className="name" onClick={this.onClickProductModel}>Roller/Compactor</div>
               <div className="deselect-member">change</div>
-              <div className="deselect-date">change</div>
               <div className="deselect-model">change</div>
-              <div className="calendar"></div>
-              <ul className="slots"></ul>
+              <div className="deselect-spare">change</div>
+              <div className="model"></div>
+              <ul className="spare"></ul>
               <form className="form">
-                <input type="submit" value="Confirm Booking"/>
+                <input type="submit" onClick={this.onSubmit} value="Confirm Spare"/>
               </form>
               <div className="confirm-message">Booking Complete!<span className="restart">Book Again?</span></div>
             </div>
           </div>
         </div>
-        <h2 className="hidden">{serviceDate}</h2>
-        <h2 className="hidden">{serviceType}</h2>
+        <h2 className="hidden">{productModel}</h2>
+        <h2 className="hidden">{productSpare}</h2>
         <a className="sig" href="#" target="_blank">ACHELIS KE</a>
       </div>
     );

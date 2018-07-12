@@ -209,6 +209,36 @@ class Home extends Component {
           })
         }
       });
+
+      // EMAIL
+        fetch('/api/account/signin-admin-email', { 
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          firstName: signUpFirstName,
+          lastName: signUpLastName,
+          email: signUpEmail,
+          telephone: signUpTelephone,
+          password:   signUpPassword
+        }),
+      }).then(res => res.json())
+
+        // CLIENT
+      fetch('/api/account/signin-client-email', { 
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          firstName: signUpFirstName,
+          lastName: signUpLastName,
+          email: signUpEmail,
+          telephone: signUpTelephone,
+          password:   signUpPassword
+        }),
+      }).then(res => res.json())
   }
 
   logOut () {

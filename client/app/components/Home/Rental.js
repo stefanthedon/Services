@@ -14,14 +14,14 @@ class Rental extends Component {
       super(props);
 
       this.state = {
-          firstName: 'Don',
-          lastName: 'Stefan',
+          firstName: 'Admin',
+          lastName: 'Admin',
           telephone: '0719762808',
-          email: 'don@gmail.com',
+          email: 'admin@admin.com',
           productModel: '',
-          serviceDate: '',
-          serviceType: '',
-          bookingError: ''
+          rentalDate: '',
+          returnDate: '',
+          rentalError: ''
       };
 
     this.onSubmit = this.onSubmit.bind(this);
@@ -38,13 +38,13 @@ class Rental extends Component {
       telephone,
       email,
       productModel,
-      serviceDate,
-      serviceType,
-      bookingError
+      rentalDate,
+      returnDate,
+      rentalError
     } = this.state;
 
     // POST
-    fetch('/api/account/booking', { 
+    fetch('/api/account/rental', { 
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -55,41 +55,59 @@ class Rental extends Component {
         telephone: telephone,
         email: email,
         productModel: productModel,
-        serviceType: serviceType,
-        serviceDate: serviceDate
+        returnDate: returnDate,
+        rentalDate: rentalDate
       }),
     }).then(res => res.json())
       .then(json => {
         this.setState({
-            bookingError: json.message,
+            rentalError: json.message,
           });
         if (json.success) {
           this.setState({
-            bookingError: json.message,
+            rentalError: json.message,
           })
         } else {
           this.setState({
-            bookingError: json.message,
+            rentalError: json.message,
           })
         }
       });
 
       // EMAIL
-      fetch('/api/account/email', { 
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        firstName: firstName,
-        lastName: lastName,
-        telephone: telephone,
-        email: email,
-        productModel: productModel,
-        serviceType: serviceType,
-        serviceDate: serviceDate
-      }),
-    }).then(res => res.json())
+      // ADMIN
+      fetch('/api/account/rental-admin-email', { 
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          firstName: firstName,
+          lastName: lastName,
+          telephone: telephone,
+          email: email,
+          productModel: productModel,
+          returnDate: returnDate,
+          rentalDate: rentalDate
+        }),
+      }).then(res => res.json())
+
+      // CLIENT
+      fetch('/api/account/rental-client-email', { 
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          firstName: firstName,
+          lastName: lastName,
+          telephone: telephone,
+          email: email,
+          productModel: productModel,
+          returnDate: returnDate,
+          rentalDate: rentalDate
+        }),
+      }).then(res => res.json())
   }
 
     onClickProductModel(event) {
@@ -101,17 +119,17 @@ class Rental extends Component {
     }
     // onClickSeviceDate(event) {
     // this.setState({
-    //   serviceDate: date,
+    //   rentalDate: date,
     // });
-    // const serviceDate = event.currentTarget.textContent;
-    // console.log(serviceDate);
+    // const rentalDate = event.currentTarget.textContent;
+    // console.log(rentalDate);
     // }
     // onClickSeviceType(event) {
     // this.setState({
-    //   serviceType: event.currentTarget.textContent,
+    //   returnDate: event.currentTarget.textContent,
     // });
-    // const serviceType = event.currentTarget.textContent;
-    // console.log(serviceType);
+    // const returnDate = event.currentTarget.textContent;
+    // console.log(returnDate);
     // }
 
 
@@ -121,8 +139,8 @@ class Rental extends Component {
 
     componentDidMount () {
       let _this=this;
-      let serviceType = _this.state.serviceType;
-      let serviceDate = _this.state.serviceDate;
+      let returnDate = _this.state.returnDate;
+      let rentalDate = _this.state.rentalDate;
 
     $('.member').on('click', function(){
       if (!$(this).hasClass('selected')){
@@ -184,8 +202,8 @@ class Rental extends Component {
         setTimeout(function(){
           $('.wrap').addClass('date-selected');
         },10);
-        _this.setState({ serviceDate: [date+ ' ' +day+ ' ' +monthNames[month]+ ' ' +year] })
-        console.log(serviceDate);
+        _this.setState({ rentalDate: [date+ ' ' +day+ ' ' +monthNames[month]+ ' ' +year] })
+        console.log(rentalDate);
         e.preventDefault();
         e.stopPropagation();
       });
@@ -195,11 +213,11 @@ class Rental extends Component {
     function invokeTimeInListener(){
       $('.time-in li').on('click', function(e){
         addTimeOut();
-        var service = $(this).html();
+        var rentalDate = $(this).html();
         $(this).addClass('selected');
         $('.wrap').addClass('time-in-selected');
-        _this.setState({ serviceType: service })
-        console.log(serviceType);
+        _this.setState({ rentalDate: rentalDate })
+        console.log(rentalDate);
         e.preventDefault();
         e.stopPropagation();
       });
@@ -207,11 +225,11 @@ class Rental extends Component {
 
     function invokeTimeOutListener(){
       $('.time-out li').on('click', function(e){
-        var service = $(this).html();
+        var returnDate = $(this).html();
         $(this).addClass('selected');
         $('.wrap').addClass('time-out-selected');
-        _this.setState({ serviceType: service })
-        console.log(serviceType);
+        _this.setState({ returnDate: returnDate })
+        console.log(returnDate);
         e.preventDefault();
         e.stopPropagation();
       });
@@ -248,8 +266,6 @@ class Rental extends Component {
       invokeTimeInListener();
       
     }
-
-
 
     function addCalendar(container){
       //get dates
@@ -322,9 +338,9 @@ class Rental extends Component {
       telephone,
       email,
       productModel,
-      serviceDate,
-      serviceType,
-      bookingError
+      rentalDate,
+      returnDate,
+      rentalError
     } = this.state;
       
     return (
@@ -360,7 +376,7 @@ class Rental extends Component {
               <form className="form">
                 <input type="submit" onClick={this.onSubmit} value="Lease Product"/>
               </form>
-              <h2>{bookingError}</h2>
+              <h2>{rentalError}</h2>
               <div className="confirm-message">Lease Complete!<span className="restart">Find Another Product?</span></div>
             </div>
             <div className="member"> 
@@ -368,45 +384,51 @@ class Rental extends Component {
               <div className="name">Backhoe Loader</div>
               <div className="deselect-member">change</div>
               <div className="deselect-date">change</div>
-              <div className="deselect-slot">change</div>
+              <div className="deselect-time-in">change</div>
+              <div className="deselect-time-out">change</div>
               <div className="calendar"></div>
-              <ul className="slots"></ul>
+              <ul className="time-in"></ul>
+              <ul className="time-out"></ul>
               <form className="form">
                 <label>Name</label>
                 <input type="submit" value="Confirm Booking"/>
               </form>
-              <div className="confirm-message">Booking Complete!<span className="restart">Book Again?</span></div>
+              <div className="confirm-message">Lease Complete!<span className="restart">Book Again?</span></div>
             </div>
             <div className="member"> 
               <div className="avatar"></div>
               <div className="name">Motor Grader</div>
               <div className="deselect-member">change</div>
               <div className="deselect-date">change</div>
-              <div className="deselect-slot">change</div>
+              <div className="deselect-time-in">change</div>
+              <div className="deselect-time-out">change</div>
               <div className="calendar"></div>
-              <ul className="slots"></ul>
+              <ul className="time-in"></ul>
+              <ul className="time-out"></ul>
               <form className="form">
                 <input type="submit" value="Confirm Booking"/>
               </form>
-              <div className="confirm-message">Booking Complete!<span className="restart">Book Again?</span></div>
+              <div className="confirm-message">Lease Complete!<span className="restart">Book Again?</span></div>
             </div>
             <div className="member"> 
               <div className="avatar"></div>
               <div className="name">Roller/Compactor</div>
               <div className="deselect-member">change</div>
               <div className="deselect-date">change</div>
-              <div className="deselect-slot">change</div>
+              <div className="deselect-time-in">change</div>
+              <div className="deselect-time-out">change</div>
               <div className="calendar"></div>
-              <ul className="slots"></ul>
+              <ul className="time-in"></ul>
+              <ul className="time-out"></ul>
               <form className="form">
                 <input type="submit" value="Confirm Booking"/>
               </form>
-              <div className="confirm-message">Booking Complete!<span className="restart">Book Again?</span></div>
+              <div className="confirm-message">Lease Complete!<span className="restart">Book Again?</span></div>
             </div>
           </div>
         </div>
-        <h2 className="hidden">{serviceDate}</h2>
-        <h2 className="hidden">{serviceType}</h2>
+        <h2 className="hidden">{rentalDate}</h2>
+        <h2 className="hidden">{returnDate}</h2>
         <a className="sig" href="#" target="_blank">ACHELIS KE</a>
       </div>
     );
