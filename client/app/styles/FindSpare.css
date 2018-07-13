@@ -372,7 +372,7 @@ body {
 
 .deselect-member, .deselect-model, .deselect-spare {
   position: absolute;
-  color: #ddd;
+  color: #e65f5f;
   top: 35rem;
   right: 25rem;
   z-index: 10;
@@ -495,6 +495,7 @@ body {
   height: 320rem;
   top: 95rem;
   opacity: 0;
+  color: #312eff;
   -webkit-transform: translatey(50%);
           transform: translatey(50%);
   pointer-events: none;
@@ -698,7 +699,8 @@ body {
   text-align: center;
   height: 320rem;
   top: 320rem;
-  font-size: 40rem;
+  color: #24946c;
+  font-size: 20rem;
   font-weight: 100;
   opacity: 0;
   -webkit-transform: translatey(35%);
@@ -715,7 +717,7 @@ body {
   display: block;
   text-align: center;
   margin-top: 15rem;
-  color: #ddd;
+  
   font-size: 25rem;
   cursor: pointer;
 }
@@ -732,19 +734,16 @@ body {
   letter-spacing: 2px;
 }
 
-@media screen and (max-width: 479px) {
-    .wrap {
-      width: 300rem;
-      /*height: 450rem;*/
-    }
-}
-
 .navbar-brand-centered {
     position: absolute;
     left: 50%;
     display: block;
-    width: 160px;
+    width: 160vw;
     text-align: center;
+}
+
+.navbar-left {
+    width: 20vw;
 }
 
 .navbar>.container .navbar-brand-centered, 
@@ -754,4 +753,34 @@ body {
 
 .glyphicon {
   font-size: 20px;
+}
+
+
+@media screen and (min-width: 640px) {
+    .wrap {
+      
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .wrap {
+      
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .wrap {
+      top: 320rem;
+      width: 100%;
+      font-size: 30px;
+      font-family: Raleway;
+      height: 600rem;
+    }
+    .member {
+      width: 100%;
+    }
+    .member .name {
+    font-size: 20px;
+    }
+
 }

@@ -403,7 +403,7 @@ body {
 
 .deselect-member, .deselect-date, .deselect-time-in, .deselect-time-out {
   position: absolute;
-  color: #ddd;
+  color: #e65f5f;
   top: 35rem;
   right: 25rem;
   z-index: 10;
@@ -848,7 +848,7 @@ body {
   display: block;
   text-align: center;
   margin-top: 15rem;
-  color: #ddd;
+  color: #24946c;
   font-size: 25rem;
   cursor: pointer;
 }
@@ -865,12 +865,6 @@ body {
   letter-spacing: 2px;
 }
 
-@media screen and (max-width: 479px) {
-    .wrap {
-      width: 300rem;
-      /*height: 450rem;*/
-    }
-}
 
 .navbar-brand-centered {
     position: absolute;
@@ -887,4 +881,33 @@ body {
 
 .glyphicon {
   font-size: 20px;
+}
+
+@media screen and (min-width: 640px) {
+    .wrap {
+      
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .wrap {
+      
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .wrap {
+      top: 320rem;
+      width: 100%;
+      font-size: 30px;
+      font-family: Raleway;
+      height: 600rem;
+    }
+    .member {
+      width: 100%;
+    }
+    .member .name {
+    font-size: 20px;
+    }
+
 }

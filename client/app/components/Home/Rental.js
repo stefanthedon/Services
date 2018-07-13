@@ -376,12 +376,11 @@ class Rental extends Component {
               <form className="form">
                 <input type="submit" onClick={this.onSubmit} value="Lease Product"/>
               </form>
-              <h2>{rentalError}</h2>
               <div className="confirm-message">Lease Complete!<span className="restart">Find Another Product?</span></div>
             </div>
             <div className="member"> 
               <div className="avatar"></div>
-              <div className="name">Backhoe Loader</div>
+              <div className="name" onClick={this.onClickProductModel}>Backhoe Loader</div>
               <div className="deselect-member">change</div>
               <div className="deselect-date">change</div>
               <div className="deselect-time-in">change</div>
@@ -391,13 +390,13 @@ class Rental extends Component {
               <ul className="time-out"></ul>
               <form className="form">
                 <label>Name</label>
-                <input type="submit" value="Confirm Booking"/>
+                <input type="submit" onClick={this.onSubmit} value="Confirm Booking"/>
               </form>
               <div className="confirm-message">Lease Complete!<span className="restart">Book Again?</span></div>
             </div>
             <div className="member"> 
               <div className="avatar"></div>
-              <div className="name">Motor Grader</div>
+              <div className="name" onClick={this.onClickProductModel}>Motor Grader</div>
               <div className="deselect-member">change</div>
               <div className="deselect-date">change</div>
               <div className="deselect-time-in">change</div>
@@ -406,13 +405,13 @@ class Rental extends Component {
               <ul className="time-in"></ul>
               <ul className="time-out"></ul>
               <form className="form">
-                <input type="submit" value="Confirm Booking"/>
+                <input type="submit" onClick={this.onSubmit} value="Confirm Booking"/>
               </form>
               <div className="confirm-message">Lease Complete!<span className="restart">Book Again?</span></div>
             </div>
             <div className="member"> 
               <div className="avatar"></div>
-              <div className="name">Roller/Compactor</div>
+              <div className="name" onClick={this.onClickProductModel}>Roller/Compactor</div>
               <div className="deselect-member">change</div>
               <div className="deselect-date">change</div>
               <div className="deselect-time-in">change</div>
@@ -421,7 +420,7 @@ class Rental extends Component {
               <ul className="time-in"></ul>
               <ul className="time-out"></ul>
               <form className="form">
-                <input type="submit" value="Confirm Booking"/>
+                <input type="submit" onClick={this.onSubmit} value="Confirm Booking"/>
               </form>
               <div className="confirm-message">Lease Complete!<span className="restart">Book Again?</span></div>
             </div>

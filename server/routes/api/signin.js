@@ -148,7 +148,7 @@ module.exports = (app) => {
       if (!user.validPassword(password)) {
         return res.send({
           success: false,
-          message: 'Error: Invalid'
+          message: 'Error: Invalid Credentials'
         });
       }
       //User Session
@@ -193,7 +193,7 @@ module.exports = (app) => {
       if (sessions.length != 1) {
         return res.send({
           success: false,
-          message: 'Error: Invalid Credentials'
+          message: 'Error: Invalid'
         });
       } else {
           return res.send({
@@ -203,6 +203,75 @@ module.exports = (app) => {
       }
     
     });
+  });
+
+  app.get('/api/account/accountDetails', (req, res, next) => {
+    //Get Token
+    const { query } = req;
+    const { token } = query;
+    const { userId } = '';
+    const { body } = req;
+    const {
+      firstName,
+      lastName,
+      telephone,
+      password
+    } = body;
+
+    let {
+      email
+    } = body;
+    //?token=test
+
+    //Verify the Token is one of a kind
+    UserSession.find({
+      _id: token,
+      isDeleted: false
+    }, (err, sessions) => {
+      if(err) {
+        return res.send({
+          success: false,
+          message: 'Error: Server error'
+        });
+      }
+      
+      if (sessions.length != 1) {
+        return res.send({
+          success: false,
+          message: 'Error: Invalid'
+        });
+      } else {
+          return res.send({
+            success: true,
+            message: 'Good',
+            userId: userId
+          });
+      }
+      });
+
+      User.find({
+        _id: userId,
+        isDeleted: false
+      }, (err, user) => {
+        if(err) {
+          return res.send({
+            success: false,
+            message: 'Error: Server error'
+          });
+        }
+      return res.send({
+        success: true,
+        message: 'Good',
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        password: password,
+        telephone: telephone
+      });
+
+      });
+    
+    
   });
 
   app.get('/api/account/logout', (req, res, next) => {

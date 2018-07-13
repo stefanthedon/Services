@@ -340,12 +340,11 @@ class Service extends Component {
               <form className="form">
                 <input type="submit" onClick={this.onSubmit} value="Confirm Booking"/>
               </form>
-              <h2>{bookingError}</h2>
               <div className="confirm-message">Booking Complete!<span className="restart">Book Again?</span></div>
             </div>
             <div className="member"> 
               <div className="avatar"></div>
-              <div className="name">Backhoe Loader</div>
+              <div className="name" onClick={this.onClickProductModel}>Backhoe Loader</div>
               <div className="deselect-member">change</div>
               <div className="deselect-date">change</div>
               <div className="deselect-slot">change</div>
@@ -353,33 +352,33 @@ class Service extends Component {
               <ul className="slots"></ul>
               <form className="form">
                 <label>Name</label>
-                <input type="submit" value="Confirm Booking"/>
+                <input type="submit" onClick={this.onSubmit} value="Confirm Booking"/>
               </form>
               <div className="confirm-message">Booking Complete!<span className="restart">Book Again?</span></div>
             </div>
             <div className="member"> 
               <div className="avatar"></div>
-              <div className="name">Motor Grader</div>
+              <div className="name" onClick={this.onClickProductModel}>Motor Grader</div>
               <div className="deselect-member">change</div>
               <div className="deselect-date">change</div>
               <div className="deselect-slot">change</div>
               <div className="calendar"></div>
               <ul className="slots"></ul>
               <form className="form">
-                <input type="submit" value="Confirm Booking"/>
+                <input type="submit" onClick={this.onSubmit} value="Confirm Booking"/>
               </form>
               <div className="confirm-message">Booking Complete!<span className="restart">Book Again?</span></div>
             </div>
             <div className="member"> 
               <div className="avatar"></div>
-              <div className="name">Roller/Compactor</div>
+              <div className="name" onClick={this.onClickProductModel}>Roller/Compactor</div>
               <div className="deselect-member">change</div>
               <div className="deselect-date">change</div>
               <div className="deselect-slot">change</div>
               <div className="calendar"></div>
               <ul className="slots"></ul>
               <form className="form">
-                <input type="submit" value="Confirm Booking"/>
+                <input type="submit" onClick={this.onSubmit} value="Confirm Booking"/>
               </form>
               <div className="confirm-message">Booking Complete!<span className="restart">Book Again?</span></div>
             </div>

@@ -227,13 +227,12 @@ class FindSpare extends Component {
     return (
       <div>
         <nav className="navbar navbar-default" role="navigation">
-          <Link to="/">
-          <ul className="nav navbar-nav navbar-left">
-              <li><a href=""><span className="glyphicon glyphicon-home">HOME</span></a></li>  
-          </ul>
-          </Link>
-
           <div className="container">
+            <Link to="/">
+              <ul className="nav navbar-nav navbar-left">
+                  <li><a href=""><span className="glyphicon glyphicon-home">HOME</span></a></li>  
+              </ul>
+            </Link>
             <div className="navbar-header">
               <div className="navbar-brand navbar-brand-centered">ACHELIS KE</div>
             </div>
@@ -255,7 +254,6 @@ class FindSpare extends Component {
               <form className="form">
                 <input type="submit" onClick={this.onSubmit} value="Confirm Spare"/>
               </form>
-              <h2>{findSpareError}</h2>
               <div className="confirm-message">Booking Complete!<span className="restart">Book Again?</span></div>
             </div>
             <div className="member"> 
