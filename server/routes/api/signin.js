@@ -209,7 +209,7 @@ module.exports = (app) => {
     //Get Token
     const { query } = req;
     const { token } = query;
-    const { userId } = '';
+    const userId = '';
     const { body } = req;
     const {
       firstName,
@@ -221,7 +221,6 @@ module.exports = (app) => {
     let {
       email
     } = body;
-    //?token=test
 
     //Verify the Token is one of a kind
     UserSession.find({
@@ -249,27 +248,27 @@ module.exports = (app) => {
       }
       });
 
-      User.find({
-        _id: userId,
-        isDeleted: false
-      }, (err, user) => {
-        if(err) {
-          return res.send({
-            success: false,
-            message: 'Error: Server error'
-          });
-        }
-      return res.send({
-        success: true,
-        message: 'Good',
-        firstName: firstName,
-        lastName: lastName,
-        email: email,
-        password: password,
-        telephone: telephone
-      });
+      // User.find({
+      //   _id: userId,
+      //   isDeleted: false
+      // }, (err, user) => {
+      //   if(err) {
+      //     return res.send({
+      //       success: false,
+      //       message: 'Error: Server error'
+      //     });
+      //   }
+      // return res.send({
+      //   success: true,
+      //   message: 'Good',
+      //   firstName: firstName,
+      //   lastName: lastName,
+      //   email: email,
+      //   password: password,
+      //   telephone: telephone
+      // });
 
-      });
+      // });
     
     
   });

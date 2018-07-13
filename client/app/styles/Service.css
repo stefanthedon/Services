@@ -724,17 +724,27 @@ body {
 
 @media screen and (max-width: 576px) {
     .wrap {
-      /*top: 320rem;*/
-      /*width: 100%;*/
-      /*font-size: 30px;*/
+      top: 320rem;
+      width: 100%;
+      font-size: 30px;
       font-family: Raleway;
-      /*height: 600rem;*/
+      height: 600rem;
     }
     .member {
-      /*width: 100%;*/
+      width: 100%;
     }
     .member .name {
-    /*font-size: 20px;*/
+    font-size: 20px;
+    }
+    .member-selected .model {
+    font-size: 25px;
+    }
+    .member-selected .calendar {
+    font-size: 20px; 
+    }
+    .member-selected .calendar .month, .member-selected .calendar .year {
+      font-size: 40px;
+      left: 30rem;
     }
 
 }
