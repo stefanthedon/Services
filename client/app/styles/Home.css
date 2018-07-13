@@ -41,11 +41,39 @@ input[type=text], input[type=password], input[type=email], input[type=number] {
   background-color: rgba(444, 444, 443, 0.6);
 }
 
-@media screen and (max-width: 479px) {
-    #signIn {
-	/*max-width: 550px;*/
-    text-align: center;
-    padding: 20px;
-    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+
+@media screen and (max-width: 576px) {
+    .wrap {
+      top: 320rem;
+      width: 100%;
+      font-size: 30px;
+      font-family: Raleway;
+      height: 600rem;
+    }
+    .member {
+      width: 100%;
+    }
+    .member .name {
+    font-size: 20px;
+    }
+    .member-selected .model {
+    font-size: 25px;
+    }
 }
+
+@media screen and (max-width: 340px) {
+    .wrap {
+      top: 320rem;
+      width: 100%;
+      font-size: 30px;
+      font-family: Raleway;
+      height: 600rem;
+    }
+    .member {
+      width: 100%;
+    }
+    .member .name {
+    font-size: 20px;
+    }
+
 }
