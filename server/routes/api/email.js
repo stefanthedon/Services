@@ -58,6 +58,7 @@ app.post('/api/account/booking-admin-email', (req, res) => {
 })
 
 app.post('/api/account/booking-client-email', (req, res) => {
+	const email = `${req.body.email}`;
 	const output = `
 		<p>You have a new Booking</p>
 		<h3>Booking Details</h3>
@@ -158,6 +159,7 @@ app.post('/api/account/rental-admin-email', (req, res) => {
 })
 
 app.post('/api/account/rental-client-email', (req, res) => {
+	const email = `${req.body.email}`;
 	const output = `
 		<p>You have a new Rental</p>
 		<h3>Rental Details</h3>
@@ -257,6 +259,7 @@ app.post('/api/account/findspare-admin-email', (req, res) => {
 })
 
 app.post('/api/account/findspare-client-email', (req, res) => {
+	const email = `${req.body.email}`;
 	const output = `
 		<p>You have a new Spare</p>
 		<h3>Spare Details</h3>
@@ -354,6 +357,7 @@ app.post('/api/account/signin-admin-email', (req, res) => {
 })
 
 app.post('/api/account/signin-client-email', (req, res) => {
+	const email = `${req.body.email}`;
 	const output = `
 		<p>You have a new Sign Up</p>
 		<h3>Sign Up Details</h3>

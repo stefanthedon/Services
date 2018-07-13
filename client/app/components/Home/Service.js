@@ -17,7 +17,7 @@ class Service extends Component {
           firstName: 'Admin',
           lastName: 'Admin',
           telephone: '0719762808',
-          email: 'admin@admin.com',
+          email: 'don.parminter@gmail.com',
           productModel: '',
           serviceDate: '',
           serviceType: '',
