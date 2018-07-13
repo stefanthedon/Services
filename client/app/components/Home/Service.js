@@ -320,7 +320,7 @@ class Service extends Component {
 
           <div className="container">
             <div className="navbar-header">
-              <div className="navbar-brand navbar-brand-centered">ACHELIS KE</div>
+              <div className="navbar-brand navbar-brand-centered">ACHELIS KENYA LTD</div>
             </div>
           </div>
         </nav>
@@ -386,7 +386,7 @@ class Service extends Component {
         </div>
         <h2 className="hidden">{serviceDate}</h2>
         <h2 className="hidden">{serviceType}</h2>
-        <a className="sig" href="#" target="_blank">ACHELIS KE</a>
+        <a className="sig" href="#" target="_blank">ACHELIS KENYA LTD</a>
       </div>
     );
   }

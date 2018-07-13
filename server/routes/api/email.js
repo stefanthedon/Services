@@ -20,7 +20,7 @@ app.post('/api/account/booking-admin-email', (req, res) => {
 			<li>Service Date: ${req.body.serviceDate}</li>
 		</ul>
 		<p>Kind Regards,</p>
-		<p>Achelis KE</p>
+		<p>Achelis Kenya LTD</p>
 	`;
 	  // create reusable transporter object using the default SMTP transport
 	  let transporter = nodemailer.createTransport({
@@ -40,7 +40,7 @@ app.post('/api/account/booking-admin-email', (req, res) => {
 	  let mailOptions = {
 	      from: '"Achelis New Booking Information" <don.parminter@gmail.com>', // sender address
 	      to: 'donald.lokong@strathmore.edu', // list of receivers
-	      subject: 'Achelis LTD', // Subject line
+	      subject: 'Achelis Kenya LTD', // Subject line
 	      text: 'Hi,', // plain text body
 	      html: output // html body
 	  };
@@ -70,7 +70,7 @@ app.post('/api/account/booking-client-email', (req, res) => {
 			<li>Service Date: ${req.body.serviceDate}</li>
 		</ul>
 		<p>Kind Regards,</p>
-		<p>Achelis KE</p>
+		<p>Achelis Kenya LTD</p>
 	`;
 	  // create reusable transporter object using the default SMTP transport
 	  let transporter = nodemailer.createTransport({
@@ -89,8 +89,8 @@ app.post('/api/account/booking-client-email', (req, res) => {
 	  // setup email data with unicode symbols
 	  let mailOptions = {
 	      from: '"Achelis New Booking Information" <don.parminter@gmail.com>', // sender address
-	      to: 'donald.lokong@strathmore.edu', // list of receivers
-	      subject: 'Achelis LTD', // Subject line
+	      to: 'donald.lokong@strathmore.edu', ${req.body.email} // list of receivers
+	      subject: 'Achelis Kenya LTD', // Subject line
 	      text: 'Hi,', // plain text body
 	      html: output // html body
 	  };
@@ -109,8 +109,8 @@ app.post('/api/account/booking-client-email', (req, res) => {
 
 app.post('/api/account/rental-admin-email', (req, res) => {
 	const output = `
-		<p>You have a new Booking</p>
-		<h3>Booking Details</h3>
+		<p>You have a new Rental</p>
+		<h3>Rental Details</h3>
 		<ul>
 			<li>Name: ${req.body.firstName} ${req.body.lastName}</li>
 			<li>Email: ${req.body.email}</li>
@@ -120,7 +120,7 @@ app.post('/api/account/rental-admin-email', (req, res) => {
 			<li>Service Date: ${req.body.returnDate}</li>
 		</ul>
 		<p>Kind Regards,</p>
-		<p>Achelis KE</p>
+		<p>Achelis Kenya LTD</p>
 	`;
 	  // create reusable transporter object using the default SMTP transport
 	  let transporter = nodemailer.createTransport({
@@ -138,9 +138,9 @@ app.post('/api/account/rental-admin-email', (req, res) => {
 
 	  // setup email data with unicode symbols
 	  let mailOptions = {
-	      from: '"Achelis New Booking Information" <don.parminter@gmail.com>', // sender address
+	      from: '"Achelis New Rental Information" <don.parminter@gmail.com>', // sender address
 	      to: 'donald.lokong@strathmore.edu', // list of receivers
-	      subject: 'Achelis LTD', // Subject line
+	      subject: 'Achelis Kenya LTD', // Subject line
 	      text: 'Hi,', // plain text body
 	      html: output // html body
 	  };
@@ -159,18 +159,18 @@ app.post('/api/account/rental-admin-email', (req, res) => {
 
 app.post('/api/account/rental-client-email', (req, res) => {
 	const output = `
-		<p>You have a new Booking</p>
-		<h3>Booking Details</h3>
+		<p>You have a new Rental</p>
+		<h3>Rental Details</h3>
 		<ul>
 			<li>Name: ${req.body.firstName} ${req.body.lastName}</li>
 			<li>Email: ${req.body.email}</li>
 			<li>Telephone: ${req.body.telephone}</li>
 			<li>Product: ${req.body.productModel}</li>
-			<li>Service: ${req.body.rentalDate}</li>
-			<li>Service Date: ${req.body.returnDate}</li>
+			<li>Rental Date: ${req.body.rentalDate}</li>
+			<li>Return Date: ${req.body.returnDate}</li>
 		</ul>
 		<p>Kind Regards,</p>
-		<p>Achelis KE</p>
+		<p>Achelis Kenya LTD</p>
 	`;
 	  // create reusable transporter object using the default SMTP transport
 	  let transporter = nodemailer.createTransport({
@@ -188,9 +188,9 @@ app.post('/api/account/rental-client-email', (req, res) => {
 
 	  // setup email data with unicode symbols
 	  let mailOptions = {
-	      from: '"Achelis New Booking Information" <don.parminter@gmail.com>', // sender address
-	      to: 'donald.lokong@strathmore.edu', // list of receivers
-	      subject: 'Achelis LTD', // Subject line
+	      from: '"Achelis New Rental Information" <don.parminter@gmail.com>', // sender address
+	      to: ${req.body.email}, // list of receivers
+	      subject: 'Achelis Kenya LTD', // Subject line
 	      text: 'Hi,', // plain text body
 	      html: output // html body
 	  };
@@ -209,17 +209,17 @@ app.post('/api/account/rental-client-email', (req, res) => {
 
 app.post('/api/account/findspare-admin-email', (req, res) => {
 	const output = `
-		<p>You have a new Booking</p>
-		<h3>Booking Details</h3>
+		<p>You have a new Spare</p>
+		<h3>Spare Details</h3>
 		<ul>
 			<li>Name: ${req.body.firstName} ${req.body.lastName}</li>
 			<li>Email: ${req.body.email}</li>
 			<li>Telephone: ${req.body.telephone}</li>
 			<li>Product: ${req.body.productModel}</li>
-			<li>Service: ${req.body.productSpare}</li>
+			<li>Spare Part: ${req.body.productSpare}</li>
 		</ul>
 		<p>Kind Regards,</p>
-		<p>Achelis KE</p>
+		<p>Achelis Kenya LTD</p>
 	`;
 	  // create reusable transporter object using the default SMTP transport
 	  let transporter = nodemailer.createTransport({
@@ -237,9 +237,9 @@ app.post('/api/account/findspare-admin-email', (req, res) => {
 
 	  // setup email data with unicode symbols
 	  let mailOptions = {
-	      from: '"Achelis New Booking Information" <don.parminter@gmail.com>', // sender address
+	      from: '"Achelis New Spare Information" <don.parminter@gmail.com>', // sender address
 	      to: 'donald.lokong@strathmore.edu', // list of receivers
-	      subject: 'Achelis LTD', // Subject line
+	      subject: 'Achelis Kenya LTD', // Subject line
 	      text: 'Hi,', // plain text body
 	      html: output // html body
 	  };
@@ -258,17 +258,17 @@ app.post('/api/account/findspare-admin-email', (req, res) => {
 
 app.post('/api/account/findspare-client-email', (req, res) => {
 	const output = `
-		<p>You have a new Booking</p>
-		<h3>Booking Details</h3>
+		<p>You have a new Spare</p>
+		<h3>Spare Details</h3>
 		<ul>
 			<li>Name: ${req.body.firstName} ${req.body.lastName}</li>
 			<li>Email: ${req.body.email}</li>
 			<li>Telephone: ${req.body.telephone}</li>
 			<li>Product: ${req.body.productModel}</li>
-			<li>Service: ${req.body.productSpare}</li>
+			<li>Spare Part: ${req.body.productSpare}</li>
 		</ul>
 		<p>Kind Regards,</p>
-		<p>Achelis KE</p>
+		<p>Achelis Kenya LTD</p>
 	`;
 	  // create reusable transporter object using the default SMTP transport
 	  let transporter = nodemailer.createTransport({
@@ -286,9 +286,9 @@ app.post('/api/account/findspare-client-email', (req, res) => {
 
 	  // setup email data with unicode symbols
 	  let mailOptions = {
-	      from: '"Achelis New Booking Information" <don.parminter@gmail.com>', // sender address
-	      to: 'donald.lokong@strathmore.edu', // list of receivers
-	      subject: 'Achelis LTD', // Subject line
+	      from: '"Achelis New Spare Information" <don.parminter@gmail.com>', // sender address
+	      to: ${req.body.email}, // list of receivers
+	      subject: 'Achelis Kenya LTD', // Subject line
 	      text: 'Hi,', // plain text body
 	      html: output // html body
 	  };
@@ -307,16 +307,16 @@ app.post('/api/account/findspare-client-email', (req, res) => {
 
 app.post('/api/account/signin-admin-email', (req, res) => {
 	const output = `
-		<p>You have a new Booking</p>
-		<h3>Booking Details</h3>
+		<p>You have a new Sign Up</p>
+		<h3>Sign Up Details</h3>
 		<ul>
 			<li>Name: ${req.body.firstName} ${req.body.lastName}</li>
 			<li>Email: ${req.body.email}</li>
 			<li>Telephone: ${req.body.telephone}</li>
-			<li>Product: ${req.body.signUpPassword}</li>
+			<li>Password: ${req.body.signUpPassword}</li>
 		</ul>
 		<p>Kind Regards,</p>
-		<p>Achelis KE</p>
+		<p>Achelis Kenya LTD</p>
 	`;
 	  // create reusable transporter object using the default SMTP transport
 	  let transporter = nodemailer.createTransport({
@@ -334,9 +334,9 @@ app.post('/api/account/signin-admin-email', (req, res) => {
 
 	  // setup email data with unicode symbols
 	  let mailOptions = {
-	      from: '"Achelis New Booking Information" <don.parminter@gmail.com>', // sender address
-	      to: 'donald.lokong@strathmore.edu', // list of receivers
-	      subject: 'Achelis LTD', // Subject line
+	      from: '"Achelis New Sign Up Information" <don.parminter@gmail.com>', // sender address
+	      to: 'don.parminter@gmail.com', // list of receivers
+	      subject: 'Achelis Kenya LTD', // Subject line
 	      text: 'Hi,', // plain text body
 	      html: output // html body
 	  };
@@ -355,16 +355,16 @@ app.post('/api/account/signin-admin-email', (req, res) => {
 
 app.post('/api/account/signin-client-email', (req, res) => {
 	const output = `
-		<p>You have a new Booking</p>
-		<h3>Booking Details</h3>
+		<p>You have a new Sign Up</p>
+		<h3>Sign Up Details</h3>
 		<ul>
 			<li>Name: ${req.body.firstName} ${req.body.lastName}</li>
 			<li>Email: ${req.body.email}</li>
 			<li>Telephone: ${req.body.telephone}</li>
-			<li>Product: ${req.body.signUpPassword}</li>
+			<li>Password: ${req.body.signUpPassword}</li>
 		</ul>
 		<p>Kind Regards,</p>
-		<p>Achelis KE</p>
+		<p>Achelis Kenya LTD</p>
 	`;
 	  // create reusable transporter object using the default SMTP transport
 	  let transporter = nodemailer.createTransport({
@@ -382,9 +382,9 @@ app.post('/api/account/signin-client-email', (req, res) => {
 
 	  // setup email data with unicode symbols
 	  let mailOptions = {
-	      from: '"Achelis New Booking Information" <don.parminter@gmail.com>', // sender address
-	      to: 'donald.lokong@strathmore.edu', // list of receivers
-	      subject: 'Achelis LTD', // Subject line
+	      from: '"Achelis New Sign Up Information" <don.parminter@gmail.com>', // sender address
+	      to: ${req.body.email}, // list of receivers
+	      subject: 'Achelis Kenya LTD', // Subject line
 	      text: 'Hi,', // plain text body
 	      html: output // html body
 	  };

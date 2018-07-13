@@ -234,7 +234,7 @@ class FindSpare extends Component {
               </ul>
             </Link>
             <div className="navbar-header">
-              <div className="navbar-brand navbar-brand-centered">ACHELIS KE</div>
+              <div className="navbar-brand navbar-brand-centered">ACHELIS KENYA LTD</div>
             </div>
           </div>
         </nav>
@@ -300,7 +300,7 @@ class FindSpare extends Component {
         </div>
         <h2 className="hidden">{productModel}</h2>
         <h2 className="hidden">{productSpare}</h2>
-        <a className="sig" href="#" target="_blank">ACHELIS KE</a>
+        <a className="sig" href="#" target="_blank">ACHELIS KENYA LTD</a>
       </div>
     );
   }
