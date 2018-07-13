@@ -89,7 +89,7 @@ app.post('/api/account/booking-client-email', (req, res) => {
 	  // setup email data with unicode symbols
 	  let mailOptions = {
 	      from: '"Achelis New Booking Information" <don.parminter@gmail.com>', // sender address
-	      to: 'donald.lokong@strathmore.edu', ${req.body.email} // list of receivers
+	      to: email, // list of receivers
 	      subject: 'Achelis Kenya LTD', // Subject line
 	      text: 'Hi,', // plain text body
 	      html: output // html body
@@ -189,7 +189,7 @@ app.post('/api/account/rental-client-email', (req, res) => {
 	  // setup email data with unicode symbols
 	  let mailOptions = {
 	      from: '"Achelis New Rental Information" <don.parminter@gmail.com>', // sender address
-	      to: ${req.body.email}, // list of receivers
+	      to: email, // list of receivers
 	      subject: 'Achelis Kenya LTD', // Subject line
 	      text: 'Hi,', // plain text body
 	      html: output // html body
@@ -287,7 +287,7 @@ app.post('/api/account/findspare-client-email', (req, res) => {
 	  // setup email data with unicode symbols
 	  let mailOptions = {
 	      from: '"Achelis New Spare Information" <don.parminter@gmail.com>', // sender address
-	      to: ${req.body.email}, // list of receivers
+	      to: email, // list of receivers
 	      subject: 'Achelis Kenya LTD', // Subject line
 	      text: 'Hi,', // plain text body
 	      html: output // html body
@@ -383,7 +383,7 @@ app.post('/api/account/signin-client-email', (req, res) => {
 	  // setup email data with unicode symbols
 	  let mailOptions = {
 	      from: '"Achelis New Sign Up Information" <don.parminter@gmail.com>', // sender address
-	      to: ${req.body.email}, // list of receivers
+	      to: email, // list of receivers
 	      subject: 'Achelis Kenya LTD', // Subject line
 	      text: 'Hi,', // plain text body
 	      html: output // html body
