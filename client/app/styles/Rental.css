@@ -5,7 +5,7 @@ html * {
   box-sizing: border-box;
 }
 
-body {
+/*body {
   width: 100vw;
   height: 100vh;
   background: -webkit-linear-gradient(30deg, #1900fa, #616bff);
@@ -14,7 +14,7 @@ body {
   font-family: 'Alegreya Sans','Montserrat', sans-serif;
   font-size: 30rem;
   overflow-x: hidden;
-}
+}*/
 
 .wrap {
   position: absolute;
@@ -483,7 +483,7 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 100rem;
-  background-color: #312eff;
+  /*background-color: #312eff;*/
   mix-blend-mode: lighten;
 }
 .member:nth-child(1) {

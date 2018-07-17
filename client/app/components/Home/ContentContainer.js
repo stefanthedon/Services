@@ -24,7 +24,7 @@ class ContentContainer extends Component {
 
     return (
       <div className="row">
-	      <div className="content-container">     	
+	      <div className="content-container">    	
 	      	<div>
 	      		<Link to="/MyAccount">
 		      	<button className="btn btn-default btn-lg btn-block btn-huge">
