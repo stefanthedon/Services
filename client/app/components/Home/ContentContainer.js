@@ -1,17 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import css from '../../styles/ServiceAccount.css';
+import css from '../../styles/ContentContainer.css';
 
 import 'whatwg-fetch';
-// import css from './ContentContainer.css';
-
-import Home from './Home';
-// import ContentContainerRouter from '../../routes/ContentContainerRouter';
-// import ProductList from './ProductList';
 
 
-
-// export default class ContentContainer extends Component<{}> {
 class ContentContainer extends Component {
 
 	constructor(props) {
@@ -28,90 +21,58 @@ class ContentContainer extends Component {
 
 
 	render() {
-		var container = {
-			maxWidth: "480px",
-			backgroundColor: "#fff",
-			marginTop: "5%",
-			marginBottom: "10%",
-			padding: "20px",
-		  	// border: "2px solid #000",
-		  	borderRadius: "10px",
-    		boxShadow: "0 4px 10px 4px rgba(19, 35, 47, 0.3)",
-		};
-
-		var cardStyle1 = {
-			float: "left",
-		  	// background: "#eee",
-		  	padding: "10px",
-		  	margin: "10px",
-		  	height: "150px",
-		  	width: "150px",
-		  	borderRadius: "10px"
-		};
-		var cardStyle2 = {
-			float: "right",
-		  	// background: "#eee",
-		  	padding: "10px",
-		  	margin: "10px",
-		  	height: "150px",
-		  	width: "150px",
-		  	borderRadius: "10px"
-		};
-
-		var icon = {
-			fontSize: "2.5em",
-			padding: "20px"
-		};
-
-		
 
     return (
       <div className="row">
-	      <div className="col-md-6 col-xs-12 col-sm-8 col-lg-4 col-xl-4 col-sm-offset-2 col-md-offset-5 col-lg-offset-5 col-xl-offset-5" style={container}>     	
+	      <div className="content-container">     	
 	      	<div>
-		      	<button className="btn btn-default btn-lg btn-block btn-huge" style={cardStyle1}>
-		      		<span className="glyphicon glyphicon-user" aria-hidden="true" style={icon}></span><br/>
-		      		<span>MY PROFILE</span>
+	      		<Link to="/MyAccount">
+		      	<button className="btn btn-default btn-lg btn-block btn-huge">
+		      		<span className="glyphicon glyphicon-user" aria-hidden="true"></span><br/>
+		      		<span className="name">MY PROFILE</span>
 		      	</button>
+		      	</Link>
 	      	</div>
 	      	<div>
-		      	<button className="btn btn-default btn-lg btn-block btn-huge" style={cardStyle2}>
-		      		<span className="glyphicon glyphicon-comment" aria-hidden="true" style={icon}></span><br/>
-		      		<span>MESSAGES</span>
+	      		<Link to="/Messages">
+		      	<button className="btn btn-default btn-lg btn-block btn-huge">
+		      		<span className="glyphicon glyphicon-comment" aria-hidden="true"></span><br/>
+		      		<span className="name">MESSAGES</span>
 		      	</button>
+		      	</Link>
 	      	</div>
 	      	<div>
 	      		<Link to="/FindSpare">
-		      	<button className="btn btn-default btn-lg btn-block btn-huge" style={cardStyle1}>
-		      		<span className="glyphicon glyphicon-list-alt" aria-hidden="true" style={icon}></span><br/>
-		      		<span>FIND SPARE</span><br/>
-		      		<span>PARTS</span>
+		      	<button className="btn btn-default btn-lg btn-block btn-huge">
+		      		<span className="glyphicon glyphicon-list-alt" aria-hidden="true"></span><br/>
+		      		<span className="name">FIND SPARE</span><br/>
+		      		<span className="name">PARTS</span>
 		      	</button>
 		      	</Link>
 	      	</div>
 	      	<div>
 	      		<Link to="/Service">
-		      	<button className="btn btn-default btn-lg btn-block btn-huge" style={cardStyle2}>
-		      		<span className="glyphicon glyphicon-usd" aria-hidden="true" style={icon}></span><br/>
-		      		<span>SERVICE</span><br/>
-		      		<span>CENTER</span>
+		      	<button className="btn btn-default btn-lg btn-block btn-huge">
+		      		<span className="glyphicon glyphicon-usd" aria-hidden="true"></span><br/>
+		      		<span className="name">SERVICE</span><br/>
+		      		<span className="name">CENTER</span>
 		      	</button>
 		      	</Link>
 	      	</div>
 	      	<div>
 	      		<Link to="/Rental">
-		      	<button className="btn btn-default btn-lg btn-block btn-huge" style={cardStyle1}>
-		      		<span className="glyphicon glyphicon-stats" aria-hidden="true" style={icon}></span><br/>
-		      		<span>LEASING</span><br/>
-		      		<span>&amp; RENTAL</span>
+		      	<button className="btn btn-default btn-lg btn-block btn-huge">
+		      		<span className="glyphicon glyphicon-stats" aria-hidden="true"></span><br/>
+		      		<span className="name">LEASING</span><br/>
+		      		<span className="name">&amp; RENTAL</span>
 		      	</button>
 		      	</Link>
 	      	</div>
 	      	<div>
-		      	<button className="btn btn-default btn-lg btn-block btn-huge" style={cardStyle2}>
-		      		<span className="glyphicon glyphicon-globe" aria-hidden="true" style={icon}></span><br/>
-		      		<span>CUSTOMER</span><br/>
-		      		<span>SUPPORT</span>
+		      	<button className="btn btn-default btn-lg btn-block btn-huge">
+		      		<span className="glyphicon glyphicon-globe" aria-hidden="true"></span><br/>
+		      		<span className="name">CUSTOMER</span><br/>
+		      		<span className="name">SUPPORT</span>
 		      	</button>
 	      	</div>
 	      </div>

@@ -4,8 +4,6 @@ import { Select } from 'react-dom';
 import $ from 'jquery'
 import 'whatwg-fetch';
 import css from '../../styles/Rental.css';
-// import axios from 'axios';
-
 
 
 class Rental extends Component {

@@ -19,6 +19,8 @@ import FindSpare from './components/Home/FindSpare';
 import Service from './components/Home/Service';
 import Rental from './components/Home/Rental';
 import BookService from './components/Home/BookService';
+import MyAccount from './components/Home/MyAccount';
+import Messages from './components/Home/Messages';
 
 
 
@@ -32,6 +34,8 @@ render((
         <Route exact path="/Service" component={Service}/>  
         <Route exact path="/Rental" component={Rental}/>  
         <Route exact path="/BookService" component={BookService}/>
+        <Route exact path="/MyAccount" component={MyAccount}/>
+        <Route exact path="/Messages" component={Messages}/>
         <Route component={NotFound}/>
       </Switch>
     </App>

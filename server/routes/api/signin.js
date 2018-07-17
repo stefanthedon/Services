@@ -205,6 +205,18 @@ module.exports = (app) => {
     });
   });
 
+
+  app.get('/api/account/accountDetails/:id', (req, res, next) => {
+    User.findById(req.params.id)
+      .then(userFound => {
+        if (!userFound) {
+          return res.status(404).end();
+        }
+        return res.status(200).json(userFound);
+    });
+
+  });
+
   app.get('/api/account/accountDetails', (req, res, next) => {
     //Get Token
     const { query } = req;
@@ -223,30 +235,42 @@ module.exports = (app) => {
     } = body;
 
     //Verify the Token is one of a kind
-    UserSession.find({
-      _id: token,
-      isDeleted: false
-    }, (err, sessions) => {
-      if(err) {
-        return res.send({
-          success: false,
-          message: 'Error: Server error'
-        });
-      }
+    // UserSession.find({
+    //   _id: token,
+    //   isDeleted: false
+    // }, (err, sessions) => {
+    //   if(err) {
+    //     return res.send({
+    //       success: false,
+    //       message: 'Error: Server error'
+    //     });
+    //   }
       
-      if (sessions.length != 1) {
-        return res.send({
-          success: false,
-          message: 'Error: Invalid'
-        });
-      } else {
-          return res.send({
-            success: true,
-            message: 'Good',
-            userId: userId
-          });
+    //   if (sessions.length != 1) {
+    //     return res.send({
+    //       success: false,
+    //       message: 'Error: Invalid'
+    //     });
+    //   } else {
+    //       return res.send({
+    //         success: true,
+    //         message: 'Good'
+    //       });
+    //   }
+
+    User.find({}, function (err, User) {
+      if(err) {
+        res.send('Something is wrong!!!');
+        next();
       }
-      });
+      res.json(User);
+    });
+
+
+      // res.json(UserSession);
+      // userId: res.json(UserSession);
+
+      // });
 
       // User.find({
       //   _id: userId,

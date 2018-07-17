@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 import $ from 'jquery'
 import 'whatwg-fetch';
 import css from '../../styles/Service.css';
-// import axios from 'axios';
-
 
 
 class Service extends Component {

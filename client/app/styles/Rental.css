@@ -903,6 +903,9 @@ body {
     .member .name {
     font-size: 20px;
     }
+    .member-selected {
+    margin-top: 70rem;
+    }
     .member-selected .model {
     font-size: 25px;
     }

@@ -1,0 +1,34 @@
+.account {
+	padding: 0;
+}
+
+.account-avatar {
+	left: 50%;
+	/*position: absolute;*/
+	height: 150px;
+	width: 150px;
+	border: 2px solid grey;
+	border-radius: 50%;
+}
+
+.account-avatar span {
+	left: 9%;
+	font-size: 120px;
+	color: grey;
+}
+
+.account-details {
+	top: 50%;
+	/*position: absolute;*/
+}
+
+.account-details span{
+	font-family: Raleway;
+	font-size: 30px;
+}
+
+.account h2{
+	text-align: center;
+	font-family: Raleway;
+	font-weight: 500;
+}

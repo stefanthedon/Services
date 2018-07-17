@@ -11,7 +11,7 @@ body {
   background: -webkit-linear-gradient(30deg, #1900fa, #616bff);
   background: linear-gradient(60deg, #1900fa, #616bff);
   background: white;
-  font-family: 'Alegreya Sans','Montserrat', sans-serif;
+  font-family: Raleway, 'Alegreya Sans', 'Montserrat', sans-serif;
   font-size: 30rem;
   overflow-x: hidden;
 }
@@ -735,6 +735,9 @@ body {
     }
     .member .name {
     font-size: 20px;
+    }
+    .member-selected {
+    margin-top: 70rem;
     }
     .member-selected .model {
     font-size: 25px;
