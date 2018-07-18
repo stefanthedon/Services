@@ -70,6 +70,9 @@ class Home extends Component {
     }
 
   }
+  
+  // ASSIGN USER DETAILS
+
 
   onTextboxChangeSignInEmail(event) {
     this.setState({

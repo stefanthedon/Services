@@ -782,6 +782,11 @@ html * {
     .member-selected .model {
     font-size: 25px;
     }
+
+    .navbar-brand {
+      position: absolute;
+    }
+
 }
 
 @media screen and (max-width: 340px) {
