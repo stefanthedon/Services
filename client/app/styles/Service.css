@@ -22,7 +22,7 @@ html * {
   left: 50%;
   -webkit-transform: translate3d(-50%, -50%, 0);
           transform: translate3d(-50%, -50%, 0);
-  color: #312eff;
+  color: #8180cc;
   width: 500rem;
   height: 450rem;
 }
@@ -93,7 +93,7 @@ html * {
   -webkit-transform: translatey(0);
           transform: translatey(0);
   opacity: 1;
-  color: #312eff;
+  color: #8180cc;
 }
 .wrap.member-selected.date-selected .slots li:nth-child(1) {
   -webkit-transition-delay: 0ms;
@@ -739,8 +739,12 @@ html * {
     .member-selected {
     margin-top: 70rem;
     }
-    .member-selected .model {
-    font-size: 25px;
+    .member-selected .name {
+    font-size: 5px;
+    }
+    .member-selected.date-selected .slots {
+    padding: 0;
+    font-size: 25px; 
     }
     .member-selected .calendar {
     font-size: 20px; 
@@ -749,7 +753,11 @@ html * {
       font-size: 40px;
       left: 30rem;
     }
-
+    
+    .member-selected.date-selected.slot-selected .confirm-message {
+    width: 100%;
+    font-size: 30px;
+    }
 }
 
 @media screen and (max-width: 340px) {
@@ -767,4 +775,9 @@ html * {
     font-size: 20px;
     }
 
+}
+
+.member-selected.date-selected.slot-selected .form input {
+    background-color: #8180cc;
+    border-radius: 5px;
 }
