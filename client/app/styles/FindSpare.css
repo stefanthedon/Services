@@ -757,13 +757,13 @@ html * {
 
 
 
-@media screen and (min-width: 640px) {
+/*@media screen and (min-width: 640px) {
     .wrap {
       
     }
-}
+}*/
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 576px) {
     .container a {
       color: #8180cc;
       float: left;
@@ -789,11 +789,17 @@ html * {
       margin-top: 50px;
     }
     .wrap {
-      top: 320rem;
+      /*top: 320rem;
       width: 100%;
-      font-size: 30px;
-      font-family: Raleway;
-      height: 600rem;
+      font-size: 30px;*/
+      font-family: 'Raleway';
+      /*height: 600rem;*/
+      width: 100%;
+      height: 100%;
+      /*margin: 20% 0 0rem 0;*/
+      /*padding: 10% 5% 0 9%;*/
+      overflow: hidden;
+      flex-wrap: wrap;
     }
     .member {
       width: 100%;
@@ -827,7 +833,7 @@ html * {
       top: 320rem;
       width: 100%;
       font-size: 30px;
-      font-family: Raleway;
+      font-family: 'Raleway';
       height: 600rem;
     }
     .member {
