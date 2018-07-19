@@ -5,7 +5,7 @@ body {
   background: linear-gradient(60deg, #1900fa, #616bff);
   background: white;
   font-family: 'Alegreya Sans','Montserrat', sans-serif;
-  font-size: 30rem;
+  font-size: 30px;
   overflow-x: hidden;
 }
 
@@ -16,8 +16,8 @@ body {
   -webkit-transform: translate3d(-50%, -50%, 0);
           transform: translate3d(-50%, -50%, 0);
   color: #8180cc;
-  width: 500rem;
-  height: 450rem;
+  width: 500px;
+  height: 450px;
 }*/
 
 .avatar {
@@ -27,8 +27,8 @@ body {
 .wrap.member-selected .member:not(.selected) {
   opacity: 0;
   pointer-events: none;
-  -webkit-transform: perspective(100rem) translatez(-50rem);
-          transform: perspective(100rem) translatez(-50rem);
+  -webkit-transform: perspective(100px) translatez(-50px);
+          transform: perspective(100px) translatez(-50px);
   -webkit-transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), height 500ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 800ms cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), height 500ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 800ms cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 800ms cubic-bezier(0.645, 0.045, 0.355, 1), height 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -53,44 +53,44 @@ body {
 .wrap.member-selected .model li:nth-child(1) {
   -webkit-transition-delay: 0ms;
           transition-delay: 0ms;
-  -webkit-transform: translateY(0rem) perspective(100rem) translateZ(0);
-          transform: translateY(0rem) perspective(100rem) translateZ(0);
+  -webkit-transform: translateY(0px) perspective(100px) translateZ(0);
+          transform: translateY(0px) perspective(100px) translateZ(0);
 }
 .wrap.member-selected .model li:nth-child(2) {
   -webkit-transition-delay: 83.33333ms;
           transition-delay: 83.33333ms;
-  -webkit-transform: translateY(50rem) perspective(100rem) translateZ(0);
-          transform: translateY(50rem) perspective(100rem) translateZ(0);
+  -webkit-transform: translateY(50px) perspective(100px) translateZ(0);
+          transform: translateY(50px) perspective(100px) translateZ(0);
 }
 .wrap.member-selected .model li:nth-child(3) {
   -webkit-transition-delay: 166.66667ms;
           transition-delay: 166.66667ms;
-  -webkit-transform: translateY(100rem) perspective(100rem) translateZ(0);
-          transform: translateY(100rem) perspective(100rem) translateZ(0);
+  -webkit-transform: translateY(100px) perspective(100px) translateZ(0);
+          transform: translateY(100px) perspective(100px) translateZ(0);
 }
 .wrap.member-selected .model li:nth-child(4) {
   -webkit-transition-delay: 250ms;
           transition-delay: 250ms;
-  -webkit-transform: translateY(150rem) perspective(100rem) translateZ(0);
-          transform: translateY(150rem) perspective(100rem) translateZ(0);
+  -webkit-transform: translateY(150px) perspective(100px) translateZ(0);
+          transform: translateY(150px) perspective(100px) translateZ(0);
 }
 .wrap.member-selected .model li:nth-child(5) {
   -webkit-transition-delay: 333.33333ms;
           transition-delay: 333.33333ms;
-  -webkit-transform: translateY(200rem) perspective(100rem) translateZ(0);
-          transform: translateY(200rem) perspective(100rem) translateZ(0);
+  -webkit-transform: translateY(200px) perspective(100px) translateZ(0);
+          transform: translateY(200px) perspective(100px) translateZ(0);
 }
 .wrap.member-selected .model li:nth-child(6) {
   -webkit-transition-delay: 416.66667ms;
           transition-delay: 416.66667ms;
-  -webkit-transform: translateY(250rem) perspective(100rem) translateZ(0);
-          transform: translateY(250rem) perspective(100rem) translateZ(0);
+  -webkit-transform: translateY(250px) perspective(100px) translateZ(0);
+          transform: translateY(250px) perspective(100px) translateZ(0);
 }
 .wrap.member-selected .model li:nth-child(7) {
   -webkit-transition-delay: 500ms;
           transition-delay: 500ms;
-  -webkit-transform: translateY(300rem) perspective(100rem) translateZ(0);
-          transform: translateY(300rem) perspective(100rem) translateZ(0);
+  -webkit-transform: translateY(300px) perspective(100px) translateZ(0);
+          transform: translateY(300px) perspective(100px) translateZ(0);
 }
 .wrap.member-selected.model-selected .spare {
   opacity: 1;
@@ -107,44 +107,44 @@ body {
 .wrap.member-selected.model-selected .spare li:nth-child(1) {
   -webkit-transition-delay: 0ms;
           transition-delay: 0ms;
-  -webkit-transform: translateY(0rem) perspective(100rem) translateZ(0);
-          transform: translateY(0rem) perspective(100rem) translateZ(0);
+  -webkit-transform: translateY(0px) perspective(100px) translateZ(0);
+          transform: translateY(0px) perspective(100px) translateZ(0);
 }
 .wrap.member-selected.model-selected .spare li:nth-child(2) {
   -webkit-transition-delay: 83.33333ms;
           transition-delay: 83.33333ms;
-  -webkit-transform: translateY(50rem) perspective(100rem) translateZ(0);
-          transform: translateY(50rem) perspective(100rem) translateZ(0);
+  -webkit-transform: translateY(50px) perspective(100px) translateZ(0);
+          transform: translateY(50px) perspective(100px) translateZ(0);
 }
 .wrap.member-selected.model-selected .spare li:nth-child(3) {
   -webkit-transition-delay: 166.66667ms;
           transition-delay: 166.66667ms;
-  -webkit-transform: translateY(100rem) perspective(100rem) translateZ(0);
-          transform: translateY(100rem) perspective(100rem) translateZ(0);
+  -webkit-transform: translateY(100px) perspective(100px) translateZ(0);
+          transform: translateY(100px) perspective(100px) translateZ(0);
 }
 .wrap.member-selected.model-selected .spare li:nth-child(4) {
   -webkit-transition-delay: 250ms;
           transition-delay: 250ms;
-  -webkit-transform: translateY(150rem) perspective(100rem) translateZ(0);
-          transform: translateY(150rem) perspective(100rem) translateZ(0);
+  -webkit-transform: translateY(150px) perspective(100px) translateZ(0);
+          transform: translateY(150px) perspective(100px) translateZ(0);
 }
 .wrap.member-selected.model-selected .spare li:nth-child(5) {
   -webkit-transition-delay: 333.33333ms;
           transition-delay: 333.33333ms;
-  -webkit-transform: translateY(200rem) perspective(100rem) translateZ(0);
-          transform: translateY(200rem) perspective(100rem) translateZ(0);
+  -webkit-transform: translateY(200px) perspective(100px) translateZ(0);
+          transform: translateY(200px) perspective(100px) translateZ(0);
 }
 .wrap.member-selected.model-selected .spare li:nth-child(6) {
   -webkit-transition-delay: 416.66667ms;
           transition-delay: 416.66667ms;
-  -webkit-transform: translateY(250rem) perspective(100rem) translateZ(0);
-          transform: translateY(250rem) perspective(100rem) translateZ(0);
+  -webkit-transform: translateY(250px) perspective(100px) translateZ(0);
+          transform: translateY(250px) perspective(100px) translateZ(0);
 }
 .wrap.member-selected.model-selected .spare li:nth-child(7) {
   -webkit-transition-delay: 500ms;
           transition-delay: 500ms;
-  -webkit-transform: translateY(300rem) perspective(100rem) translateZ(0);
-          transform: translateY(300rem) perspective(100rem) translateZ(0);
+  -webkit-transform: translateY(300px) perspective(100px) translateZ(0);
+          transform: translateY(300px) perspective(100px) translateZ(0);
 }
 .wrap.member-selected.model-selected.spare-selected .form {
   opacity: 1;
@@ -201,48 +201,48 @@ body {
 .wrap.member-selected.model-selected .model li:not(.selected):nth-child(1) {
   -webkit-transition-delay: 0ms;
           transition-delay: 0ms;
-  -webkit-transform: translateY(0rem) perspective(100rem) translateZ(-50rem);
-          transform: translateY(0rem) perspective(100rem) translateZ(-50rem);
+  -webkit-transform: translateY(0px) perspective(100px) translateZ(-50px);
+          transform: translateY(0px) perspective(100px) translateZ(-50px);
 }
 .wrap.member-selected.model-selected .model li:not(.selected):nth-child(2) {
   -webkit-transition-delay: 83.33333ms;
           transition-delay: 83.33333ms;
-  -webkit-transform: translateY(50rem) perspective(100rem) translateZ(-50rem);
-          transform: translateY(50rem) perspective(100rem) translateZ(-50rem);
+  -webkit-transform: translateY(50px) perspective(100px) translateZ(-50px);
+          transform: translateY(50px) perspective(100px) translateZ(-50px);
 }
 .wrap.member-selected.model-selected .model li:not(.selected):nth-child(3) {
   -webkit-transition-delay: 166.66667ms;
           transition-delay: 166.66667ms;
-  -webkit-transform: translateY(100rem) perspective(100rem) translateZ(-50rem);
-          transform: translateY(100rem) perspective(100rem) translateZ(-50rem);
+  -webkit-transform: translateY(100px) perspective(100px) translateZ(-50px);
+          transform: translateY(100px) perspective(100px) translateZ(-50px);
 }
 .wrap.member-selected.model-selected .model li:not(.selected):nth-child(4) {
   -webkit-transition-delay: 250ms;
           transition-delay: 250ms;
-  -webkit-transform: translateY(150rem) perspective(100rem) translateZ(-50rem);
-          transform: translateY(150rem) perspective(100rem) translateZ(-50rem);
+  -webkit-transform: translateY(150px) perspective(100px) translateZ(-50px);
+          transform: translateY(150px) perspective(100px) translateZ(-50px);
 }
 .wrap.member-selected.model-selected .model li:not(.selected):nth-child(5) {
   -webkit-transition-delay: 333.33333ms;
           transition-delay: 333.33333ms;
-  -webkit-transform: translateY(200rem) perspective(100rem) translateZ(-50rem);
-          transform: translateY(200rem) perspective(100rem) translateZ(-50rem);
+  -webkit-transform: translateY(200px) perspective(100px) translateZ(-50px);
+          transform: translateY(200px) perspective(100px) translateZ(-50px);
 }
 .wrap.member-selected.model-selected .model li:not(.selected):nth-child(6) {
   -webkit-transition-delay: 416.66667ms;
           transition-delay: 416.66667ms;
-  -webkit-transform: translateY(250rem) perspective(100rem) translateZ(-50rem);
-          transform: translateY(250rem) perspective(100rem) translateZ(-50rem);
+  -webkit-transform: translateY(250px) perspective(100px) translateZ(-50px);
+          transform: translateY(250px) perspective(100px) translateZ(-50px);
 }
 .wrap.member-selected.model-selected .model li:not(.selected):nth-child(7) {
   -webkit-transition-delay: 500ms;
           transition-delay: 500ms;
-  -webkit-transform: translateY(300rem) perspective(100rem) translateZ(-50rem);
-          transform: translateY(300rem) perspective(100rem) translateZ(-50rem);
+  -webkit-transform: translateY(300px) perspective(100px) translateZ(-50px);
+          transform: translateY(300px) perspective(100px) translateZ(-50px);
 }
 .wrap.member-selected.model-selected .model li.selected {
-  -webkit-transform: translateY(0rem) perspective(100rem) translateZ(0rem);
-          transform: translateY(0rem) perspective(100rem) translateZ(0rem);
+  -webkit-transform: translateY(0px) perspective(100px) translateZ(0px);
+          transform: translateY(0px) perspective(100px) translateZ(0px);
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
   border-bottom: 1px solid rgba(221, 221, 221, 0.8);
@@ -256,48 +256,48 @@ body {
 .wrap.member-selected.model-selected.spare-selected .spare li:not(.selected):nth-child(1) {
   -webkit-transition-delay: 0ms;
           transition-delay: 0ms;
-  -webkit-transform: translateY(0rem) perspective(100rem) translateZ(-50rem);
-          transform: translateY(0rem) perspective(100rem) translateZ(-50rem);
+  -webkit-transform: translateY(0px) perspective(100px) translateZ(-50px);
+          transform: translateY(0px) perspective(100px) translateZ(-50px);
 }
 .wrap.member-selected.model-selected.spare-selected .spare li:not(.selected):nth-child(2) {
   -webkit-transition-delay: 83.33333ms;
           transition-delay: 83.33333ms;
-  -webkit-transform: translateY(50rem) perspective(100rem) translateZ(-50rem);
-          transform: translateY(50rem) perspective(100rem) translateZ(-50rem);
+  -webkit-transform: translateY(50px) perspective(100px) translateZ(-50px);
+          transform: translateY(50px) perspective(100px) translateZ(-50px);
 }
 .wrap.member-selected.model-selected.spare-selected .spare li:not(.selected):nth-child(3) {
   -webkit-transition-delay: 166.66667ms;
           transition-delay: 166.66667ms;
-  -webkit-transform: translateY(100rem) perspective(100rem) translateZ(-50rem);
-          transform: translateY(100rem) perspective(100rem) translateZ(-50rem);
+  -webkit-transform: translateY(100px) perspective(100px) translateZ(-50px);
+          transform: translateY(100px) perspective(100px) translateZ(-50px);
 }
 .wrap.member-selected.model-selected.spare-selected .spare li:not(.selected):nth-child(4) {
   -webkit-transition-delay: 250ms;
           transition-delay: 250ms;
-  -webkit-transform: translateY(150rem) perspective(100rem) translateZ(-50rem);
-          transform: translateY(150rem) perspective(100rem) translateZ(-50rem);
+  -webkit-transform: translateY(150px) perspective(100px) translateZ(-50px);
+          transform: translateY(150px) perspective(100px) translateZ(-50px);
 }
 .wrap.member-selected.model-selected.spare-selected .spare li:not(.selected):nth-child(5) {
   -webkit-transition-delay: 333.33333ms;
           transition-delay: 333.33333ms;
-  -webkit-transform: translateY(200rem) perspective(100rem) translateZ(-50rem);
-          transform: translateY(200rem) perspective(100rem) translateZ(-50rem);
+  -webkit-transform: translateY(200px) perspective(100px) translateZ(-50px);
+          transform: translateY(200px) perspective(100px) translateZ(-50px);
 }
 .wrap.member-selected.model-selected.spare-selected .spare li:not(.selected):nth-child(6) {
   -webkit-transition-delay: 416.66667ms;
           transition-delay: 416.66667ms;
-  -webkit-transform: translateY(250rem) perspective(100rem) translateZ(-50rem);
-          transform: translateY(250rem) perspective(100rem) translateZ(-50rem);
+  -webkit-transform: translateY(250px) perspective(100px) translateZ(-50px);
+          transform: translateY(250px) perspective(100px) translateZ(-50px);
 }
 .wrap.member-selected.model-selected.spare-selected .spare li:not(.selected):nth-child(7) {
   -webkit-transition-delay: 500ms;
           transition-delay: 500ms;
-  -webkit-transform: translateY(300rem) perspective(100rem) translateZ(-50rem);
-          transform: translateY(300rem) perspective(100rem) translateZ(-50rem);
+  -webkit-transform: translateY(300px) perspective(100px) translateZ(-50px);
+          transform: translateY(300px) perspective(100px) translateZ(-50px);
 }
 .wrap.member-selected.model-selected.spare-selected .spare li.selected {
-  -webkit-transform: translateY(0rem) perspective(100rem) translateZ(0rem);
-          transform: translateY(0rem) perspective(100rem) translateZ(0rem);
+  -webkit-transform: translateY(0px) perspective(100px) translateZ(0px);
+          transform: translateY(0px) perspective(100px) translateZ(0px);
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
   border-bottom: 1px solid rgba(221, 221, 221, 0.8);
@@ -326,18 +326,18 @@ body {
   pointer-events: none;
 }
 .wrap.member-selected.model-selected.spare-selected.booking-complete .form input[name="name"] {
-  padding: 10rem 70rem;
-  -webkit-transform: translatey(-33rem);
-          transform: translatey(-33rem);
+  padding: 10px 70px;
+  -webkit-transform: translatey(-33px);
+          transform: translatey(-33px);
 }
 .wrap.member-selected.model-selected.spare-selected.booking-complete .form input[name="email"] {
-  padding: 10rem 70rem;
-  -webkit-transform: translatey(-60rem);
-          transform: translatey(-60rem);
+  padding: 10px 70px;
+  -webkit-transform: translatey(-60px);
+          transform: translatey(-60px);
 }
 .wrap.member-selected.model-selected.spare-selected.booking-complete .form input[type="submit"] {
-  -webkit-transform: translatey(-60rem);
-          transform: translatey(-60rem);
+  -webkit-transform: translatey(-60px);
+          transform: translatey(-60px);
   opacity: 0;
   -webkit-transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -352,7 +352,7 @@ body {
 }
 
 /*.instructions {
-  margin-bottom: 25rem;
+  margin-bottom: 25px;
   text-align: center;
   height: 80vh;
   font-weight: 300;
@@ -366,11 +366,11 @@ body {
 .deselect-member, .deselect-model, .deselect-spare {
   position: absolute;
   color: #e65f5f;
-  top: 35rem;
-  right: 25rem;
+  top: 35px;
+  right: 25px;
   z-index: 10;
   display: inline-block;
-  font-size: 20rem;
+  font-size: 20px;
   cursor: pointer;
   opacity: 0;
   pointer-events: none;
@@ -380,18 +380,18 @@ body {
 }
 
 .deselect-model {
-  top: 95rem;
+  top: 95px;
 }
 
 .deselect-spare {
-  top: 145rem;
+  top: 145px;
 }
 
 .member {
   background: white;
   width: 100%;
-  padding: 20rem;
-  height: 100rem;
+  padding: 20px;
+  height: 100px;
   cursor: pointer;
   position: absolute;
   top: 0;
@@ -399,13 +399,13 @@ body {
   transition: opacity 800ms cubic-bezier(0.645, 0.045, 0.355, 1), height 300ms cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow 800ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: opacity 800ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1), height 300ms cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow 800ms cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: opacity 800ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1), height 300ms cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow 800ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
-  box-shadow: 5rem 5rem 20rem rgba(49, 46, 255, 0.15);
+  box-shadow: 5px 5px 20px rgba(49, 46, 255, 0.15);
   overflow: hidden;
 }
 .member .name {
   display: inline-block;
-  margin-left: 85rem;
-  line-height: 60rem;
+  margin-left: 85px;
+  line-height: 60px;
   -webkit-transform-origin: 0% 0%;
           transform-origin: 0% 0%;
   -webkit-transition: -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -413,19 +413,19 @@ body {
   transition: transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
   font-weight: 100;
-  font-size: 25rem;
+  font-size: 25px;
   color:  #8180cc;
 }
 .member .avatar {
   -webkit-transform-origin: 100% 0%;
           transform-origin: 100% 0%;
-  width: 70rem;
-  height: 70rem;
-  border-radius: 100rem;
+  width: 70px;
+  height: 70px;
+  border-radius: 100px;
   display: inline-block;
   position: absolute;
-  top: 15rem;
-  left: 15rem;
+  top: 15px;
+  left: 15px;
   background-size: cover;
   -webkit-filter: saturate(50%) contrast(120%);
           filter: saturate(50%) contrast(120%);
@@ -440,33 +440,33 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 100rem;
+  border-radius: 100px;
   /*background-color: #312eff;*/
   mix-blend-mode: lighten;
 }
 .member:nth-child(1) {
-  -webkit-transform: translatey(70rem) perspective(100rem) translatez(-10rem);
-          transform: translatey(70rem) perspective(100rem) translatez(-10rem);
+  -webkit-transform: translatey(70px) perspective(100px) translatez(-10px);
+          transform: translatey(70px) perspective(100px) translatez(-10px);
 }
 .member:nth-child(2) {
-  -webkit-transform: translatey(170rem) perspective(100rem) translatez(-10rem);
-          transform: translatey(170rem) perspective(100rem) translatez(-10rem);
+  -webkit-transform: translatey(170px) perspective(100px) translatez(-10px);
+          transform: translatey(170px) perspective(100px) translatez(-10px);
 }
 .member:nth-child(3) {
-  -webkit-transform: translatey(270rem) perspective(100rem) translatez(-10rem);
-          transform: translatey(270rem) perspective(100rem) translatez(-10rem);
+  -webkit-transform: translatey(270px) perspective(100px) translatez(-10px);
+          transform: translatey(270px) perspective(100px) translatez(-10px);
 }
 .member:nth-child(4) {
-  -webkit-transform: translatey(370rem) perspective(100rem) translatez(-10rem);
-          transform: translatey(370rem) perspective(100rem) translatez(-10rem);
+  -webkit-transform: translatey(370px) perspective(100px) translatez(-10px);
+          transform: translatey(370px) perspective(100px) translatez(-10px);
 }
 .member.selected {
-  -webkit-transform: translatey(0rem) perspective(100rem) translatez(0rem);
-          transform: translatey(0rem) perspective(100rem) translatez(0rem);
-  height: 450rem;
+  -webkit-transform: translatey(0px) perspective(100px) translatez(0px);
+          transform: translatey(0px) perspective(100px) translatez(0px);
+  height: 450px;
   cursor: default;
   z-index: 2;
-  box-shadow: 10rem 10rem 60rem rgba(3, 0, 199, 0.1);
+  box-shadow: 10px 10px 60px rgba(3, 0, 199, 0.1);
   -webkit-transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), height 500ms cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow 800ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 800ms cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), height 500ms cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow 800ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 800ms cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 800ms cubic-bezier(0.645, 0.045, 0.355, 1), height 500ms cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow 800ms cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -477,16 +477,16 @@ body {
   pointer-events: auto;
 }
 .member.selected .name, .member.selected .avatar {
-  -webkit-transform: scale(0.7) translatex(-30rem);
-          transform: scale(0.7) translatex(-30rem);
+  -webkit-transform: scale(0.7) translatex(-30px);
+          transform: scale(0.7) translatex(-30px);
 }
 
 .model {
   position: absolute;
-  left: 15rem;
-  width: calc(100% - 20rem);
-  height: 320rem;
-  top: 95rem;
+  left: 15px;
+  width: calc(100% - 20px);
+  height: 320px;
+  top: 95px;
   opacity: 0;
   color: #312eff;
   -webkit-transform: translatey(50%);
@@ -496,7 +496,7 @@ body {
   transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
-  font-size: 25rem;
+  font-size: 25px;
   font-weight: 100;
 }
 .model li {
@@ -510,46 +510,46 @@ body {
           transform-origin: 100% 50%;
   color: transparent;
   border-bottom: 1px solid rgba(221, 221, 221, 0);
-  padding: 10rem 70rem;
+  padding: 10px 70px;
   cursor: pointer;
   position: absolute;
-  width: calc(100% - 20rem);
+  width: calc(100% - 20px);
 }
 .model li:nth-child(1) {
-  -webkit-transform: translatey(0rem) perspective(100rem) translatez(30rem);
-          transform: translatey(0rem) perspective(100rem) translatez(30rem);
+  -webkit-transform: translatey(0px) perspective(100px) translatez(30px);
+          transform: translatey(0px) perspective(100px) translatez(30px);
 }
 .model li:nth-child(2) {
-  -webkit-transform: translatey(50rem) perspective(100rem) translatez(30rem);
-          transform: translatey(50rem) perspective(100rem) translatez(30rem);
+  -webkit-transform: translatey(50px) perspective(100px) translatez(30px);
+          transform: translatey(50px) perspective(100px) translatez(30px);
 }
 .model li:nth-child(3) {
-  -webkit-transform: translatey(100rem) perspective(100rem) translatez(30rem);
-          transform: translatey(100rem) perspective(100rem) translatez(30rem);
+  -webkit-transform: translatey(100px) perspective(100px) translatez(30px);
+          transform: translatey(100px) perspective(100px) translatez(30px);
 }
 .model li:nth-child(4) {
-  -webkit-transform: translatey(150rem) perspective(100rem) translatez(30rem);
-          transform: translatey(150rem) perspective(100rem) translatez(30rem);
+  -webkit-transform: translatey(150px) perspective(100px) translatez(30px);
+          transform: translatey(150px) perspective(100px) translatez(30px);
 }
 .model li:nth-child(5) {
-  -webkit-transform: translatey(200rem) perspective(100rem) translatez(30rem);
-          transform: translatey(200rem) perspective(100rem) translatez(30rem);
+  -webkit-transform: translatey(200px) perspective(100px) translatez(30px);
+          transform: translatey(200px) perspective(100px) translatez(30px);
 }
 .model li:nth-child(6) {
-  -webkit-transform: translatey(250rem) perspective(100rem) translatez(30rem);
-          transform: translatey(250rem) perspective(100rem) translatez(30rem);
+  -webkit-transform: translatey(250px) perspective(100px) translatez(30px);
+          transform: translatey(250px) perspective(100px) translatez(30px);
 }
 .model li:nth-child(7) {
-  -webkit-transform: translatey(300rem) perspective(100rem) translatez(30rem);
-          transform: translatey(300rem) perspective(100rem) translatez(30rem);
+  -webkit-transform: translatey(300px) perspective(100px) translatez(30px);
+          transform: translatey(300px) perspective(100px) translatez(30px);
 }
 
 .spare {
   position: absolute;
-  left: 15rem;
-  width: calc(100% - 20rem);
-  height: 320rem;
-  top: 145rem;
+  left: 15px;
+  width: calc(100% - 20px);
+  height: 320px;
+  top: 145px;
   opacity: 0;
   -webkit-transform: translatey(50%);
           transform: translatey(50%);
@@ -558,7 +558,7 @@ body {
   transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
-  font-size: 25rem;
+  font-size: 25px;
   font-weight: 100;
 }
 .spare li {
@@ -572,46 +572,46 @@ body {
           transform-origin: 100% 50%;
   color: transparent;
   border-bottom: 1px solid rgba(221, 221, 221, 0);
-  padding: 10rem 70rem;
+  padding: 10px 70px;
   cursor: pointer;
   position: absolute;
-  width: calc(100% - 20rem);
+  width: calc(100% - 20px);
 }
 .spare li:nth-child(1) {
-  -webkit-transform: translatey(0rem) perspective(100rem) translatez(30rem);
-          transform: translatey(0rem) perspective(100rem) translatez(30rem);
+  -webkit-transform: translatey(0px) perspective(100px) translatez(30px);
+          transform: translatey(0px) perspective(100px) translatez(30px);
 }
 .spare li:nth-child(2) {
-  -webkit-transform: translatey(50rem) perspective(100rem) translatez(30rem);
-          transform: translatey(50rem) perspective(100rem) translatez(30rem);
+  -webkit-transform: translatey(50px) perspective(100px) translatez(30px);
+          transform: translatey(50px) perspective(100px) translatez(30px);
 }
 .spare li:nth-child(3) {
-  -webkit-transform: translatey(100rem) perspective(100rem) translatez(30rem);
-          transform: translatey(100rem) perspective(100rem) translatez(30rem);
+  -webkit-transform: translatey(100px) perspective(100px) translatez(30px);
+          transform: translatey(100px) perspective(100px) translatez(30px);
 }
 .spare li:nth-child(4) {
-  -webkit-transform: translatey(150rem) perspective(100rem) translatez(30rem);
-          transform: translatey(150rem) perspective(100rem) translatez(30rem);
+  -webkit-transform: translatey(150px) perspective(100px) translatez(30px);
+          transform: translatey(150px) perspective(100px) translatez(30px);
 }
 .spare li:nth-child(5) {
-  -webkit-transform: translatey(200rem) perspective(100rem) translatez(30rem);
-          transform: translatey(200rem) perspective(100rem) translatez(30rem);
+  -webkit-transform: translatey(200px) perspective(100px) translatez(30px);
+          transform: translatey(200px) perspective(100px) translatez(30px);
 }
 .spare li:nth-child(6) {
-  -webkit-transform: translatey(250rem) perspective(100rem) translatez(30rem);
-          transform: translatey(250rem) perspective(100rem) translatez(30rem);
+  -webkit-transform: translatey(250px) perspective(100px) translatez(30px);
+          transform: translatey(250px) perspective(100px) translatez(30px);
 }
 .spare li:nth-child(7) {
-  -webkit-transform: translatey(300rem) perspective(100rem) translatez(30rem);
-          transform: translatey(300rem) perspective(100rem) translatez(30rem);
+  -webkit-transform: translatey(300px) perspective(100px) translatez(30px);
+          transform: translatey(300px) perspective(100px) translatez(30px);
 }
 
 .form {
   position: absolute;
-  left: 15rem;
-  width: 460rem;
-  height: 320rem;
-  top: 210rem;
+  left: 15px;
+  width: 460px;
+  height: 320px;
+  top: 210px;
   opacity: 0;
   -webkit-transform: translatey(50%);
           transform: translatey(50%);
@@ -626,7 +626,7 @@ body {
   position: absolute;
   top: 0;
   z-index: 2;
-  width: 70rem;
+  width: 70px;
   height: 100%;
   background: white;
   -webkit-transition: -webkit-transform 800ms cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -646,20 +646,20 @@ body {
 }
 .form label {
   display: block;
-  font-size: 15rem;
+  font-size: 15px;
   font-weight: 300;
   color: #ddd;
-  margin-left: 70rem;
+  margin-left: 70px;
 }
 .form input[type="text"], .form input[type="email"] {
-  font-size: 25rem;
+  font-size: 25px;
   font-weight: 100;
-  margin-bottom: 15rem;
+  margin-bottom: 15px;
   border: none;
   border-bottom: 1px solid #312eff;
   width: 100%;
   outline: none;
-  padding: 0 70rem 5rem;
+  padding: 0 70px 5px;
   color: #312eff;
   background: transparent;
 }
@@ -668,11 +668,11 @@ body {
   border: none;
   color: white;
   font-weight: 100;
-  padding: 15rem;
-  font-size: 20rem;
+  padding: 15px;
+  font-size: 20px;
   cursor: pointer;
-  margin-top: 15rem;
-  margin-left: 70rem;
+  margin-top: 15px;
+  margin-left: 70px;
   outline: none;
 }
 .form * {
@@ -681,19 +681,19 @@ body {
   transition: border 500ms cubic-bezier(0.645, 0.045, 0.355, 1), opacity 800ms cubic-bezier(0.645, 0.045, 0.355, 1), padding 500ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1), border 500ms cubic-bezier(0.645, 0.045, 0.355, 1), opacity 800ms cubic-bezier(0.645, 0.045, 0.355, 1), padding 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1), border 500ms cubic-bezier(0.645, 0.045, 0.355, 1), opacity 800ms cubic-bezier(0.645, 0.045, 0.355, 1), padding 500ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
-  -webkit-transform: translateY(100rem);
-          transform: translateY(100rem);
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
 }
 
 .confirm-message {
   position: absolute;
-  left: 15rem;
-  width: 460rem;
+  left: 15px;
+  width: 460px;
   text-align: center;
-  height: 320rem;
-  top: 320rem;
+  height: 320px;
+  top: 320px;
   color: #24946c;
-  font-size: 20rem;
+  font-size: 20px;
   font-weight: 100;
   opacity: 0;
   -webkit-transform: translatey(35%);
@@ -709,9 +709,9 @@ body {
 .confirm-message .restart {
   display: block;
   text-align: center;
-  margin-top: 15rem;
+  margin-top: 15px;
   
-  font-size: 25rem;
+  font-size: 25px;
   cursor: pointer;
 }
 
@@ -782,14 +782,14 @@ body {
       margin-top: 50px;
     }
     .wrap {
-      /*top: 320rem;
+      /*top: 320px;
       width: 100%;
       font-size: 30px;*/
       font-family: 'Raleway';
-      /*height: 600rem;*/
+      /*height: 600px;*/
       width: 100%;
       height: 100%;
-      /*margin: 20% 0 0rem 0;*/
+      /*margin: 20% 0 0px 0;*/
       /*padding: 10% 5% 0 9%;*/
       overflow: hidden;
       flex-wrap: wrap;
@@ -801,7 +801,7 @@ body {
     font-size: 20px;
     }
     .member-selected {
-    margin-top: 70rem;
+    margin-top: 70px;
     }
     .member-selected .name {
     font-size: 20px;
@@ -823,11 +823,11 @@ body {
 
 @media screen and (max-width: 340px) {
     .wrap {
-      top: 320rem;
+      top: 320px;
       width: 100%;
       font-size: 30px;
       font-family: 'Raleway';
-      height: 600rem;
+      height: 600px;
     }
     .member {
       width: 100%;
