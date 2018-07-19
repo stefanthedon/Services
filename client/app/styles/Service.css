@@ -1,20 +1,10 @@
 html {
-  font-size: 1.3px;
+  /*font-size: 1.3px;*/
 }
 html * {
   box-sizing: border-box;
 }
 
-/*body {
-  width: 100vw;
-  height: 100vh;
-  background: -webkit-linear-gradient(30deg, #1900fa, #616bff);
-  background: linear-gradient(60deg, #1900fa, #616bff);
-  background: white;
-  font-family: Raleway, 'Alegreya Sans', 'Montserrat', sans-serif;
-  font-size: 30rem;
-  overflow-x: hidden;
-}*/
 
 .wrap {
   position: absolute;

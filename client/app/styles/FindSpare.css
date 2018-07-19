@@ -1,11 +1,4 @@
-html {
-  font-size: 1.3px;
-}
-html * {
-  box-sizing: border-box;
-}
-
-/*body {
+body {
   width: 100vw;
   height: 100vh;
   background: -webkit-linear-gradient(30deg, #1900fa, #616bff);
@@ -14,7 +7,7 @@ html * {
   font-family: 'Alegreya Sans','Montserrat', sans-serif;
   font-size: 30rem;
   overflow-x: hidden;
-}*/
+}
 
 .wrap {
   position: absolute;
