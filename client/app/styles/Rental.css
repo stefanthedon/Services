@@ -1,5 +1,9 @@
-html {
-  font-size: 0.6px;
+body, html {
+  font-size: 1.3px;
+  -ms-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
 }
 
 .wrap {
