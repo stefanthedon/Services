@@ -23,8 +23,10 @@ html * {
   -webkit-transform: translate3d(-50%, -50%, 0);
           transform: translate3d(-50%, -50%, 0);
   color: #8180cc;
-  width: 500rem;
-  height: 450rem;
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  height: 100%;
 }
 
 .avatar {
