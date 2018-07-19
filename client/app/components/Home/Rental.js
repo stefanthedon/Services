@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Select } from 'react-dom';
 import $ from 'jquery'
 import 'whatwg-fetch';
-// import css from '../../styles/Rental.css';
+import css from '../../styles/Rental.css';
 
 
 class Rental extends Component {
