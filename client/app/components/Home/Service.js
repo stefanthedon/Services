@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import $ from 'jquery'
 import 'whatwg-fetch';
 import css from '../../styles/Service.css';
-
+import Home from './Home';
 
 class Service extends Component {
 
@@ -12,15 +12,21 @@ class Service extends Component {
       super(props);
 
       this.state = {
-          firstName: 'Admin',
-          lastName: 'Admin',
-          telephone: '0719762808',
-          email: 'don.parminter@gmail.com',
+          firstName: '',
+          lastName: '',
+          telephone: '',
+          email: '',
           productModel: '',
           serviceDate: '',
           serviceType: '',
           bookingError: ''
       };
+
+
+      firstName: props.firstName;
+      lastName: props.lastName;
+      telephone: props.telephone;
+      email: props.email;
 
     this.onSubmit = this.onSubmit.bind(this);
     this.onClickProductModel = this.onClickProductModel.bind(this);
@@ -135,6 +141,7 @@ class Service extends Component {
     // JQUERY
 
     componentDidMount () {
+
       let _this=this;
       let serviceType = _this.state.serviceType;
       let serviceDate = _this.state.serviceDate;
@@ -312,7 +319,7 @@ class Service extends Component {
         <nav className="navbar navbar-default" role="navigation">
           <Link to="/">
           <ul className="nav navbar-nav navbar-left">
-              <li><a href=""><span className="glyphicon glyphicon-home">HOME</span></a></li>  
+              <li><span className="glyphicon glyphicon-home">HOME</span></li>  
           </ul>
           </Link>
 

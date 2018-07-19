@@ -17,11 +17,12 @@ class ContentContainer extends Component {
 
 
 	}
-
+	
 
 
 	render() {
-
+	const token = this.props;
+	console.log(this.props);
     return (
       <div className="row">
 	      <div className="content-container">    	

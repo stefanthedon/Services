@@ -164,7 +164,8 @@ module.exports = (app) => {
         return res.send({
           success: true,
           message: 'Valid sign in',
-          token: doc._id
+          token: doc._id,
+          userId: doc.userId
         });
       })
 
@@ -205,6 +206,41 @@ module.exports = (app) => {
     });
   });
 
+  app.get('/api/account/user/:id', (req, res, next) => {
+    //Get Token
+    const { body } = req;
+    const {
+      firstName,
+      lastName,
+      telephone
+    } = body;
+
+    let {
+      email
+    } = body;
+    
+    User.findById({
+      _id: req.params.id
+    }, (err, user) => {
+      if(err) {
+        return res.send({
+          success: false,
+          message: 'Error: Server error'
+        });
+      } else {
+          return res.send({
+            success: true,
+            message: 'Good',
+            firstName: user.firstName,
+            lastName: user.lastName,
+            telephone: user.telephone,
+            email: user.email
+          });
+      }
+    
+    });
+  });
+          
 
   app.get('/api/account/accountDetails/:id', (req, res, next) => {
     User.findById(req.params.id)
@@ -217,47 +253,19 @@ module.exports = (app) => {
 
   });
 
+  app.get('/api/account/sessionDetails/:token', (req, res, next) => {
+    UserSession.findById(req.params.token)
+      .then(sessionFound => {
+        if (!sessionFound) {
+          return res.status(404).end();
+        }
+        return res.status(200).json(sessionFound);
+    });
+
+  });
+
   app.get('/api/account/accountDetails', (req, res, next) => {
-    //Get Token
-    const { query } = req;
-    const { token } = query;
-    const userId = '';
-    const { body } = req;
-    const {
-      firstName,
-      lastName,
-      telephone,
-      password
-    } = body;
-
-    let {
-      email
-    } = body;
-
-    //Verify the Token is one of a kind
-    // UserSession.find({
-    //   _id: token,
-    //   isDeleted: false
-    // }, (err, sessions) => {
-    //   if(err) {
-    //     return res.send({
-    //       success: false,
-    //       message: 'Error: Server error'
-    //     });
-    //   }
-      
-    //   if (sessions.length != 1) {
-    //     return res.send({
-    //       success: false,
-    //       message: 'Error: Invalid'
-    //     });
-    //   } else {
-    //       return res.send({
-    //         success: true,
-    //         message: 'Good'
-    //       });
-    //   }
-
+    
     User.find({}, function (err, User) {
       if(err) {
         res.send('Something is wrong!!!');
@@ -266,35 +274,6 @@ module.exports = (app) => {
       res.json(User);
     });
 
-
-      // res.json(UserSession);
-      // userId: res.json(UserSession);
-
-      // });
-
-      // User.find({
-      //   _id: userId,
-      //   isDeleted: false
-      // }, (err, user) => {
-      //   if(err) {
-      //     return res.send({
-      //       success: false,
-      //       message: 'Error: Server error'
-      //     });
-      //   }
-      // return res.send({
-      //   success: true,
-      //   message: 'Good',
-      //   firstName: firstName,
-      //   lastName: lastName,
-      //   email: email,
-      //   password: password,
-      //   telephone: telephone
-      // });
-
-      // });
-    
-    
   });
 
   app.get('/api/account/logout', (req, res, next) => {

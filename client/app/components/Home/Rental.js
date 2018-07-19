@@ -346,7 +346,7 @@ class Rental extends Component {
         <nav className="navbar navbar-default" role="navigation">
           <Link to="/">
           <ul className="nav navbar-nav navbar-left">
-              <li><a href=""><span className="glyphicon glyphicon-home">HOME</span></a></li>  
+              <li><span className="glyphicon glyphicon-home">HOME</span></li>  
           </ul>
           </Link>
 

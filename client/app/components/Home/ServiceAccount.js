@@ -18,10 +18,10 @@ class ServiceAccount extends Component {
 	}
 
 	render () {
-
+		console.log(this.props);
 		return (
 			<div>
-				<ContentContainer/>
+				<ContentContainer token={this.props.token}/>
 			</div>
 		);
 	}

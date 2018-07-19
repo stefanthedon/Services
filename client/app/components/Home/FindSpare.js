@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import $ from 'jquery'
 import 'whatwg-fetch';
 import css from '../../styles/FindSpare.css';
+import ContentContainer from './ContentContainer';
 
 
 class FindSpare extends Component {
@@ -212,6 +213,8 @@ class FindSpare extends Component {
     // END OF JQUERY
 
   render() {
+
+    console.log(this.props);
     const {
       firstName,
       lastName,
@@ -228,7 +231,7 @@ class FindSpare extends Component {
           <div className="container">
             <Link to="/">
               <ul className="nav navbar-nav navbar-left">
-                  <li><a href=""><span className="glyphicon glyphicon-home">HOME</span></a></li>  
+                  <li><span className="glyphicon glyphicon-home">HOME</span></li>  
               </ul>
             </Link>
             <div className="navbar-header">

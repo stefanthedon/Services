@@ -17,6 +17,11 @@ class Home extends Component {
     this.state = {
       isLoading: true,
       token: '',
+      userId: '',
+      firstName: '',
+      lastName: '',
+      telephone: '',
+      email: '',
       signUpError: '',
       signInError: '',
       signInEmail: '',
@@ -69,9 +74,29 @@ class Home extends Component {
       });
     }
 
+    // ASSIGN USER DETAILS
+    const {
+      userId
+    } = this.state;
+    fetch('/api/account/user/' + userId)
+      .then(res => res.json())
+      .then(json => {
+        if (json.success) {
+          this.setState({
+            firstName: json.firstName,
+            lastName: json.lastName,
+            telephone: json.telephone,
+            email: json.email
+          });
+        } else {
+          this.setState ({
+            isLoading:false
+          });
+        }
+      });
+
   }
   
-  // ASSIGN USER DETAILS
 
 
   onTextboxChangeSignInEmail(event) {
@@ -120,7 +145,7 @@ class Home extends Component {
     // Grab state
     const {
       signInEmail,
-      signInPassword
+      signInPassword,
     } = this.state;
 
     this.setState({
@@ -146,11 +171,12 @@ class Home extends Component {
         if (json.success) {
           setInStorage('the_main_app', { token: json.token });
           this.setState({
-            signInError: json.message,
+            // signInError: json.message,
             isLoading: false,
             signInEmail: '',
             signInPassword: '',
-            token: json.token
+            token: json.token,
+            userId: json.userId
           })
         } else {
           this.setState({
@@ -276,10 +302,17 @@ class Home extends Component {
   }
 
 
+
   render() {
+
     const {
       isLoading,
       token,
+      userId,
+      firstName,
+      lastName,
+      telephone,
+      email,      
       signInError,
       signUpError,
       signInEmail,
@@ -404,7 +437,7 @@ class Home extends Component {
             </ul>
           </div>
         </nav>
-          <ServiceAccount/>
+          <ServiceAccount token={token}/>
         </div>
     );
   }

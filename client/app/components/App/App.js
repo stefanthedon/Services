@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-const App = ({ children }) => (
+const App = ({ children} ) => (
 
     <main>
       {children}
