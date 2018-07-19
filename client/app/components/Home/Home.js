@@ -430,10 +430,10 @@ class Home extends Component {
         <nav className="navbar navbar-default" role="navigation">
           <div className="container">
             <div className="navbar-header">
-              <div className="navbar-brand navbar-brand-centered">ACHELIS KE</div>
+              <div className="navbar-brand navbar-brand-centered">ACHELIS KENYA LTD</div>
             </div>
             <ul className="nav navbar-nav navbar-right">
-              <li><a href="" onClick={this.logOut}><span className="glyphicon glyphicon-log-out"></span>Logout</a></li>
+              <li><a href="" onClick={this.logOut}><span className="glyphicon glyphicon-log-out"></span><span className="logout">Logout</span></a></li>
             </ul>
           </div>
         </nav>

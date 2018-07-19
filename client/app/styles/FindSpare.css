@@ -763,7 +763,31 @@ html * {
     }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 500px) {
+    .container a {
+      color: #8180cc;
+      float: left;
+    }
+    .container  .name{
+      padding: 0;
+      margin: 0;
+      font-size: 25px;
+      float: right;
+      width: 50%;
+    }
+    .container .glyphicon {
+      font-size: 15px;
+      float: left;
+      width: 50%;
+      padding-left: 20px;
+      padding-top: 10px;
+    }
+    .navbar-header {
+      /*width: 50%;*/
+    }
+    .instructions {
+      margin-top: 50px;
+    }
     .wrap {
       top: 320rem;
       width: 100%;

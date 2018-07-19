@@ -317,13 +317,12 @@ class Service extends Component {
     return (
       <div>
         <nav className="navbar navbar-default" role="navigation">
-          <Link to="/">
-          <ul className="nav navbar-nav navbar-left">
-              <li><span className="glyphicon glyphicon-home">HOME</span></li>  
-          </ul>
-          </Link>
-
           <div className="container">
+            <Link to="/">
+              <ul className="nav navbar-nav navbar-left">
+                  <li><span className="glyphicon glyphicon-chevron-left"></span><span className="name">HOME</span></li>  
+              </ul>
+            </Link>
             <div className="navbar-header">
               <div className="navbar-brand navbar-brand-centered">ACHELIS KENYA LTD</div>
             </div>

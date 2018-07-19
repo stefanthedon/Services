@@ -231,7 +231,7 @@ class FindSpare extends Component {
           <div className="container">
             <Link to="/">
               <ul className="nav navbar-nav navbar-left">
-                  <li><span className="glyphicon glyphicon-home">HOME</span></li>  
+                  <li><span className="glyphicon glyphicon-chevron-left"></span><span className="name">HOME</span></li>  
               </ul>
             </Link>
             <div className="navbar-header">
@@ -263,8 +263,8 @@ class FindSpare extends Component {
               <div className="deselect-member">change</div>
               <div className="deselect-model">change</div>
               <div className="deselect-spare">change</div>
-              <div className="model"></div>
-              <ul className="spare"></ul>
+              <div className="model">Select Model:</div>
+              <ul className="spare">Select Spare:</ul>
               <form className="form">
                 <label>Name</label>
                 <input type="submit" onClick={this.onSubmit} value="Confirm Spare"/>
