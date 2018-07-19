@@ -1,10 +1,6 @@
 html {
-  /*font-size: 1.3px;*/
+  font-size: 0.6px;
 }
-html * {
-  box-sizing: border-box;
-}
-
 
 .wrap {
   position: absolute;
