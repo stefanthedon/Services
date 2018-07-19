@@ -6,6 +6,10 @@ import 'whatwg-fetch';
 import css from '../../styles/FindSpare.css';
 import ContentContainer from './ContentContainer';
 
+import {
+  getFromStorage
+} from '../../utils/storage';
+
 
 class FindSpare extends Component {
 
@@ -13,10 +17,11 @@ class FindSpare extends Component {
       super(props);
 
       this.state = {
-          firstName: 'Admin',
-          lastName: 'Admin',
-          telephone: '0719762808',
-          email: 'admin@admin.com',
+          userId: '',
+          firstName: '',
+          lastName: '',
+          telephone: '',
+          email: '',
           productModel: '',
           productSpare: '',
           findSpareError: ''
@@ -29,10 +34,6 @@ class FindSpare extends Component {
 
   onSubmit(event) {
     const {
-      firstName,
-      lastName,
-      telephone,
-      email,
       productModel,
       productSpare,
       findSpareError
@@ -113,6 +114,41 @@ class FindSpare extends Component {
     // JQUERY
 
     componentDidMount () {
+      // PULL ACCOUNT DETAILS
+      //1. RETRIEVE TOKEN
+      const obj = getFromStorage('the_main_app');
+      const { token } = obj;
+      fetch('/api/account/session/' + token)
+      .then(res => res.json())
+      .then(json => {
+        if (json.success) {
+          this.setState({
+            token: json.token,
+            userId: json.userId
+          });
+        }
+      });
+
+      
+
+      //2. ASSIGN USER DETAILS
+    const {
+      userId
+    } = this.state;
+    fetch('/api/account/user/' + userId)
+      .then(res => res.json())
+      .then(json => {
+        if (json.success) {
+          this.setState({
+            firstName: json.firstName,
+            lastName: json.lastName,
+            telephone: json.telephone,
+            email: json.email
+          });
+        } 
+      });
+
+
       let _this=this;
       let productModel = _this.state.productModel;
       let productSpare = _this.state.productSpare;
@@ -213,18 +249,23 @@ class FindSpare extends Component {
     // END OF JQUERY
 
   render() {
-
-    console.log(this.props);
     const {
       firstName,
       lastName,
       telephone,
       email,
+      token,
+      userId,
       productModel,
       productSpare,
       findSpareError
     } = this.state;
-      
+    console.log(token);
+    console.log(userId);
+    console.log(firstName);
+    console.log(lastName);
+    console.log(telephone);
+    console.log(email);
     return (
       <div>
         <nav className="navbar navbar-default" role="navigation">

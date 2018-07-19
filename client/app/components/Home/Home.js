@@ -17,11 +17,6 @@ class Home extends Component {
     this.state = {
       isLoading: true,
       token: '',
-      userId: '',
-      firstName: '',
-      lastName: '',
-      telephone: '',
-      email: '',
       signUpError: '',
       signInError: '',
       signInEmail: '',
@@ -73,27 +68,6 @@ class Home extends Component {
         isLoading: false
       });
     }
-
-    // ASSIGN USER DETAILS
-    const {
-      userId
-    } = this.state;
-    fetch('/api/account/user/' + userId)
-      .then(res => res.json())
-      .then(json => {
-        if (json.success) {
-          this.setState({
-            firstName: json.firstName,
-            lastName: json.lastName,
-            telephone: json.telephone,
-            email: json.email
-          });
-        } else {
-          this.setState ({
-            isLoading:false
-          });
-        }
-      });
 
   }
   

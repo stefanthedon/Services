@@ -240,6 +240,39 @@ module.exports = (app) => {
     
     });
   });
+
+  app.get('/api/account/session/:token', (req, res, next) => {
+    //Get Token
+    const { body } = req;
+    const {
+      firstName,
+      lastName,
+      telephone
+    } = body;
+
+    let {
+      email
+    } = body;
+    
+    UserSession.findById({
+      _id: req.params.token
+    }, (err, session) => {
+      if(err) {
+        return res.send({
+          success: false,
+          message: 'Error: Server error'
+        });
+      } else {
+          return res.send({
+            success: true,
+            message: 'Good',
+            token: session._id,
+            userId: session.userId
+          });
+      }
+    
+    });
+  });
           
 
   app.get('/api/account/accountDetails/:id', (req, res, next) => {
