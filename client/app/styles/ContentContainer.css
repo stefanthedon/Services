@@ -70,7 +70,7 @@ a:hover {
 	.content-container {
 	  	width: 100%;
 	  	height: 100%;
-	  	margin: 4rem 0 0rem 0;
+	  	margin: 20% 0 0rem 0;
 	  	padding: 10% 5% 0 9%;
 	  	overflow: hidden;
 	  	flex-wrap: wrap;
@@ -97,12 +97,12 @@ a:hover {
 
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 360px) {
     .content-container {;
 	  	width: 100%;
 	  	height: 100%;
 	  	margin: 20% 0 0rem 0;
-	  	/*padding: 10rem 0 0 4rem;*/
+	  	padding: 30% 0 0 4rem;
 	  	overflow: hidden;
 	  	/*position: relative;*/
 
