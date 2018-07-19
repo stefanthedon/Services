@@ -800,6 +800,8 @@ html * {
       /*padding: 10% 5% 0 9%;*/
       overflow: hidden;
       flex-wrap: wrap;
+      object-fit: cover;
+      -o-object-fit: cover;
     }
     .member {
       width: 100%;
