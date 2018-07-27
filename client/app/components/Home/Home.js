@@ -15,7 +15,7 @@ class Home extends Component {
     super(props);
 
     this.state = {
-      isLoading: true,
+      isLoading: false,
       token: '',
       signUpError: '',
       signInError: '',
@@ -44,30 +44,30 @@ class Home extends Component {
 
 
   componentDidMount() {
-    const obj = getFromStorage('the_main_app');
+  //   const obj = getFromStorage('the_main_app');
 
-    if (obj && obj.token) {
-      const { token } = obj;
-      // Verify token
-      fetch('/api/account/verify?token=' + token)
-      .then(res => res.json())
-      .then(json => {
-        if (json.success) {
-          this.setState({
-            token,
-            isLoading: false
-          });
-        } else {
-          this.setState ({
-            isLoading:false
-          });
-        }
-      });
-    } else {
-      this.setState({
-        isLoading: false
-      });
-    }
+  //   if (obj && obj.token) {
+  //     const { token } = obj;
+  //     // Verify token
+  //     fetch('/api/account/verify?token=' + token)
+  //     .then(res => res.json())
+  //     .then(json => {
+  //       if (json.success) {
+  //         this.setState({
+  //           token,
+  //           isLoading: false
+  //         });
+  //       } else {
+  //         this.setState ({
+  //           isLoading:false
+  //         });
+  //       }
+  //     });
+  //   } else {
+  //     this.setState({
+  //       isLoading: false
+  //     });
+  //   }
 
   }
   
@@ -280,124 +280,12 @@ class Home extends Component {
   render() {
 
     const {
-      isLoading,
-      token,
-      userId,
-      firstName,
-      lastName,
-      telephone,
-      email,      
-      signInError,
-      signUpError,
-      signInEmail,
-      signInPassword,
-      signUpFirstName,
-      signUpLastName,
-      signUpEmail,
-      signUpPassword,
-      signUpTelephone
+      isLoading
     } = this.state;
 
-    // STYLES
-
-    var signInBtn = {
-      backgroundColor: "#4CAF50",
-      color: "white",
-      padding: "14px 20px",
-      margin: "8px 0",
-      border: "none",
-      cursor: "pointer",
-      width: "100%",
-      opacity: "0.9"
-    };
-
-    var loading = {
-      fontSize: "40px",
-      marginLeft: "50%",
-      marginTop: "40%"
-    };
-
     if (isLoading) {
-      return (<div><i className="fa fa-spinner fa-spin" style={loading}></i></div>);
+      return (<div><i className="fa fa-spinner fa-spin"></i></div>);
     }
-
-    if (!token) {
-      return (
-
-        <div className="row text-center">
-          
-            <div id="signIn" className="col-sm-offset-3 col-md-offset-3 col-lg-offset-4 col-xl-offset-4">
-              <div className="sign-in input-group">
-                
-                  <h2>Sign In</h2>
-                  <input
-                  className="form-control" 
-                  type="email" 
-                  placeholder="Email" 
-                  value={signInEmail}
-                  onChange={this.onTextboxChangeSignInEmail}
-                  />
-                  <input
-                  className="form-control" 
-                  type="password" 
-                  placeholder="Password" 
-                  value={signInPassword}
-                  onChange={this.onTextboxChangeSignInPassword}
-                  />
-                <p className="signUpError">{signInError}</p>
-                  <button className="btn btn-default" type="button" onClick={this.onSignIn} style={signInBtn}>SIGN IN</button>
-
-              </div>
-          </div>
-
-          <div id="signIn" className="col-sm-offset-3 col-md-offset-3 col-lg-offset-4 col-xl-offset-4">
-              <div className="input-group">
-                 
-                <h2>Sign Up</h2>
-                <input
-                className="form-control" 
-                type="text" 
-                placeholder="First Name"
-                value={signUpFirstName}
-                onChange={this.onTextboxChangeSignUpFirstName}
-                />
-                <input
-                className="form-control" 
-                type="text" 
-                placeholder="Last Name"
-                value={signUpLastName}
-                onChange={this.onTextboxChangeSignUpLastName}
-                />
-                <input
-                className="form-control" 
-                type="email" 
-                placeholder="Email"
-                value={signUpEmail}
-                onChange={this.onTextboxChangeSignUpEmail}
-                />
-                <input
-                className="form-control" 
-                type="text" 
-                placeholder="Phone Number"
-                value={signUpTelephone}
-                onChange={this.onTextboxChangeSignUpTelephone}
-                />
-                <input
-                className="form-control" 
-                type="password" 
-                placeholder="Password"
-                value={signUpPassword}
-                onChange={this.onTextboxChangeSignUpPassword}
-                />
-                <p className="signUpError">{signUpError}</p>
-                <button className="btn btn-default" type="button" onClick={this.onSignUp} style={signInBtn}>Sign Up</button>
-              </div>
-            </div>
-
-        </div>
-      );
-
-  }
 
     return (
         <div>
@@ -407,11 +295,11 @@ class Home extends Component {
               <div className="navbar-brand navbar-brand-centered">ACHELIS KENYA LTD</div>
             </div>
             <ul className="nav navbar-nav navbar-right">
-              <li><a href="" onClick={this.logOut}><span className="glyphicon glyphicon-log-out"></span><span className="logout">Logout</span></a></li>
+              <li><a href=""><span className="glyphicon glyphicon-log-out"></span><span className="logout"></span></a></li>
             </ul>
           </div>
         </nav>
-          <ServiceAccount token={token}/>
+          <ServiceAccount/>
         </div>
     );
   }

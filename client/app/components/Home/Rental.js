@@ -14,8 +14,8 @@ class Rental extends Component {
       this.state = {
           firstName: 'Admin',
           lastName: 'Admin',
-          telephone: '0719762808',
-          email: 'admin@admin.com',
+          telephone: '07xxxxxxxx',
+          email: 'don.parminter@gmail.com',
           productModel: '',
           rentalDate: '',
           returnDate: '',

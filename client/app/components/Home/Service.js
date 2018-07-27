@@ -12,10 +12,10 @@ class Service extends Component {
       super(props);
 
       this.state = {
-          firstName: '',
-          lastName: '',
-          telephone: '',
-          email: '',
+          firstName: 'Admin',
+          lastName: 'Admin',
+          telephone: '07xxxxxxxx',
+          email: 'don.parminter@gmail.com',
           productModel: '',
           serviceDate: '',
           serviceType: '',

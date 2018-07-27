@@ -1,159 +1,301 @@
 {
-    "Construction": {
-        "Case": {
-            "Excavator": [
-                {"model":"CX2010B"},
-                {"model":"CX290B"},
-                {"model":"CX350B"},
-                {"model":"CX470B"}
-            ],
-            "Backhoe Loader": [
-                {"model":"570T"},
-                {"model":"580T"}
-            ],
-            "Motor Grader": [
-                {"model":"865B"},
-                {"model":"845B"},
-                {"model":"885B"}
-            ],
-            "Roller/Compactor": [
-                {"model":"1107EX"}
-            ],
-              "Dozer": [
-                {"model":"2050M"}
-            ],
-              "Wheel Loader": [
-                {"model":"621F"},
-                {"model":"721F"},
-                {"model":"821F"},
-                {"model":"921F"}
-            ],
-              "Skid steer": [
-                {"model":"SR175"},
-                {"model":"SR300"}            
-            ]
-        },
-        "New Holland": {
-            "Grader": [
-                {"model":"F170 -180HP"}
-            ],
-              "Wheel loader": [
-                {"model":"W190C-3.5 CUM"}
-            ]
-        },
-        "Bomag": {
-          "Roller": [
-            {"model":"161AD-40(10ton tandem roller)"},
-            {"model":"BW213D-40(13ton single drum roller)"},
-            {"model":"BW211D-40(10ton roller)"},
-            {"model":"BW120AD-5(3ton tandem roller-used)"},
-            {"model":"BW120AD-5(3ton tandem roller)"},
-            {"model":"BW900(1.2 ton tandem roller)"},
-            {"model":"BW75H(1ton pedestrian roller)"},
-            {"model":"BW24RH( 10ton pneumatic tyre roller)"}
-          ]
-        },
-        "Fiori": {
-          "Concrete Mixer": [
-            {"model":"DBX35"},
-            {"model":"DB460"}
-          ]
-        },
-        "Triman": {
-          "Crusher": [
-            {"model":"DB 110"},
-            {"model":"DB X35"},
-            {"model":"DB 180"},
-            {"model":"DB 460"},
-            {"model":"D40"},
-            {"model":"D100SL"},
-            {"model":"DB X25"},
-            {"model":"DB X50"},
-            {"model":"DB 260"},
-            {"model":"DB 560T"},
-            {"model":"D70SL"},
-            {"model":"HS 15.0"},
-            {"model":"HS 35.0"}
-          ]
-        }
-    },
-    "Material Handling": {
-        "Hyster": {
-            "Forklift Trucks": [
-                {"model":"CX2010B"},
-                {"model":"CX290B"},
-                {"model":"CX350B"},
-                {"model":"CX470B"}
-            ],
-            "Backhoe Loader": [
-                {"model":"570T"},
-                {"model":"580T"}
-            ],
-            "Motor Grader": [
-                {"model":"865B"},
-                {"model":"845B"},
-                {"model":"885B"}
-            ],
-            "Roller/Compactor": [
-                {"model":"1107EX"}
-            ],
-              "Dozer": [
-                {"model":"2050M"}
-            ],
-              "Wheel Loader": [
-                {"model":"621F"},
-                {"model":"721F"},
-                {"model":"821F"},
-                {"model":"921F"}
-            ],
-              "Skid steer": [
-                {"model":"SR175"},
-                {"model":"SR300"}            
-            ]
-        },
-        "Utilev": {
-            "Grader": [
-                {"model":"F170 -180HP"}
-            ],
-              "Wheel loader": [
-                {"model":"W190C-3.5 CUM"}
-            ]
-        },
-        "Manitou ": {
-          "Roller": [
-            {"model":"161AD-40(10ton tandem roller)"},
-            {"model":"BW213D-40(13ton single drum roller)"},
-            {"model":"BW211D-40(10ton roller)"},
-            {"model":"BW120AD-5(3ton tandem roller-used)"},
-            {"model":"BW120AD-5(3ton tandem roller)"},
-            {"model":"BW900(1.2 ton tandem roller)"},
-            {"model":"BW75H(1ton pedestrian roller)"},
-            {"model":"BW24RH( 10ton pneumatic tyre roller)"}
-          ]
-        },
-        "Zeigler": {
-          "Zieglar": [
-            {"model":"DBX35"},
-            {"model":"DB460"}
-          ]
-        },
-        "FFG": {
-          "Combined high pressure vehicle for sewer cleaning": [
-            {"model":"DB 110"},
-            {"model":"DB X35"},
-            {"model":"DB 180"},
-            {"model":"DB 460"},
-            {"model":"D40"},
-            {"model":"D100SL"},
-            {"model":"DB X25"},
-            {"model":"DB X50"},
-            {"model":"DB 260"},
-            {"model":"DB 560T"},
-            {"model":"D70SL"},
-            {"model":"HS 15.0"},
-            {"model":"HS 35.0"}
-          ]
-        }
+  "divisions": [
+    {
+      "Construction": {
+        "Brand": [
+          {
+            "Case": {
+              "Product": [
+                {
+                  "Excavator": {
+                    "Model": [
+                      "CX2010B",
+                      "CX290B",
+                      "CX350B",
+                      "CX470B"
+                    ]
+                  },
+                  "BackhoeLoader": {
+                    "Model": [
+                      "570T",
+                      "580T"
+                    ]
+                  },
+                  "MortorGrader": {
+                    "Model": [
+                      "865B",
+                      "845B",
+                      "885B"
+                    ]
+                  },
+                  "Roller/Compacter": {
+                    "Model": [
+                      "1107EX"
+                    ]
+                  },
+                  "Dozer": {
+                    "Model": [
+                      "2050M"
+                    ]
+                  },
+                  "WheelLoader": {
+                    "Model": [
+                      "621F",
+                      "721F",
+                      "821F",
+                      "821F",
+                      "921F"
+                    ]
+                  },
+                  "SkidSteer": {
+                    "Model": [
+                      "SR175",
+                      "SR300"
+                    ]
+                  }
+                }
+              ]
+            },
+            "NewHoland": {
+              "Product": [
+                {
+                  "MortorGrader": {
+                    "Model": [
+                      "New Holland-F170-180HP Grader"
+                    ]
+                  },
+                  "WheelLoader": {
+                    "Model": [
+                      "W190C-3.5 CUM"
+                    ]
+                  }
+                }
+              ]
+            },
+            "Bomag": {
+              "Product": [
+                {
+                  "SingleDrumRollers": {},
+                  "DoubleDrumRollers": {},
+                  "PedestrianRollers": {},
+                  "Pavers": {},
+                  "RefuseCompactors": {}
+                }
+              ]
+            },
+            "Fiori": {
+              "Product": [
+                {
+                  "ConcreteMixers": {
+                    "Model": [
+                      "DBX35",
+                      "DB460"
+                    ]
+                  }
+                }
+              ]
+            },
+            "Triman": {
+              "Product": [
+                {
+                  "Crushers": {
+                    "Model": [
+                      "DB 110",
+                      "DB X35",
+                      "DB 180",
+                      "DB 460",
+                      "D40",
+                      "D100SL",
+                      "DB X25",
+                      "DB X50",
+                      "DB 260",
+                      "DB 560T",
+                      "D70SL",
+                      "HS 15.0-HS 35.0"
+                    ]
+                  }
+                }
+              ]
+            },
+            "Zoomlion": {
+              "Product": [
+                {
+                  "MobileCrane": {
+                    "Model": [
+                      "Zoomlion- QY25 25ton mobile truck crane",
+                      "QY50 50ton mobile truck crane"
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "MaterialHandling": {
+        "Brand": [
+          {
+            "Hyster": {
+              "Product": [
+                {
+                  "GeneralPurposeForklifts": {
+                    "Model": [
+                      "H2.0XT",
+                      "H3.0XT",
+                      "H3.5FT",
+                      "5.0FTH7.0FT",
+                      "H10.0XM-6",
+                      "H16XM-12"
+                    ]
+                  },
+                  "ElectricForklifts": {
+                    "Model": [
+                      "J1.5XNT",
+                      "J2.0XNT",
+                      "J2.0XN",
+                      "J2.2XN",
+                      "J3.0XN",
+                      "J3.5XN"
+                    ]
+                  },
+                  "WarehouselForklifts": {
+                    "Model": [
+                      "P1.6",
+                      "P1.8AC",
+                      "P2.0AC",
+                      "P2.0SE",
+                      "R1.4",
+                      "R1.6",
+                      "R2.5",
+                      "C1.3"
+                    ]
+                  }
+                }
+              ]
+            },
+            "Utilev": {
+              "Product": [
+                {
+                  "MortorGrader": {
+                    "Model": [
+                      "New Holland-F170-180HP Grader"
+                    ]
+                  },
+                  "WheelLoader": {
+                    "Model": [
+                      "W190C-3.5 CUM"
+                    ]
+                  }
+                }
+              ]
+            },
+            "Manitou": {
+              "Product": [
+                {
+                  "SingleDrumRollers": {},
+                  "DoubleDrumRollers": {},
+                  "PedestrianRollers": {},
+                  "Pavers": {},
+                  "RefuseCompactors": {}
+                }
+              ]
+            },
+            "Zeigler": {
+              "Product": [
+                {
+                  "ConcreteMixers": {
+                    "Model": [
+                      "DBX35",
+                      "DB460"
+                    ]
+                  }
+                }
+              ]
+            },
+            "FFG": {
+              "Product": [
+                {
+                  "Crushers": {
+                    "Model": [
+                      "DB 110",
+                      "DB X35",
+                      "DB 180",
+                      "DB 460",
+                      "D40",
+                      "D100SL",
+                      "DB X25",
+                      "DB X50",
+                      "DB 260",
+                      "DB 560T",
+                      "D70SL",
+                      "HS 15.0-HS 35.0"
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "PowerSystems": {},
+      "TechnicalEquipment": {},
+      "AgriculturalEquipment": {
+        "Brand": [
+          {
+            "DeutzFahr": {
+              "Product": [
+                {
+                  "Tractors": {
+                    "Type": {
+                      "High-Range": {
+                        "Model": [
+                          "Agroton 336hp to 163hp",
+                          "Agrotrac 170hp to 115hp"
+                        ]
+                      },
+                      "Mid-Range": {
+                        "Model": [
+                          "Agrofarm 110hp to 90hp",
+                          "Agrolux 75hp to 95hp"
+                        ]
+                      },
+                      "Low-Range": {
+                        "Model": [
+                          "Agrolux 60hp to 40hp"
+                        ]
+                      },
+                      "Orchards": {
+                        "Model": [
+                          "Agroplus Ecoline 95hp to 60hp",
+                          "Agroplus Keyline 75hp to 55hp"
+                        ]
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "SoloSprayers": {
+              "Product": [
+                {
+                  "Sprayers": {
+                    "Model": [
+                      "New Holland-F170-180HP Grader"
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "Oil&Gas": {},
+      "CleaningSolutions": {},
+      "Industrial": {},
+      "Medical&Scientific": {},
+      "SecurityScreeningEquipment": {},
+      "InfrastructuralDevelopment": {},
+      "Printing": {}
     }
-
+  ]
 }

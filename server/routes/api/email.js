@@ -24,12 +24,12 @@ app.post('/api/account/booking-admin-email', (req, res) => {
 	`;
 	  // create reusable transporter object using the default SMTP transport
 	  let transporter = nodemailer.createTransport({
-	    host: 'smtp.ethereal.email',
+	    host: 'mail.acheliskenya.co.ke',
 	    port: 587,
-	    secure: false, // true for 465, false for other ports
+	    secure: false, // true for 587, false for other ports
 	    auth: {
-	        user: 'wjadjkjl4xij7hqi@ethereal.email', // generated ethereal user
-	        pass: 'y3kFJda6AKAQtd3m7D'  // generated ethereal password
+	        user: 'info@acheliskenya.co.ke', // generated ethereal user
+	        pass: 'i9dVB81T{X*y'  // generated ethereal password
 	    },
 	    tls:{
 	      rejectUnauthorized:false
@@ -38,8 +38,8 @@ app.post('/api/account/booking-admin-email', (req, res) => {
 
 	  // setup email data with unicode symbols
 	  let mailOptions = {
-	      from: '"Achelis New Booking Information" <don.parminter@gmail.com>', // sender address
-	      to: 'donald.lokong@strathmore.edu', // list of receivers
+	      from: '"Achelis New Booking Information" <achelis@achelis-group.com>', // sender address
+	      to: 'achelis@achelis-group.com', // list of receivers
 	      subject: 'Achelis Kenya LTD', // Subject line
 	      text: 'Hi,', // plain text body
 	      html: output // html body
@@ -75,12 +75,12 @@ app.post('/api/account/booking-client-email', (req, res) => {
 	`;
 	  // create reusable transporter object using the default SMTP transport
 	  let transporter = nodemailer.createTransport({
-	    host: 'smtp.ethereal.email',
+	    host: 'mail.acheliskenya.co.ke',
 	    port: 587,
-	    secure: false, // true for 465, false for other ports
+	    secure: false, // true for 587, false for other ports
 	    auth: {
-	        user: 'wjadjkjl4xij7hqi@ethereal.email', // generated ethereal user
-	        pass: 'y3kFJda6AKAQtd3m7D'  // generated ethereal password
+	        user: 'info@acheliskenya.co.ke', // generated ethereal user
+	        pass: 'i9dVB81T{X*y'  // generated ethereal password
 	    },
 	    tls:{
 	      rejectUnauthorized:false
@@ -89,7 +89,7 @@ app.post('/api/account/booking-client-email', (req, res) => {
 
 	  // setup email data with unicode symbols
 	  let mailOptions = {
-	      from: '"Achelis New Booking Information" <don.parminter@gmail.com>', // sender address
+	      from: '"Achelis New Booking Information" <achelis@achelis-group.com>', // sender address
 	      to: email, // list of receivers
 	      subject: 'Achelis Kenya LTD', // Subject line
 	      text: 'Hi,', // plain text body
@@ -125,12 +125,12 @@ app.post('/api/account/rental-admin-email', (req, res) => {
 	`;
 	  // create reusable transporter object using the default SMTP transport
 	  let transporter = nodemailer.createTransport({
-	    host: 'smtp.ethereal.email',
+	    host: 'mail.acheliskenya.co.ke',
 	    port: 587,
-	    secure: false, // true for 465, false for other ports
+	    secure: false, // true for 587, false for other ports
 	    auth: {
-	        user: 'wjadjkjl4xij7hqi@ethereal.email', // generated ethereal user
-	        pass: 'y3kFJda6AKAQtd3m7D'  // generated ethereal password
+	        user: 'info@acheliskenya.co.ke', // generated ethereal user
+	        pass: 'i9dVB81T{X*y'  // generated ethereal password
 	    },
 	    tls:{
 	      rejectUnauthorized:false
@@ -139,8 +139,8 @@ app.post('/api/account/rental-admin-email', (req, res) => {
 
 	  // setup email data with unicode symbols
 	  let mailOptions = {
-	      from: '"Achelis New Rental Information" <don.parminter@gmail.com>', // sender address
-	      to: 'donald.lokong@strathmore.edu', // list of receivers
+	      from: '"Achelis New Rental Information" <achelis@achelis-group.com>', // sender address
+	      to: 'achelis@achelis-group.com', // list of receivers
 	      subject: 'Achelis Kenya LTD', // Subject line
 	      text: 'Hi,', // plain text body
 	      html: output // html body
@@ -176,12 +176,12 @@ app.post('/api/account/rental-client-email', (req, res) => {
 	`;
 	  // create reusable transporter object using the default SMTP transport
 	  let transporter = nodemailer.createTransport({
-	    host: 'smtp.ethereal.email',
+	    host: 'mail.acheliskenya.co.ke',
 	    port: 587,
-	    secure: false, // true for 465, false for other ports
+	    secure: false, // true for 587, false for other ports
 	    auth: {
-	        user: 'wjadjkjl4xij7hqi@ethereal.email', // generated ethereal user
-	        pass: 'y3kFJda6AKAQtd3m7D'  // generated ethereal password
+	        user: 'info@acheliskenya.co.ke', // generated ethereal user
+	        pass: 'i9dVB81T{X*y'  // generated ethereal password
 	    },
 	    tls:{
 	      rejectUnauthorized:false
@@ -190,7 +190,7 @@ app.post('/api/account/rental-client-email', (req, res) => {
 
 	  // setup email data with unicode symbols
 	  let mailOptions = {
-	      from: '"Achelis New Rental Information" <don.parminter@gmail.com>', // sender address
+	      from: '"Achelis New Rental Information" <achelis@achelis-group.com>', // sender address
 	      to: email, // list of receivers
 	      subject: 'Achelis Kenya LTD', // Subject line
 	      text: 'Hi,', // plain text body
@@ -225,12 +225,12 @@ app.post('/api/account/findspare-admin-email', (req, res) => {
 	`;
 	  // create reusable transporter object using the default SMTP transport
 	  let transporter = nodemailer.createTransport({
-	    host: 'smtp.ethereal.email',
+	    host: 'mail.acheliskenya.co.ke',
 	    port: 587,
-	    secure: false, // true for 465, false for other ports
+	    secure: false, // true for 587, false for other ports
 	    auth: {
-	        user: 'wjadjkjl4xij7hqi@ethereal.email', // generated ethereal user
-	        pass: 'y3kFJda6AKAQtd3m7D'  // generated ethereal password
+	        user: 'info@acheliskenya.co.ke', // generated ethereal user
+	        pass: 'i9dVB81T{X*y'  // generated ethereal password
 	    },
 	    tls:{
 	      rejectUnauthorized:false
@@ -239,8 +239,8 @@ app.post('/api/account/findspare-admin-email', (req, res) => {
 
 	  // setup email data with unicode symbols
 	  let mailOptions = {
-	      from: '"Achelis New Spare Information" <don.parminter@gmail.com>', // sender address
-	      to: 'donald.lokong@strathmore.edu', // list of receivers
+	      from: '"Achelis New Spare Information" <achelis@achelis-group.com>', // sender address
+	      to: 'achelis@achelis-group.com', // list of receivers
 	      subject: 'Achelis Kenya LTD', // Subject line
 	      text: 'Hi,', // plain text body
 	      html: output // html body
@@ -275,12 +275,12 @@ app.post('/api/account/findspare-client-email', (req, res) => {
 	`;
 	  // create reusable transporter object using the default SMTP transport
 	  let transporter = nodemailer.createTransport({
-	    host: 'smtp.ethereal.email',
+	    host: 'mail.acheliskenya.co.ke',
 	    port: 587,
-	    secure: false, // true for 465, false for other ports
+	    secure: false, // true for 587, false for other ports
 	    auth: {
-	        user: 'wjadjkjl4xij7hqi@ethereal.email', // generated ethereal user
-	        pass: 'y3kFJda6AKAQtd3m7D'  // generated ethereal password
+	        user: 'info@acheliskenya.co.ke', // generated ethereal user
+	        pass: 'i9dVB81T{X*y'  // generated ethereal password
 	    },
 	    tls:{
 	      rejectUnauthorized:false
@@ -289,7 +289,7 @@ app.post('/api/account/findspare-client-email', (req, res) => {
 
 	  // setup email data with unicode symbols
 	  let mailOptions = {
-	      from: '"Achelis New Spare Information" <don.parminter@gmail.com>', // sender address
+	      from: '"Achelis New Spare Information" <achelis@achelis-group.com>', // sender address
 	      to: email, // list of receivers
 	      subject: 'Achelis Kenya LTD', // Subject line
 	      text: 'Hi,', // plain text body
@@ -323,12 +323,12 @@ app.post('/api/account/signin-admin-email', (req, res) => {
 	`;
 	  // create reusable transporter object using the default SMTP transport
 	  let transporter = nodemailer.createTransport({
-	    host: 'smtp.ethereal.email',
+	    host: 'mail.acheliskenya.co.ke',
 	    port: 587,
-	    secure: false, // true for 465, false for other ports
+	    secure: false, // true for 587, false for other ports
 	    auth: {
-	        user: 'wjadjkjl4xij7hqi@ethereal.email', // generated ethereal user
-	        pass: 'y3kFJda6AKAQtd3m7D'  // generated ethereal password
+	        user: 'info@acheliskenya.co.ke', // generated ethereal user
+	        pass: 'i9dVB81T{X*y'  // generated ethereal password
 	    },
 	    tls:{
 	      rejectUnauthorized:false
@@ -337,8 +337,8 @@ app.post('/api/account/signin-admin-email', (req, res) => {
 
 	  // setup email data with unicode symbols
 	  let mailOptions = {
-	      from: '"Achelis New Sign Up Information" <don.parminter@gmail.com>', // sender address
-	      to: 'don.parminter@gmail.com', // list of receivers
+	      from: '"Achelis New Sign Up Information" <achelis@achelis-group.com>', // sender address
+	      to: 'achelis@achelis-group.com', // list of receivers
 	      subject: 'Achelis Kenya LTD', // Subject line
 	      text: 'Hi,', // plain text body
 	      html: output // html body
@@ -372,12 +372,12 @@ app.post('/api/account/signin-client-email', (req, res) => {
 	`;
 	  // create reusable transporter object using the default SMTP transport
 	  let transporter = nodemailer.createTransport({
-	    host: 'smtp.ethereal.email',
+	    host: 'mail.acheliskenya.co.ke',
 	    port: 587,
-	    secure: false, // true for 465, false for other ports
+	    secure: false, // true for 587, false for other ports
 	    auth: {
-	        user: 'wjadjkjl4xij7hqi@ethereal.email', // generated ethereal user
-	        pass: 'y3kFJda6AKAQtd3m7D'  // generated ethereal password
+	        user: 'info@acheliskenya.co.ke', // generated ethereal user
+	        pass: 'i9dVB81T{X*y'  // generated ethereal password
 	    },
 	    tls:{
 	      rejectUnauthorized:false
@@ -386,7 +386,7 @@ app.post('/api/account/signin-client-email', (req, res) => {
 
 	  // setup email data with unicode symbols
 	  let mailOptions = {
-	      from: '"Achelis New Sign Up Information" <don.parminter@gmail.com>', // sender address
+	      from: '"Achelis New Sign Up Information" <achelis@achelis-group.com>', // sender address
 	      to: email, // list of receivers
 	      subject: 'Achelis Kenya LTD', // Subject line
 	      text: 'Hi,', // plain text body

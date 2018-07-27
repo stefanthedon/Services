@@ -17,10 +17,10 @@ class FindSpare extends Component {
       super(props);
 
       this.state = {
-          userId: '',
-          firstName: '',
-          lastName: '',
-          telephone: '',
+          firstName: 'Admin',
+          lastName: 'Admin',
+          telephone: '07xxxxxxxx',
+          email: 'don.parminter@gmail.com',
           email: '',
           productModel: '',
           productSpare: '',
@@ -116,37 +116,37 @@ class FindSpare extends Component {
     componentDidMount () {
       // PULL ACCOUNT DETAILS
       //1. RETRIEVE TOKEN
-      const obj = getFromStorage('the_main_app');
-      const { token } = obj;
-      fetch('/api/account/session/' + token)
-      .then(res => res.json())
-      .then(json => {
-        if (json.success) {
-          this.setState({
-            token: json.token,
-            userId: json.userId
-          });
-        }
-      });
+      // const obj = getFromStorage('the_main_app');
+      // const { token } = obj;
+      // fetch('/api/account/session/' + token)
+      // .then(res => res.json())
+      // .then(json => {
+      //   if (json.success) {
+      //     this.setState({
+      //       token: json.token,
+      //       userId: json.userId
+      //     });
+      //   }
+      // });
 
       
 
       //2. ASSIGN USER DETAILS
-    const {
-      userId
-    } = this.state;
-    fetch('/api/account/user/' + userId)
-      .then(res => res.json())
-      .then(json => {
-        if (json.success) {
-          this.setState({
-            firstName: json.firstName,
-            lastName: json.lastName,
-            telephone: json.telephone,
-            email: json.email
-          });
-        } 
-      });
+    // const {
+    //   userId
+    // } = this.state;
+    // fetch('/api/account/user/' + userId)
+    //   .then(res => res.json())
+    //   .then(json => {
+    //     if (json.success) {
+    //       this.setState({
+    //         firstName: json.firstName,
+    //         lastName: json.lastName,
+    //         telephone: json.telephone,
+    //         email: json.email
+    //       });
+    //     } 
+    //   });
 
 
       let _this=this;
