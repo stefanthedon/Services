@@ -128,12 +128,43 @@ a:hover {
 
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 372px) {
     .content-container {;
 	  	width: 100%;
 	  	height: 100%;
-	  	margin: 20% 0 0rem 0;
-	  	padding: 30% 0 0 4px;
+	  	margin: 10% 0 0rem 0;
+	  	padding: 30% 0 0 8%;
+	  	overflow: hidden;
+	  	/*position: relative;*/
+
+	}
+
+	.content-container .btn {
+		float: left;
+		position: relative;
+		width: 140px;
+		height: 140px;
+		margin: 5px;
+	}
+
+	.content-container .btn span {
+		font-size: 20px;
+		padding: 10px 0;
+	}
+
+	.content-container .btn .glyphicon {
+		font-size: 40px;
+		padding: 10px 0;
+	}
+
+}
+
+@media screen and (max-width: 320px) {
+    .content-container {;
+	  	width: 100%;
+	  	height: 100%;
+	  	margin: 10% 0 0rem 0;
+	  	padding: 30% 0 0 1%;
 	  	overflow: hidden;
 	  	/*position: relative;*/
 
