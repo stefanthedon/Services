@@ -37,7 +37,7 @@ class ContentContainer extends Component {
 	      	<div>
 	      		<Link to="/Messages">
 		      	<button className="btn btn-default btn-lg btn-block btn-huge">
-		      		<span className="glyphicon glyphicon-comment" aria-hidden="true"></span><br/>
+		      		<span className="glyphicon glyphicon-envelope" aria-hidden="true"></span><br/>
 		      		<span className="name">MESSAGES</span>
 		      	</button>
 		      	</Link>
@@ -45,8 +45,8 @@ class ContentContainer extends Component {
 	      	<div>
 	      		<Link to="/FindSpare">
 		      	<button className="btn btn-default btn-lg btn-block btn-huge">
-		      		<span className="glyphicon glyphicon-list-alt" aria-hidden="true"></span><br/>
-		      		<span className="name">FIND SPARE</span><br/>
+		      		<span className="glyphicon glyphicon-cog" aria-hidden="true"></span><br/>
+		      		<span className="name">BUY SPARE</span><br/>
 		      		<span className="name">PARTS</span>
 		      	</button>
 		      	</Link>
@@ -54,16 +54,16 @@ class ContentContainer extends Component {
 	      	<div>
 	      		<Link to="/Service">
 		      	<button className="btn btn-default btn-lg btn-block btn-huge">
-		      		<span className="glyphicon glyphicon-usd" aria-hidden="true"></span><br/>
-		      		<span className="name">SERVICE</span><br/>
-		      		<span className="name">CENTER</span>
+		      		<span className="glyphicon glyphicon-heart" aria-hidden="true"></span><br/>
+		      		<span className="name">BOOK</span><br/>
+		      		<span className="name">SERVICE</span>
 		      	</button>
 		      	</Link>
 	      	</div>
 	      	<div>
 	      		<Link to="/Rental">
 		      	<button className="btn btn-default btn-lg btn-block btn-huge">
-		      		<span className="glyphicon glyphicon-stats" aria-hidden="true"></span><br/>
+		      		<span className="glyphicon glyphicon-usd" aria-hidden="true"></span><br/>
 		      		<span className="name">LEASING</span><br/>
 		      		<span className="name">&amp; RENTAL</span>
 		      	</button>
@@ -71,7 +71,7 @@ class ContentContainer extends Component {
 	      	</div>
 	      	<div>
 		      	<button className="btn btn-default btn-lg btn-block btn-huge">
-		      		<span className="glyphicon glyphicon-globe" aria-hidden="true"></span><br/>
+		      		<span className="glyphicon glyphicon-headphones" aria-hidden="true"></span><br/>
 		      		<span className="name">CUSTOMER</span><br/>
 		      		<span className="name">SUPPORT</span>
 		      	</button>

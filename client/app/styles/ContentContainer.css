@@ -1,27 +1,22 @@
 body {
-	/*display: block; */
-	width: 100vw;
-	height: 100vh;
-	background: -webkit-linear-gradient(30deg, #1900fa, #616bff);
-	background: linear-gradient(60deg, #1900fa, #616bff);
-	background: white;
-	font-family: Raleway, 'Alegreya Sans', 'Montserrat', sans-serif;
-	font-size: 30px;
-	overflow-x: hidden;
+  background-image: url("http://www.hyster.com/assets/0/72/74/101/6bcc560a-73b7-4d77-9030-8ea5bbd2f116.jpg?n=1480");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
 }
-
-
 .content-container {
 	align-content: center;
 	display: flex;
 	flex-wrap: wrap;
-	box-shadow: 5px 5px 20px rgba(49, 46, 255, 0.15);
+	/*box-shadow: 5px 5px 20px rgba(255,211,0, 0.15);*/
+	border: 2px solid #ffd300;
+	border-radius: 10px;
 	position: absolute;
   	top: 50%;
   	left: 50%;
   	-webkit-transform: translate3d(-50%, -50%, 0);
           	transform: translate3d(-50%, -50%, 0);
-  	color: #8180cc;
+  	color: #ffd300;
   	width: 700px;
   	height: 800px;
   	margin: 50px 0 100px 0;
@@ -33,17 +28,18 @@ body {
 	height: 200px;
 	width: 200px;
 	border: none;
-	border-radius: 0;
+	border-radius: 10px;
 	margin: 30px;
-	box-shadow: 5px 5px 20px rgba(49, 46, 255, 0.15);
+	box-shadow: 5px 5px 20px rgba(255,211,0, 0.15);
   	-webkit-transform: translate3d(-0%, -50%, 0);
           	transform: translate3d(-0%, -50%, 0);
+    background-color: #2a2f35;
 }
 
 .content-container .btn span {
 	font-size: 24px;
 	padding: 20px 0;
-	color: #8180cc;
+	color: #ffd300;
 	text-decoration: none;
 }
 
@@ -67,13 +63,26 @@ a:hover {
 }
 
 @media screen and (max-width: 576px) {
+	body {
+	/*margin-top: 100px;*/
+  	background-image: url("https://cdn.apk-dl.com/detail/screenshot/JJlyJEZ-PQJmQ24lfSNy7a7Wk5wsB4b-uE1M5thBv3bDnpHZatpJPctgsgKnQ3BPhpwd=h900.png");
+  	background-size: 100%;
+  	background-repeat: repeat;
+  	background-attachment: fixed;
+	}
+
+	/*.navbar {
+		position: fixed;
+	}*/
+
 	.content-container {
 	  	width: 100%;
 	  	height: 100%;
 	  	margin: 20% 0 0 0;
-	  	padding: 10% 5% 0 6%;
+	  	padding: 10% 5% 0 9%;
 	  	overflow: hidden;
 	  	flex-wrap: wrap;
+	  	border: none;
 	  	/*position: absolute;*/
 	}
 
@@ -129,6 +138,13 @@ a:hover {
 }
 
 @media screen and (max-width: 372px) {
+	body {
+  	background-image: url("https://cdn.apk-dl.com/detail/screenshot/JJlyJEZ-PQJmQ24lfSNy7a7Wk5wsB4b-uE1M5thBv3bDnpHZatpJPctgsgKnQ3BPhpwd=h900.png");
+  	background-size: 100%;
+  	background-repeat: repeat;
+  	background-attachment: fixed; 
+	}
+
     .content-container {;
 	  	width: 100%;
 	  	height: 100%;
@@ -160,11 +176,18 @@ a:hover {
 }
 
 @media screen and (max-width: 320px) {
+	body {
+  	background-image: url("https://cdn.apk-dl.com/detail/screenshot/JJlyJEZ-PQJmQ24lfSNy7a7Wk5wsB4b-uE1M5thBv3bDnpHZatpJPctgsgKnQ3BPhpwd=h900.png");
+  	background-size: 100%;
+  	background-repeat: repeat;
+  	background-attachment: fixed; 
+	}
+
     .content-container {;
 	  	width: 100%;
 	  	height: 100%;
 	  	margin: 10% 0 0rem 0;
-	  	padding: 30% 0 0 1%;
+	  	padding: 30% 0 0 2%;
 	  	overflow: hidden;
 	  	/*position: relative;*/
 

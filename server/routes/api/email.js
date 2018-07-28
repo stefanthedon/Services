@@ -24,12 +24,12 @@ app.post('/api/account/booking-admin-email', (req, res) => {
 	`;
 	  // create reusable transporter object using the default SMTP transport
 	  let transporter = nodemailer.createTransport({
-	    host: 'mail.acheliskenya.co.ke',
-	    port: 587,
-	    secure: false, // true for 587, false for other ports
+	    host: 'mail.dukachapchap.co.ke',
+	    port: 465,
+	    secure: true, // true for 465, false for other ports
 	    auth: {
-	        user: 'info@acheliskenya.co.ke', // generated ethereal user
-	        pass: 'i9dVB81T{X*y'  // generated ethereal password
+	        user: 'akl@dukachapchap.co.ke', // generated ethereal user
+	        pass: 'donstefan92'  // generated ethereal password
 	    },
 	    tls:{
 	      rejectUnauthorized:false
@@ -75,12 +75,12 @@ app.post('/api/account/booking-client-email', (req, res) => {
 	`;
 	  // create reusable transporter object using the default SMTP transport
 	  let transporter = nodemailer.createTransport({
-	    host: 'mail.acheliskenya.co.ke',
-	    port: 587,
-	    secure: false, // true for 587, false for other ports
+	    host: 'mail.dukachapchap.co.ke',
+	    port: 465,
+	    secure: true, // true for 465, false for other ports
 	    auth: {
-	        user: 'info@acheliskenya.co.ke', // generated ethereal user
-	        pass: 'i9dVB81T{X*y'  // generated ethereal password
+	        user: 'akl@dukachapchap.co.ke', // generated ethereal user
+	        pass: 'donstefan92'  // generated ethereal password
 	    },
 	    tls:{
 	      rejectUnauthorized:false
@@ -113,9 +113,6 @@ app.post('/api/account/rental-admin-email', (req, res) => {
 		<p>You have a new Rental</p>
 		<h3>Rental Details</h3>
 		<ul>
-			<li>Name: ${req.body.firstName} ${req.body.lastName}</li>
-			<li>Email: ${req.body.email}</li>
-			<li>Telephone: ${req.body.telephone}</li>
 			<li>Product: ${req.body.productModel}</li>
 			<li>Service: ${req.body.rentalDate}</li>
 			<li>Service Date: ${req.body.returnDate}</li>
@@ -125,12 +122,12 @@ app.post('/api/account/rental-admin-email', (req, res) => {
 	`;
 	  // create reusable transporter object using the default SMTP transport
 	  let transporter = nodemailer.createTransport({
-	    host: 'mail.acheliskenya.co.ke',
-	    port: 587,
-	    secure: false, // true for 587, false for other ports
+	    host: 'mail.dukachapchap.co.ke',
+	    port: 465,
+	    secure: true, // true for 465, false for other ports
 	    auth: {
-	        user: 'info@acheliskenya.co.ke', // generated ethereal user
-	        pass: 'i9dVB81T{X*y'  // generated ethereal password
+	        user: 'akl@dukachapchap.co.ke', // generated ethereal user
+	        pass: 'donstefan92'  // generated ethereal password
 	    },
 	    tls:{
 	      rejectUnauthorized:false
@@ -164,9 +161,6 @@ app.post('/api/account/rental-client-email', (req, res) => {
 		<p>You have a new Rental</p>
 		<h3>Rental Details</h3>
 		<ul>
-			<li>Name: ${req.body.firstName} ${req.body.lastName}</li>
-			<li>Email: ${req.body.email}</li>
-			<li>Telephone: ${req.body.telephone}</li>
 			<li>Product: ${req.body.productModel}</li>
 			<li>Rental Date: ${req.body.rentalDate}</li>
 			<li>Return Date: ${req.body.returnDate}</li>
@@ -176,12 +170,12 @@ app.post('/api/account/rental-client-email', (req, res) => {
 	`;
 	  // create reusable transporter object using the default SMTP transport
 	  let transporter = nodemailer.createTransport({
-	    host: 'mail.acheliskenya.co.ke',
-	    port: 587,
-	    secure: false, // true for 587, false for other ports
+	    host: 'mail.dukachapchap.co.ke',
+	    port: 465,
+	    secure: true, // true for 465, false for other ports
 	    auth: {
-	        user: 'info@acheliskenya.co.ke', // generated ethereal user
-	        pass: 'i9dVB81T{X*y'  // generated ethereal password
+	        user: 'akl@dukachapchap.co.ke', // generated ethereal user
+	        pass: 'donstefan92'  // generated ethereal password
 	    },
 	    tls:{
 	      rejectUnauthorized:false
@@ -225,12 +219,12 @@ app.post('/api/account/findspare-admin-email', (req, res) => {
 	`;
 	  // create reusable transporter object using the default SMTP transport
 	  let transporter = nodemailer.createTransport({
-	    host: 'mail.acheliskenya.co.ke',
-	    port: 587,
-	    secure: false, // true for 587, false for other ports
+	    host: 'mail.dukachapchap.co.ke',
+	    port: 465,
+	    secure: true, // true for 465, false for other ports
 	    auth: {
-	        user: 'info@acheliskenya.co.ke', // generated ethereal user
-	        pass: 'i9dVB81T{X*y'  // generated ethereal password
+	        user: 'akl@dukachapchap.co.ke', // generated ethereal user
+	        pass: 'donstefan92'  // generated ethereal password
 	    },
 	    tls:{
 	      rejectUnauthorized:false
@@ -275,12 +269,12 @@ app.post('/api/account/findspare-client-email', (req, res) => {
 	`;
 	  // create reusable transporter object using the default SMTP transport
 	  let transporter = nodemailer.createTransport({
-	    host: 'mail.acheliskenya.co.ke',
-	    port: 587,
-	    secure: false, // true for 587, false for other ports
+	    host: 'mail.dukachapchap.co.ke',
+	    port: 465,
+	    secure: true, // true for 465, false for other ports
 	    auth: {
-	        user: 'info@acheliskenya.co.ke', // generated ethereal user
-	        pass: 'i9dVB81T{X*y'  // generated ethereal password
+	        user: 'akl@dukachapchap.co.ke', // generated ethereal user
+	        pass: 'donstefan92'  // generated ethereal password
 	    },
 	    tls:{
 	      rejectUnauthorized:false
@@ -323,12 +317,12 @@ app.post('/api/account/signin-admin-email', (req, res) => {
 	`;
 	  // create reusable transporter object using the default SMTP transport
 	  let transporter = nodemailer.createTransport({
-	    host: 'mail.acheliskenya.co.ke',
-	    port: 587,
-	    secure: false, // true for 587, false for other ports
+	    host: 'mail.dukachapchap.co.ke',
+	    port: 465,
+	    secure: true, // true for 465, false for other ports
 	    auth: {
-	        user: 'info@acheliskenya.co.ke', // generated ethereal user
-	        pass: 'i9dVB81T{X*y'  // generated ethereal password
+	        user: 'akl@dukachapchap.co.ke', // generated ethereal user
+	        pass: 'donstefan92'  // generated ethereal password
 	    },
 	    tls:{
 	      rejectUnauthorized:false
@@ -372,12 +366,12 @@ app.post('/api/account/signin-client-email', (req, res) => {
 	`;
 	  // create reusable transporter object using the default SMTP transport
 	  let transporter = nodemailer.createTransport({
-	    host: 'mail.acheliskenya.co.ke',
-	    port: 587,
-	    secure: false, // true for 587, false for other ports
+	    host: 'mail.dukachapchap.co.ke',
+	    port: 465,
+	    secure: true, // true for 465, false for other ports
 	    auth: {
-	        user: 'info@acheliskenya.co.ke', // generated ethereal user
-	        pass: 'i9dVB81T{X*y'  // generated ethereal password
+	        user: 'akl@dukachapchap.co.ke', // generated ethereal user
+	        pass: 'donstefan92'  // generated ethereal password
 	    },
 	    tls:{
 	      rejectUnauthorized:false

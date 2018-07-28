@@ -80,10 +80,6 @@ class Rental extends Component {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          firstName: firstName,
-          lastName: lastName,
-          telephone: telephone,
-          email: email,
           productModel: productModel,
           returnDate: returnDate,
           rentalDate: rentalDate
@@ -97,10 +93,6 @@ class Rental extends Component {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          firstName: firstName,
-          lastName: lastName,
-          telephone: telephone,
-          email: email,
           productModel: productModel,
           returnDate: returnDate,
           rentalDate: rentalDate
@@ -351,7 +343,7 @@ class Rental extends Component {
               </ul>
             </Link>
             <div className="navbar-header">
-              <div className="navbar-brand navbar-brand-centered">ACHELIS KENYA LTD</div>
+              <div className="navbar-brand navbar-brand-centered"><span>ACHELIS KENYA LTD</span></div>
             </div>
           </div>
         </nav>
@@ -360,8 +352,8 @@ class Rental extends Component {
             <div className="first">Choose Product</div>
           </div>
           <div className="staff">
-            <div className="member"> 
-              <div className="avatar"></div>
+            <div className="member">
+              <div className="avatar" style={{backgroundImage: "url(https://s3-us-west-1.amazonaws.com/acropolis-wp-content-uploads/2017/04/product_image_21-110.jpg"}}></div>
               <div className="name" onClick={this.onClickProductModel}>Excavator</div>
               <div className="deselect-member">change</div>
               <div className="deselect-date">change</div>
@@ -375,8 +367,8 @@ class Rental extends Component {
               </form>
               <div className="confirm-message">Lease Complete!<span className="restart">Find Another Product?</span></div>
             </div>
-            <div className="member"> 
-              <div className="avatar"></div>
+            <div className="member">
+              <div className="avatar" style={{backgroundImage: "url(https://5.imimg.com/data5/KG/LA/MY-45815663/jcb-3cx-backhoe-loader-500x500.jpg)"}}></div>
               <div className="name" onClick={this.onClickProductModel}>Backhoe Loader</div>
               <div className="deselect-member">change</div>
               <div className="deselect-date">change</div>
@@ -391,8 +383,8 @@ class Rental extends Component {
               </form>
               <div className="confirm-message">Lease Complete!<span className="restart">Book Again?</span></div>
             </div>
-            <div className="member"> 
-              <div className="avatar"></div>
+            <div className="member">
+              <div className="avatar" style={{backgroundImage: "url(http://s7d2.scene7.com/is/image/Caterpillar/CM20170503-44150-23167?$cc-g$)"}}></div>
               <div className="name" onClick={this.onClickProductModel}>Motor Grader</div>
               <div className="deselect-member">change</div>
               <div className="deselect-date">change</div>
@@ -406,8 +398,8 @@ class Rental extends Component {
               </form>
               <div className="confirm-message">Lease Complete!<span className="restart">Book Again?</span></div>
             </div>
-            <div className="member"> 
-              <div className="avatar"></div>
+            <div className="member">
+              <div className="avatar" style={{backgroundImage: "url(http://sc02.alicdn.com/kf/HTB1PM0FOpXXXXcbXFXXq6xXFXXXv/Mini-Road-Roller-baby-roller-compactor.jpg)"}}></div>
               <div className="name" onClick={this.onClickProductModel}>Roller/Compactor</div>
               <div className="deselect-member">change</div>
               <div className="deselect-date">change</div>

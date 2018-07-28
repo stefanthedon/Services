@@ -1,3 +1,6 @@
+body {
+  background-color: #2a2f35;
+}
 
 .signUpError {
 	font-size: 20px;
@@ -5,12 +8,21 @@
 	border: 1px;
 }
 
+.navbar {
+  background-color: black;
+  border: none;
+  height: 60px;
+}
+
+.navbar-brand span {
+  color: #ffd300;
+}
+
 .navbar-brand-centered {
-    position: absolute;
-    left: 50%;
-    display: block;
-    width: 160px;
-    text-align: center;
+    /*position: absolute;*/
+    /*left: 50%;*/
+    /*display: block;*/
+    /*text-align: center;*/
 }
 .navbar>.container .navbar-brand-centered, 
 .navbar>.container-fluid .navbar-brand-centered {

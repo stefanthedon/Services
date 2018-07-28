@@ -292,7 +292,7 @@ class Home extends Component {
         <nav className="navbar navbar-default" role="navigation">
           <div className="container">
             <div className="navbar-header">
-              <div className="navbar-brand navbar-brand-centered">ACHELIS KENYA LTD</div>
+              <div className="navbar-brand navbar-brand-centered"><span>ACHELIS KENYA LTD</span></div>
             </div>
             <ul className="nav navbar-nav navbar-right">
               <li><a href=""><span className="glyphicon glyphicon-log-out"></span><span className="logout"></span></a></li>
