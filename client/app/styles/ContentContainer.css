@@ -107,6 +107,12 @@ a:hover {
 }
 
 @media screen and (max-width: 400px) {
+	body {
+  	background-image: url("https://cdn.apk-dl.com/detail/screenshot/JJlyJEZ-PQJmQ24lfSNy7a7Wk5wsB4b-uE1M5thBv3bDnpHZatpJPctgsgKnQ3BPhpwd=h900.png");
+  	background-size: 100%;
+  	background-repeat: repeat;
+  	background-attachment: fixed; 
+	}
 	.content-container {
 	  	width: 100%;
 	  	height: 100%;
